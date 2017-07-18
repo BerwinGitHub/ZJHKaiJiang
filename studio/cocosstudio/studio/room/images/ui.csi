@@ -1,0 +1,24 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="ui" Type="Plist" ID="11ef52dc-6cb4-40af-8c01-748ae3ebfdd6" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="studio/room/images/ui/seat_bg.png" />
+      <FilePathData Path="studio/room/images/ui/count_down.png" />
+      <FilePathData Path="studio/room/images/ui/game_liaotianpaopao.png" />
+      <FilePathData Path="studio/room/images/ui/game_tishikuang.png" />
+      <FilePathData Path="studio/room/images/ui/trun_bg.png" />
+      <FilePathData Path="studio/room/images/ui/btn_back_hall.png" />
+      <FilePathData Path="studio/room/images/ui/btn_change_table.png" />
+      <FilePathData Path="studio/room/images/ui/btn_transparent_bg.png" />
+      <FilePathData Path="studio/room/images/ui/prepare.png" />
+      <FilePathData Path="studio/room/images/ui/btn_menu.png" />
+      <FilePathData Path="studio/room/images/ui/btn_settings.png" />
+      <FilePathData Path="studio/room/images/ui/btn_help.png" />
+      <FilePathData Path="studio/room/images/ui/btn_audio.png" />
+      <FilePathData Path="studio/room/images/ui/btn_message.png" />
+      <FilePathData Path="studio/room/images/ui/btn_back.png" />
+      <FilePathData Path="studio/room/images/ui/dialog_bg.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

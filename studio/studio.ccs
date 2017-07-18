@@ -1,0 +1,244 @@
+<Solution>
+  <PropertyGroup Name="studio" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Folder Name="studio">
+          <Folder Name="com">
+            <Folder Name="components">
+              <Project Name="broadcast.csd" Type="Node" />
+              <Project Name="dialog_help.csd" Type="Node" />
+            </Folder>
+            <Folder Name="fonts" />
+            <Folder Name="images">
+              <Folder Name="ui">
+                <Image Name="agree.png" />
+                <Image Name="agree_kuang.png" />
+                <Image Name="bc_bg.png" />
+                <Image Name="bc_speaker.png" />
+                <Image Name="btn_charge.png" />
+                <Image Name="btn_qq.png" />
+                <Image Name="btn_qq_pressed.png" />
+                <Image Name="btn_wechat.png" />
+                <Image Name="btn_wechat_pressed.png" />
+                <Image Name="coin.png" />
+                <Image Name="diamond.png" />
+                <Image Name="diamond_2.png" />
+                <Image Name="game_help_content.png" />
+                <Image Name="public_btn_disable.png" />
+                <Image Name="public_btn_normal.png" />
+                <Image Name="public_btn_pressed.png" />
+                <Image Name="transparent_corner_bg.png" />
+                <Image Name="user_face_b_64.png" />
+                <Image Name="user_face_b_96.png" />
+                <Image Name="user_face_f_64.png" />
+                <Image Name="user_face_f_96.png" />
+                <Image Name="user_face_m_64.png" />
+                <Image Name="user_face_m_96.png" />
+                <Image Name="user_face_mask_64.png" />
+                <Image Name="user_face_mask_96.png" />
+              </Folder>
+              <PlistInfo Name="ui.csi" Type="Plist" />
+            </Folder>
+          </Folder>
+          <Folder Name="debug">
+            <Folder Name="amts">
+              <Project Name="inputHistory.csd" Type="Node" />
+            </Folder>
+            <Folder Name="imgs">
+              <Folder Name="ui">
+                <Image Name="debug.png" />
+                <Image Name="dot.png" />
+              </Folder>
+              <PlistInfo Name="ui.csi" Type="Plist" />
+            </Folder>
+            <Folder Name="node">
+              <Project Name="console.csd" Type="Node" />
+              <Project Name="debug.csd" Type="Scene" />
+            </Folder>
+          </Folder>
+          <Folder Name="hall">
+            <Folder Name="animations" />
+            <Folder Name="images">
+              <Folder Name="bg">
+                <Image Name="bg_dim.jpg" />
+              </Folder>
+              <Folder Name="ui">
+                <Image Name="btn_hall_help.png" />
+                <Image Name="btn_hall_history.png" />
+                <Image Name="btn_hall_mail.png" />
+                <Image Name="btn_hall_settings.png" />
+                <Image Name="btn_hall_share.png" />
+                <Image Name="item_create_room.png" />
+                <Image Name="item_join_room.png" />
+                <Image Name="item_quick_start.png" />
+                <Image Name="nav_transparent.png" />
+              </Folder>
+              <PlistInfo Name="bg.csi" Type="Plist" />
+              <PlistInfo Name="ui.csi" Type="Plist" />
+            </Folder>
+            <Folder Name="layers">
+              <Project Name="hall.csd" Type="Node" />
+            </Folder>
+            <Folder Name="particles" />
+          </Folder>
+          <Folder Name="login">
+            <Folder Name="animations" />
+            <Folder Name="images">
+              <Folder Name="bg">
+                <Image Name="bg_common.jpg" />
+              </Folder>
+            </Folder>
+            <Folder Name="layers">
+              <Project Name="login.csd" Type="Node" />
+            </Folder>
+            <Folder Name="particles" />
+          </Folder>
+          <Folder Name="room">
+            <Folder Name="animations" />
+            <Folder Name="components">
+              <Project Name="dialog_menu.csd" Type="Node" />
+              <Project Name="seat_left.csd" Type="Node" />
+              <Project Name="seat_right.csd" Type="Node" />
+            </Folder>
+            <Folder Name="fonts">
+              <Fnt Name="game_num_money.fnt" />
+              <Fnt Name="game_shijian.fnt" />
+              <Fnt Name="gamingMoneyNumber.fnt" />
+            </Folder>
+            <Folder Name="images">
+              <Folder Name="cards">
+                <Image Name="game_compare_bg.png" />
+                <Image Name="game_dacaohua.png" />
+                <Image Name="game_dafangpian.png" />
+                <Image Name="game_daheitao.png" />
+                <Image Name="game_dahongtao.png" />
+                <Image Name="game_huaseheij.png" />
+                <Image Name="game_huaseheik.png" />
+                <Image Name="game_huaseheiq.png" />
+                <Image Name="game_huasehongj.png" />
+                <Image Name="game_huasehongk.png" />
+                <Image Name="game_huasehongq.png" />
+                <Image Name="game_poker11.png" />
+                <Image Name="game_poker12.png" />
+                <Image Name="game_poker13.png" />
+                <Image Name="game_poker14.png" />
+                <Image Name="game_poker2.png" />
+                <Image Name="game_poker3.png" />
+                <Image Name="game_xiaocaohua.png" />
+                <Image Name="game_xiaofangpian.png" />
+                <Image Name="game_xiaoheitao.png" />
+                <Image Name="game_xiaohongtao.png" />
+                <Image Name="poker_b2.png" />
+                <Image Name="poker_b3.png" />
+                <Image Name="poker_b4.png" />
+                <Image Name="poker_b5.png" />
+                <Image Name="poker_b6.png" />
+                <Image Name="poker_b7.png" />
+                <Image Name="poker_b8.png" />
+                <Image Name="poker_b9.png" />
+                <Image Name="poker_ba.png" />
+                <Image Name="poker_bj.png" />
+                <Image Name="poker_bk.png" />
+                <Image Name="poker_bq.png" />
+                <Image Name="poker_bt.png" />
+                <Image Name="poker_c1_s.png" />
+                <Image Name="poker_c10_s.png" />
+                <Image Name="poker_c11_s.png" />
+                <Image Name="poker_c12_s.png" />
+                <Image Name="poker_c13_s.png" />
+                <Image Name="poker_c2_s.png" />
+                <Image Name="poker_c3_s.png" />
+                <Image Name="poker_c4_s.png" />
+                <Image Name="poker_c5_s.png" />
+                <Image Name="poker_c6_s.png" />
+                <Image Name="poker_c7_s.png" />
+                <Image Name="poker_c8_s.png" />
+                <Image Name="poker_c9_s.png" />
+                <Image Name="poker_d1_s.png" />
+                <Image Name="poker_d10_s.png" />
+                <Image Name="poker_d11_s.png" />
+                <Image Name="poker_d12_s.png" />
+                <Image Name="poker_d13_s.png" />
+                <Image Name="poker_d2_s.png" />
+                <Image Name="poker_d3_s.png" />
+                <Image Name="poker_d4_s.png" />
+                <Image Name="poker_d5_s.png" />
+                <Image Name="poker_d6_s.png" />
+                <Image Name="poker_d7_s.png" />
+                <Image Name="poker_d8_s.png" />
+                <Image Name="poker_d9_s.png" />
+                <Image Name="poker_h1_s.png" />
+                <Image Name="poker_h10_s.png" />
+                <Image Name="poker_h11_s.png" />
+                <Image Name="poker_h12_s.png" />
+                <Image Name="poker_h13_s.png" />
+                <Image Name="poker_h2_s.png" />
+                <Image Name="poker_h3_s.png" />
+                <Image Name="poker_h4_s.png" />
+                <Image Name="poker_h5_s.png" />
+                <Image Name="poker_h6_s.png" />
+                <Image Name="poker_h7_s.png" />
+                <Image Name="poker_h8_s.png" />
+                <Image Name="poker_h9_s.png" />
+                <Image Name="poker_r2.png" />
+                <Image Name="poker_r3.png" />
+                <Image Name="poker_r4.png" />
+                <Image Name="poker_r5.png" />
+                <Image Name="poker_r6.png" />
+                <Image Name="poker_r7.png" />
+                <Image Name="poker_r8.png" />
+                <Image Name="poker_r9.png" />
+                <Image Name="poker_ra.png" />
+                <Image Name="poker_rj.png" />
+                <Image Name="poker_rk.png" />
+                <Image Name="poker_rq.png" />
+                <Image Name="poker_rt.png" />
+                <Image Name="poker_s1_s.png" />
+                <Image Name="poker_s10_s.png" />
+                <Image Name="poker_s11_s.png" />
+                <Image Name="poker_s12_s.png" />
+                <Image Name="poker_s13_s.png" />
+                <Image Name="poker_s2_s.png" />
+                <Image Name="poker_s3_s.png" />
+                <Image Name="poker_s4_s.png" />
+                <Image Name="poker_s5_s.png" />
+                <Image Name="poker_s6_s.png" />
+                <Image Name="poker_s7_s.png" />
+                <Image Name="poker_s8_s.png" />
+                <Image Name="poker_s9_s.png" />
+              </Folder>
+              <Folder Name="ui">
+                <Image Name="btn_audio.png" />
+                <Image Name="btn_back.png" />
+                <Image Name="btn_back_hall.png" />
+                <Image Name="btn_change_table.png" />
+                <Image Name="btn_help.png" />
+                <Image Name="btn_menu.png" />
+                <Image Name="btn_message.png" />
+                <Image Name="btn_settings.png" />
+                <Image Name="btn_transparent_bg.png" />
+                <Image Name="count_down.png" />
+                <Image Name="dialog_bg.png" />
+                <Image Name="game_liaotianpaopao.png" />
+                <Image Name="game_tishikuang.png" />
+                <Image Name="prepare.png" />
+                <Image Name="seat_bg.png" />
+                <Image Name="trun_bg.png" />
+              </Folder>
+              <Image Name="bg_mtt.jpg" />
+              <Image Name="bg_normal.jpg" />
+              <PlistInfo Name="card.csi" Type="Plist" />
+              <PlistInfo Name="table.csi" Type="Plist" />
+              <PlistInfo Name="ui.csi" Type="Plist" />
+            </Folder>
+            <Folder Name="layers">
+              <Project Name="room.csd" Type="Node" />
+            </Folder>
+            <Folder Name="particles" />
+          </Folder>
+        </Folder>
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

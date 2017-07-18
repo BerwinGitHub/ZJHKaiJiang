@@ -1,0 +1,9 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="bg" Type="Plist" ID="643603da-8484-4e5f-a92e-6be62e5a5541" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="studio/hall/images/bg/bg_dim.jpg" />
+    </ImageFiles>
+    <MaxSize Width="1280" Height="720" />
+  </Content>
+</PlistInfoProjectFile>

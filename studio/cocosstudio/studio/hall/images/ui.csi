@@ -1,0 +1,17 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="ui" Type="Plist" ID="49160cc0-efd3-4945-baf3-119f9f67a1d9" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="studio/hall/images/ui/nav_transparent.png" />
+      <FilePathData Path="studio/hall/images/ui/item_create_room.png" />
+      <FilePathData Path="studio/hall/images/ui/item_join_room.png" />
+      <FilePathData Path="studio/hall/images/ui/item_quick_start.png" />
+      <FilePathData Path="studio/hall/images/ui/btn_hall_help.png" />
+      <FilePathData Path="studio/hall/images/ui/btn_hall_history.png" />
+      <FilePathData Path="studio/hall/images/ui/btn_hall_mail.png" />
+      <FilePathData Path="studio/hall/images/ui/btn_hall_settings.png" />
+      <FilePathData Path="studio/hall/images/ui/btn_hall_share.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

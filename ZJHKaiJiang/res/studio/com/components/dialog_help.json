@@ -1,0 +1,126 @@
+{
+  "ID": "837409ee-7a68-496e-9007-f0f96578027e",
+  "Version": "3.10.0.0",
+  "Name": "dialog_help",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 517,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "studio/room/images/ui/dialog_bg.png",
+              "Plist": "studio/room/images/ui.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 45,
+            "Scale9OriginY": 55,
+            "Scale9Width": 38,
+            "Scale9Height": 13,
+            "AnchorPoint": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -300.0,
+            "BottomMargin": -500.0,
+            "Tag": 518,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "studio/com/images/ui/game_help_content.png",
+                  "Plist": "studio/com/images/ui.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 154.0644,
+                  "Y": 252.1103
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5135,
+                  "Y": 0.5042
+                },
+                "PreSize": {
+                  "X": 0.1533,
+                  "Y": 0.092
+                },
+                "LeftMargin": 131.0644,
+                "RightMargin": 122.9356,
+                "TopMargin": 224.8897,
+                "BottomMargin": 229.1103,
+                "Tag": 548,
+                "ActionTag": 881707431,
+                "Size": {
+                  "X": 283.0,
+                  "Y": 475.0
+                },
+                "Name": "game_help_content_1",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -2121262899,
+            "Size": {
+              "X": 300.0,
+              "Y": 500.0
+            },
+            "Name": "Image_1",
+            "ctype": "ImageViewObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../../room/images/ui.plist",
+        "../../room/images/ui.png",
+        "../images/ui.plist",
+        "../images/ui.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

@@ -1,0 +1,9 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="table" Type="Plist" ID="48cca24b-74e8-49f2-9162-d8dd94af2b2b" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="0" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="studio/room/images/bg_normal.jpg" />
+    </ImageFiles>
+    <MaxSize Width="1280" Height="720" />
+  </Content>
+</PlistInfoProjectFile>

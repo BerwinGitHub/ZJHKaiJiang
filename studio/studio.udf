@@ -1,0 +1,50 @@
+<UserData Version="3.10.0.0">
+  <Properties>
+    <Item Key="PackageParamsKey">
+      <Value ctype="PackageParams">
+        <LuaIsEncrypt Value="False" />
+        <LuaEncryptKey Value="" />
+        <LuaEncryptSign Value="" />
+        <Android_PackageName Value="org.cocos.studio" />
+        <AndroidkeyStore Value="" />
+        <AndroidVersion Value="android-23" />
+        <iOS_Target Value="studio-mobile" />
+        <iOS_BundleID Value="iPhone Developer: berwin.net@gmail.com (3355FNS8AS)" />
+        <Platform Value="None" />
+        <RunPlatform Value="None" />
+        <FrameworkVersion Value="cocos2d-x-3.10" />
+        <IsDebugKeystore Value="True" />
+        <KeystorePassword Value="" />
+        <KeystoreAliasName Value="" />
+        <KeystoreAliasPassword Value="" />
+        <EnableSourceMap Value="False" />
+        <EnableHTML5Advanced Value="False" />
+      </Value>
+    </Item>
+    <Item Key="CocosRecentOperation">
+      <Value ctype="CocosRecentOperation">
+        <LastPublishType Value="Resource" />
+        <IsLastPublish Value="True" />
+        <LastRunType Value="Mac" />
+      </Value>
+    </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="studio/hall/layers/hall.csd" />
+          <FilePathData Path="studio/room/components/seat_left.csd" />
+          <FilePathData Path="studio/room/components/seat_right.csd" />
+          <FilePathData Path="studio/com/images/ui.csi" />
+          <FilePathData Path="studio/login/layers/login.csd" />
+          <FilePathData Path="studio/debug/node/console.csd" />
+          <FilePathData Path="studio/debug/node/debug.csd" />
+          <FilePathData Path="studio/room/images/ui.csi" />
+          <FilePathData Path="studio/room/images/card.csi" />
+          <FilePathData Path="studio/room/components/dialog_menu.csd" />
+          <FilePathData Path="studio/room/layers/room.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="studio/room/images/card.csi" />
+      </Value>
+    </Item>
+  </Properties>
+</UserData>

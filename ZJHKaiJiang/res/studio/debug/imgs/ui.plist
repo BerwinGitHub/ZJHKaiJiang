@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>studio/debug/imgs/ui/debug.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{64,64}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{64,64}</string>
+			</dict>
+			<key>studio/debug/imgs/ui/dot.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,70},{25,26}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{25,26}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>ui.png</string>
+			<key>realTextureFileName</key>
+			<string>ui.png</string>
+			<key>size</key>
+			<string>{68,98}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>68</integer>
+			<key>height</key>
+			<integer>98</integer>
+		</dict>
+	</dict>
+</plist>

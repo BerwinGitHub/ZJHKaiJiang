@@ -1,0 +1,229 @@
+{
+  "ID": "9e52646c-5a4a-4305-887e-9a5fa5b40fb4",
+  "Version": "3.10.0.0",
+  "Name": "broadcast",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 1704,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "studio/com/images/ui/bc_bg.png",
+              "Plist": "studio/com/images/ui.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -387.5,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -387.5,
+            "RightMargin": -387.5,
+            "TopMargin": -21.0,
+            "BottomMargin": -21.0,
+            "Tag": 1705,
+            "Children": [
+              {
+                "ClipAble": true,
+                "BackColorAlpha": 102,
+                "SingleColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 200
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "Scale9Width": 1,
+                "Scale9Height": 1,
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 10.0,
+                  "Y": 22.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.0129,
+                  "Y": 0.5238
+                },
+                "PreSize": {
+                  "X": 0.9678,
+                  "Y": 0.9524
+                },
+                "LeftMargin": 10.0,
+                "RightMargin": 14.95,
+                "BottomMargin": 2.0,
+                "Tag": 1707,
+                "Children": [
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 20,
+                    "LabelText": "健康游戏公告：抵制不良游戏，拒绝盗版游戏，注意自我保护，谨防上当受骗。适度游戏益脑，沉迷游戏伤身。合理安排时间，享受健康生活。",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 0.0,
+                      "Y": 20.0
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PositionPercentYEnabled": true,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.5
+                    },
+                    "PercentHeightEnable": true,
+                    "PercentHeightEnabled": true,
+                    "PreSize": {
+                      "X": 5.333,
+                      "Y": 1.0
+                    },
+                    "RightMargin": -3249.95,
+                    "Tag": 1708,
+                    "ActionTag": -2029415094,
+                    "Size": {
+                      "X": 4000.0,
+                      "Y": 40.0
+                    },
+                    "Name": "txt_bc",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -321942526,
+                "Size": {
+                  "X": 750.05,
+                  "Y": 40.0
+                },
+                "Name": "mask",
+                "ctype": "PanelObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "studio/com/images/ui/bc_speaker.png",
+                  "Plist": "studio/com/images/ui.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": -19.9999,
+                  "Y": 21.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": -0.0258,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0865,
+                  "Y": 1.5714
+                },
+                "LeftMargin": -53.4999,
+                "RightMargin": 761.4999,
+                "TopMargin": -12.0,
+                "BottomMargin": -12.0,
+                "Tag": 1706,
+                "ActionTag": 1679673613,
+                "Size": {
+                  "X": 67.0,
+                  "Y": 66.0
+                },
+                "Name": "bc_speaker",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -1635214529,
+            "Size": {
+              "X": 775.0,
+              "Y": 42.0
+            },
+            "Name": "bc_bg_1",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../images/ui.plist",
+        "../images/ui.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

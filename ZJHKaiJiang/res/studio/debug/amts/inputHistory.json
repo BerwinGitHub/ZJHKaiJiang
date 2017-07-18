@@ -1,0 +1,145 @@
+{
+  "ID": "42dbaf89-d0c1-4f7b-bbf6-a7948d9ff501",
+  "Version": "3.10.0.0",
+  "Name": "inputHistory",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Tag": 13,
+        "Children": [
+          {
+            "ClipAble": false,
+            "BackColorAlpha": 96,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 165,
+              "G": 42,
+              "B": 42
+            },
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -320.0,
+            "RightMargin": -320.0,
+            "TopMargin": -568.0,
+            "BottomMargin": -568.0,
+            "Tag": 14,
+            "Children": [
+              {
+                "DirectionType": "Vertical",
+                "IsBounceEnabled": true,
+                "ScrollDirectionType": 0,
+                "ClipAble": true,
+                "ComboBoxIndex": 1,
+                "SingleColor": {
+                  "R": 30,
+                  "G": 144
+                },
+                "FirstColor": {
+                  "R": 150,
+                  "G": 150
+                },
+                "EndColor": {},
+                "ColorVector": {
+                  "ScaleY": 1.0
+                },
+                "TouchEnable": true,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 320.0,
+                  "Y": 568.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PercentWidthEnable": true,
+                "PercentHeightEnable": true,
+                "PercentWidthEnabled": true,
+                "PercentHeightEnabled": true,
+                "PreSize": {
+                  "X": 0.8,
+                  "Y": 0.8
+                },
+                "LeftMargin": 64.0,
+                "RightMargin": 64.0,
+                "TopMargin": 113.6,
+                "BottomMargin": 113.6,
+                "Tag": 15,
+                "ActionTag": -487619905,
+                "Size": {
+                  "X": 512.0,
+                  "Y": 908.7999
+                },
+                "Name": "lv_history",
+                "ctype": "ListViewObjectData"
+              }
+            ],
+            "ActionTag": -607158420,
+            "Size": {
+              "X": 640.0,
+              "Y": 1136.0
+            },
+            "Name": "root",
+            "ctype": "PanelObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

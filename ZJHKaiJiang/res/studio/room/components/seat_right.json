@@ -1,0 +1,1273 @@
+{
+  "ID": "74597c4d-0d03-4d3f-82df-1ae151403595",
+  "Version": "3.10.0.0",
+  "Name": "seat_right",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 125,
+        "Speed": 1.0,
+        "ActivedAnimationName": "amt_chat",
+        "Timelines": [
+          {
+            "ActionTag": -2141380223,
+            "Property": "Position",
+            "Frames": [
+              {
+                "X": 73.2407,
+                "Y": 42.4369,
+                "FrameIndex": 50,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 73.2407,
+                "Y": 42.4369,
+                "FrameIndex": 60,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 73.2407,
+                "Y": 42.4369,
+                "FrameIndex": 110,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 73.2407,
+                "Y": 42.4369,
+                "FrameIndex": 125,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": -2141380223,
+            "Property": "Scale",
+            "Frames": [
+              {
+                "X": 0.01,
+                "Y": 0.01,
+                "FrameIndex": 50,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 60,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 110,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.01,
+                "Y": 0.01,
+                "FrameIndex": 125,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": -2141380223,
+            "Property": "RotationSkew",
+            "Frames": [
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 50,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 60,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 110,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 125,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": 1801394363,
+            "Property": "Position",
+            "Frames": [
+              {
+                "X": 90.0,
+                "Y": 35.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 90.0,
+                "Y": 55.0,
+                "FrameIndex": 15,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 90.0,
+                "Y": 55.0,
+                "FrameIndex": 40,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              },
+              {
+                "X": 90.0,
+                "Y": 55.0,
+                "FrameIndex": 45,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "PointFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": 1801394363,
+            "Property": "Scale",
+            "Frames": [
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 15,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 40,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 1.0,
+                "Y": 1.0,
+                "FrameIndex": 45,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": 1801394363,
+            "Property": "RotationSkew",
+            "Frames": [
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 15,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 40,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              },
+              {
+                "X": 0.0,
+                "Y": 0.0,
+                "FrameIndex": 45,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "ScaleValueFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          },
+          {
+            "ActionTag": 1801394363,
+            "Property": "Alpha",
+            "Frames": [
+              {
+                "Value": 0,
+                "FrameIndex": 0,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "IntFrameData"
+              },
+              {
+                "Value": 255,
+                "FrameIndex": 15,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "IntFrameData"
+              },
+              {
+                "Value": 255,
+                "FrameIndex": 40,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "IntFrameData"
+              },
+              {
+                "Value": 0,
+                "FrameIndex": 45,
+                "EasingData": {
+                  "Type": 0
+                },
+                "ctype": "IntFrameData"
+              }
+            ],
+            "ctype": "TimelineData"
+          }
+        ],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [
+        {
+          "StartIndex": 0,
+          "EndIndex": 45,
+          "Name": "amt_opt",
+          "ctype": "AnimationInfoData"
+        },
+        {
+          "StartIndex": 50,
+          "EndIndex": 125,
+          "Name": "amt_chat",
+          "ctype": "AnimationInfoData"
+        }
+      ],
+      "ObjectData": {
+        "Tag": 114,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "studio/room/images/ui/seat_bg.png",
+              "Plist": "studio/room/images/ui.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -90.0,
+            "RightMargin": -90.0,
+            "TopMargin": -55.0,
+            "BottomMargin": -55.0,
+            "Tag": 127,
+            "Children": [
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 90.0,
+                  "Y": 55.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 90.0,
+                "RightMargin": 90.0,
+                "TopMargin": 55.0,
+                "BottomMargin": 55.0,
+                "Tag": 169,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "studio/com/images/ui/user_face_f_64.png",
+                      "Plist": "studio/com/images/ui.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 48.6815,
+                      "Y": 14.6946
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 16.6815,
+                    "RightMargin": -80.6815,
+                    "TopMargin": -46.6946,
+                    "BottomMargin": -17.3054,
+                    "Tag": 135,
+                    "Children": [
+                      {
+                        "FileData": {
+                          "Type": "MarkedSubImage",
+                          "Path": "studio/com/images/ui/user_face_b_64.png",
+                          "Plist": "studio/com/images/ui.plist"
+                        },
+                        "BlendFunc": {
+                          "Src": 1,
+                          "Dst": 771
+                        },
+                        "AnchorPoint": {
+                          "ScaleX": 0.5,
+                          "ScaleY": 0.5
+                        },
+                        "Position": {
+                          "X": 32.0,
+                          "Y": 32.0
+                        },
+                        "Scale": {
+                          "ScaleX": 1.0,
+                          "ScaleY": 1.0
+                        },
+                        "CColor": {},
+                        "IconVisible": false,
+                        "PositionPercentXEnabled": true,
+                        "PositionPercentYEnabled": true,
+                        "PrePosition": {
+                          "X": 0.5,
+                          "Y": 0.5
+                        },
+                        "PreSize": {
+                          "X": 1.0,
+                          "Y": 1.0
+                        },
+                        "Tag": 128,
+                        "ActionTag": 1731742744,
+                        "Size": {
+                          "X": 64.0,
+                          "Y": 64.0
+                        },
+                        "Name": "user_header_border",
+                        "ctype": "SpriteObjectData"
+                      }
+                    ],
+                    "ActionTag": 771338164,
+                    "Size": {
+                      "X": 64.0,
+                      "Y": 64.0
+                    },
+                    "Name": "user_header",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 12,
+                    "LabelText": "Berwin",
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 1.0,
+                    "ShadowOffsetY": -1.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.4908,
+                      "ScaleY": 0.4075
+                    },
+                    "Position": {
+                      "X": 48.0399,
+                      "Y": -28.6501
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 13.6839,
+                    "RightMargin": -83.6839,
+                    "TopMargin": 20.3551,
+                    "BottomMargin": -34.3551,
+                    "Tag": 129,
+                    "ActionTag": -1867730006,
+                    "Size": {
+                      "X": 70.0,
+                      "Y": 14.0
+                    },
+                    "Name": "user_name",
+                    "ctype": "TextObjectData"
+                  },
+                  {
+                    "IsCustomSize": true,
+                    "FontSize": 12,
+                    "LabelText": "21202.52万",
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 1.0,
+                    "ShadowOffsetY": -1.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 48.6815,
+                      "Y": -43.0324
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 13.6815,
+                    "RightMargin": -83.6815,
+                    "TopMargin": 36.0324,
+                    "BottomMargin": -50.0324,
+                    "Tag": 136,
+                    "ActionTag": -403931047,
+                    "Size": {
+                      "X": 70.0,
+                      "Y": 14.0
+                    },
+                    "Name": "user_coin",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": -1338311633,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "user_info",
+                "ctype": "SingleNodeObjectData"
+              },
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 90.0,
+                  "Y": 55.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 90.0,
+                "RightMargin": 90.0,
+                "TopMargin": 55.0,
+                "BottomMargin": 55.0,
+                "Tag": 138,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "studio/room/images/cards/game_poker14.png",
+                      "Plist": "studio/room/images/card.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 1.0
+                    },
+                    "Position": {
+                      "X": -34.8161,
+                      "Y": -52.192
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -109.8161,
+                    "RightMargin": 34.8161,
+                    "TopMargin": -46.808,
+                    "BottomMargin": -52.192,
+                    "Tag": 145,
+                    "ActionTag": 1796693511,
+                    "Size": {
+                      "X": 75.0,
+                      "Y": 99.0
+                    },
+                    "Name": "poker_0",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "studio/room/images/cards/game_poker14.png",
+                      "Plist": "studio/room/images/card.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 1.0
+                    },
+                    "Position": {
+                      "X": -14.816,
+                      "Y": -52.192
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -89.816,
+                    "RightMargin": 14.816,
+                    "TopMargin": -46.808,
+                    "BottomMargin": -52.192,
+                    "Tag": 146,
+                    "ActionTag": 1675389777,
+                    "Size": {
+                      "X": 75.0,
+                      "Y": 99.0
+                    },
+                    "Name": "poker_1",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "studio/room/images/cards/game_poker14.png",
+                      "Plist": "studio/room/images/card.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 1.0
+                    },
+                    "Position": {
+                      "X": 5.184,
+                      "Y": -52.192
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -69.816,
+                    "RightMargin": -5.184,
+                    "TopMargin": -46.808,
+                    "BottomMargin": -52.192,
+                    "Tag": 147,
+                    "ActionTag": 1612836381,
+                    "Size": {
+                      "X": 75.0,
+                      "Y": 99.0
+                    },
+                    "Name": "poker_2",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "studio/room/images/cards/game_poker11.png",
+                      "Plist": "studio/room/images/card.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 1.0
+                    },
+                    "Position": {
+                      "X": -34.8161,
+                      "Y": -52.192
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -109.8161,
+                    "RightMargin": 34.8161,
+                    "TopMargin": -46.808,
+                    "BottomMargin": -52.192,
+                    "Tag": 137,
+                    "ActionTag": -1981564168,
+                    "Size": {
+                      "X": 75.0,
+                      "Y": 99.0
+                    },
+                    "Name": "pcker_cover_0",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "studio/room/images/cards/game_poker11.png",
+                      "Plist": "studio/room/images/card.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 1.0
+                    },
+                    "Position": {
+                      "X": -14.816,
+                      "Y": -52.192
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -89.816,
+                    "RightMargin": 14.816,
+                    "TopMargin": -46.808,
+                    "BottomMargin": -52.192,
+                    "Tag": 140,
+                    "ActionTag": -1715801620,
+                    "Size": {
+                      "X": 75.0,
+                      "Y": 99.0
+                    },
+                    "Name": "pcker_cover_1",
+                    "ctype": "SpriteObjectData"
+                  },
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "studio/room/images/cards/game_poker11.png",
+                      "Plist": "studio/room/images/card.plist"
+                    },
+                    "BlendFunc": {
+                      "Src": 1,
+                      "Dst": 771
+                    },
+                    "AnchorPoint": {
+                      "ScaleX": 1.0
+                    },
+                    "Position": {
+                      "X": 5.184,
+                      "Y": -52.192
+                    },
+                    "Scale": {
+                      "ScaleX": 0.6,
+                      "ScaleY": 0.6
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": -69.816,
+                    "RightMargin": -5.184,
+                    "TopMargin": -46.808,
+                    "BottomMargin": -52.192,
+                    "Tag": 141,
+                    "ActionTag": 1214321608,
+                    "Size": {
+                      "X": 75.0,
+                      "Y": 99.0
+                    },
+                    "Name": "pcker_cover_2",
+                    "ctype": "SpriteObjectData"
+                  }
+                ],
+                "ActionTag": -1710336058,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "pocker",
+                "ctype": "SingleNodeObjectData"
+              },
+              {
+                "LabelText": "1000",
+                "LabelBMFontFile_CNB": {
+                  "Type": "Normal",
+                  "Path": "studio/room/fonts/gamingMoneyNumber.fnt",
+                  "Plist": ""
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 52.1604,
+                  "Y": 73.7604
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.2898,
+                  "Y": 0.6705
+                },
+                "PreSize": {
+                  "X": 0.3056,
+                  "Y": 0.3273
+                },
+                "LeftMargin": 24.6604,
+                "RightMargin": 100.3396,
+                "TopMargin": 18.2396,
+                "BottomMargin": 55.7604,
+                "Tag": 142,
+                "ActionTag": 91455395,
+                "Size": {
+                  "X": 55.0,
+                  "Y": 36.0
+                },
+                "Name": "use_coin",
+                "ctype": "TextBMFontObjectData"
+              },
+              {
+                "FlipX": true,
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "studio/room/images/ui/prepare.png",
+                  "Plist": "studio/room/images/ui.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": -28.8769,
+                  "Y": 68.255
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": -0.1604,
+                  "Y": 0.6205
+                },
+                "PreSize": {
+                  "X": 0.3,
+                  "Y": 0.6727
+                },
+                "LeftMargin": -55.8769,
+                "RightMargin": 181.8769,
+                "TopMargin": 4.745,
+                "BottomMargin": 31.255,
+                "Tag": 674,
+                "ActionTag": 639473045,
+                "Size": {
+                  "X": 54.0,
+                  "Y": 74.0
+                },
+                "VisibleForFrame": false,
+                "Name": "prepare",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "studio/room/images/ui/count_down.png",
+                  "Plist": "studio/room/images/ui.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 90.0,
+                  "Y": 55.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 1.0333,
+                  "Y": 1.0545
+                },
+                "LeftMargin": -3.0,
+                "RightMargin": -3.0,
+                "TopMargin": -3.0,
+                "BottomMargin": -3.0,
+                "Tag": 144,
+                "ActionTag": 2088213290,
+                "Size": {
+                  "X": 186.0,
+                  "Y": 116.0
+                },
+                "VisibleForFrame": false,
+                "Name": "count_down",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 90.0,
+                  "Y": 55.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.5
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 90.0,
+                "RightMargin": 90.0,
+                "TopMargin": 55.0,
+                "BottomMargin": 55.0,
+                "Tag": 172,
+                "Children": [
+                  {
+                    "FlipX": true,
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "studio/room/images/ui/game_liaotianpaopao.png",
+                      "Plist": "studio/room/images/ui.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 79,
+                    "Scale9OriginY": 36,
+                    "Scale9Width": 83,
+                    "Scale9Height": 40,
+                    "AnchorPoint": {
+                      "ScaleX": 0.08,
+                      "ScaleY": 0.1057
+                    },
+                    "Position": {
+                      "X": 73.2407,
+                      "Y": 42.4369
+                    },
+                    "Scale": {
+                      "ScaleX": 0.01,
+                      "ScaleY": 0.01
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 53.9607,
+                    "RightMargin": -294.9607,
+                    "TopMargin": -113.9809,
+                    "BottomMargin": 33.9809,
+                    "Tag": 150,
+                    "ActionTag": -2141380223,
+                    "Size": {
+                      "X": 241.0,
+                      "Y": 80.0
+                    },
+                    "Name": "chat_bg",
+                    "ctype": "ImageViewObjectData"
+                  }
+                ],
+                "ActionTag": 696997434,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "chat_node",
+                "ctype": "SingleNodeObjectData"
+              },
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 90.0,
+                  "Y": 35.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.3182
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 90.0,
+                "RightMargin": 90.0,
+                "TopMargin": 75.0,
+                "BottomMargin": 35.0,
+                "Tag": 171,
+                "Children": [
+                  {
+                    "FileData": {
+                      "Type": "MarkedSubImage",
+                      "Path": "studio/room/images/ui/game_tishikuang.png",
+                      "Plist": "studio/room/images/ui.plist"
+                    },
+                    "Scale9Enable": true,
+                    "Scale9OriginX": 33,
+                    "Scale9OriginY": 23,
+                    "Scale9Width": 36,
+                    "Scale9Height": 26,
+                    "AnchorPoint": {},
+                    "Position": {
+                      "X": 64.1425,
+                      "Y": -0.6297
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 64.1425,
+                    "RightMargin": -144.1425,
+                    "TopMargin": -59.3703,
+                    "BottomMargin": -0.6297,
+                    "Tag": 151,
+                    "ActionTag": -1620520451,
+                    "Size": {
+                      "X": 80.0,
+                      "Y": 60.0
+                    },
+                    "Name": "opt_bg",
+                    "ctype": "ImageViewObjectData"
+                  },
+                  {
+                    "FontSize": 20,
+                    "LabelText": "看牌",
+                    "HorizontalAlignmentType": "HT_Center",
+                    "VerticalAlignmentType": "VT_Center",
+                    "OutlineColor": {
+                      "G": 0,
+                      "B": 0
+                    },
+                    "ShadowColor": {
+                      "R": 110,
+                      "G": 110,
+                      "B": 110
+                    },
+                    "ShadowOffsetX": 2.0,
+                    "ShadowOffsetY": -2.0,
+                    "AnchorPoint": {
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
+                    },
+                    "Position": {
+                      "X": 102.1414,
+                      "Y": 37.931
+                    },
+                    "Scale": {
+                      "ScaleX": 1.0,
+                      "ScaleY": 1.0
+                    },
+                    "CColor": {},
+                    "IconVisible": false,
+                    "PrePosition": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "PreSize": {
+                      "X": 0.0,
+                      "Y": 0.0
+                    },
+                    "LeftMargin": 82.1414,
+                    "RightMargin": -122.1414,
+                    "TopMargin": -49.431,
+                    "BottomMargin": 26.431,
+                    "Tag": 170,
+                    "ActionTag": 773738720,
+                    "Size": {
+                      "X": 40.0,
+                      "Y": 23.0
+                    },
+                    "Name": "txt",
+                    "ctype": "TextObjectData"
+                  }
+                ],
+                "ActionTag": 1801394363,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Alpha": 0,
+                "Name": "opt_node",
+                "ctype": "SingleNodeObjectData"
+              }
+            ],
+            "ActionTag": -1244693725,
+            "Size": {
+              "X": 180.0,
+              "Y": 110.0
+            },
+            "Name": "seat_bg",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../../com/images/ui.plist",
+        "../../com/images/ui.png",
+        "../fonts/gamingMoneyNumber.fnt",
+        "../fonts/gamingMoneyNumber.png",
+        "../images/card.plist",
+        "../images/card.png",
+        "../images/ui.plist",
+        "../images/ui.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

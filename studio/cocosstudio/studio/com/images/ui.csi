@@ -1,0 +1,33 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="ui" Type="Plist" ID="c84e2769-6e38-493c-8947-cb4cef4797ab" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="studio/com/images/ui/agree.png" />
+      <FilePathData Path="studio/com/images/ui/agree_kuang.png" />
+      <FilePathData Path="studio/com/images/ui/bc_bg.png" />
+      <FilePathData Path="studio/com/images/ui/bc_speaker.png" />
+      <FilePathData Path="studio/com/images/ui/btn_charge.png" />
+      <FilePathData Path="studio/com/images/ui/btn_qq.png" />
+      <FilePathData Path="studio/com/images/ui/btn_qq_pressed.png" />
+      <FilePathData Path="studio/com/images/ui/btn_wechat.png" />
+      <FilePathData Path="studio/com/images/ui/btn_wechat_pressed.png" />
+      <FilePathData Path="studio/com/images/ui/coin.png" />
+      <FilePathData Path="studio/com/images/ui/diamond.png" />
+      <FilePathData Path="studio/com/images/ui/diamond_2.png" />
+      <FilePathData Path="studio/com/images/ui/game_help_content.png" />
+      <FilePathData Path="studio/com/images/ui/public_btn_disable.png" />
+      <FilePathData Path="studio/com/images/ui/public_btn_normal.png" />
+      <FilePathData Path="studio/com/images/ui/public_btn_pressed.png" />
+      <FilePathData Path="studio/com/images/ui/transparent_corner_bg.png" />
+      <FilePathData Path="studio/com/images/ui/user_face_b_64.png" />
+      <FilePathData Path="studio/com/images/ui/user_face_b_96.png" />
+      <FilePathData Path="studio/com/images/ui/user_face_f_64.png" />
+      <FilePathData Path="studio/com/images/ui/user_face_f_96.png" />
+      <FilePathData Path="studio/com/images/ui/user_face_m_64.png" />
+      <FilePathData Path="studio/com/images/ui/user_face_m_96.png" />
+      <FilePathData Path="studio/com/images/ui/user_face_mask_64.png" />
+      <FilePathData Path="studio/com/images/ui/user_face_mask_96.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>
