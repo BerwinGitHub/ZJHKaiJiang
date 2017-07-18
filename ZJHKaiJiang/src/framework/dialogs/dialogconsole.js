@@ -2,15 +2,15 @@
  * Created by Berwin on 2017/5/28.
  */
 
-var dialogconsole = Dialog.extend({
+var dialogconsole = DialogMask.extend({
 
     cmdHistory: null,
     fontSize: 20, // log的fontSize
     lineHeight: 0, // 先算出以上面的字号
 
-    ctor: function () {
+    ctor: function (paramenters = {}) {
         // this._super(res.studio_debug_test_json);
-        this._super(res.studio_debug_node_debug_json);
+        this._super(res.studio_debug_node_debug_json, paramenters);
         // return;
         //
         this.scrollView = ccui.helper.seekNodeByName(this.node, "scrollView");
