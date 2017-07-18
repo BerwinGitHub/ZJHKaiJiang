@@ -12,7 +12,7 @@ var LoginView = cc.View.extend({
         var btnLogin = ccui.helper.seekNodeByName(data.node, "btn_wechat");
         btnLogin.addClickEventListener(() => {
             cc.app.dialogmgr.dialogConsole.show();
-            this.runAction(cc.sequence(cc.delayTime(5.0), cc.callFunc(() => {
+            this.runAction(cc.sequence(cc.delayTime(3.0), cc.callFunc(() => {
                 cc.app.dialogmgr.dialogConsole.hide();
                 cc.app.viewmgr.replaceView(new HallView());
             })))

@@ -188,24 +188,24 @@ cc.View = cc.Layer.extend({
         this.addChild(this._layers.prompt, this.ZORDER.Prompt);
     },
 
-    addChildToBackground: function (child, localZOrder, tag) {
-        this._layers.background.addChild(child, localZOrder, tag);
+    addChildToBackground: function (child) {
+        this._layers.background.addChild(child);
     },
 
-    addChildToContent: function (child, localZOrder, tag) {
-        this._layers.content.addChild(child, localZOrder, tag);
+    addChildToContent: function (child) {
+        this._layers.content.addChild(child);
     },
 
-    addChildToUi: function (child, localZOrder, tag) {
-        this._layers.ui.addChild(child, localZOrder, tag);
+    addChildToUi: function (child) {
+        this._layers.ui.addChild(child);
     },
 
-    addChildToDialog: function (child, localZOrder, tag) {
-        this._layers.dialog.addChild(child, localZOrder, tag);
+    addChildToDialog: function (child) {
+        this._layers.dialog.addChild(child);
     },
 
-    addChildToPrompt: function (child, localZOrder, tag) {
-        this._layers.prompt.addChild(child, localZOrder, tag);
+    addChildToPrompt: function (child) {
+        this._layers.prompt.addChild(child);
     },
 
     onEnter: function () {
