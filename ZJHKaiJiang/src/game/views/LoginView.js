@@ -55,7 +55,7 @@ var LoginController = cc.ViewController.extend({
     loginSuccess: function () {
         cc.app.toast.makeToask("登录成功", 3).show();
         cc.app.dialogmgr.diaLoading.hide();
-        // cc.app.viewmgr.replaceView(new HallView());
+        cc.app.viewmgr.replaceView(new HallView());
     },
 
     loginFailed: function () {
@@ -66,10 +66,16 @@ var LoginController = cc.ViewController.extend({
     login: function () {
         cc.app.dialogmgr.diaLoading.show();
         // 开始登录
-        var user = {deviceId: "BF35095B-4003-4AF2-BF2E-5B2EBA6BA748"};
-        var td = {action: 0, data: cc.app.proto.bytesify("User", user)};
-        var buffer = cc.app.proto.bytesify("TransferData", td);
-        cc.app.socketmgr.emit(CSMapping.C2S_LOGIN, JSON.stringify(buffer));
+        // var user = {deviceId: "BF35095B-4003-4AF2-BF2E-5B2EBA6BA748"};
+        // var td = {action: 0, data: cc.app.proto.bytesify("User", user)};
+        // var buffer = cc.app.proto.bytesify("TransferData", td);
+        // cc.app.socketmgr.emit(CSMapping.C2S_LOGIN, JSON.stringify(buffer));
+        var i = cc.app.core.randomInt(0, 10);
+        if (i < 5) {
+            this._target.runAction(cc.sequence(cc.delayTime(5.0), cc.callFunc(() => this.loginSuccess())));
+        } else {
+            this._target.runAction(cc.sequence(cc.delayTime(5.0), cc.callFunc(() => this.loginFailed())));
+        }
     },
 
     onEnter: function () {

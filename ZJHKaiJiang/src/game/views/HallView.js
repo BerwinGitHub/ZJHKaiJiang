@@ -16,6 +16,12 @@ var HallView = cc.View.extend({
             cc.app.viewmgr.replaceView(new GameView());
         });
 
+        var btnSetting = ccui.helper.seekNodeByName(data.node, "btn_settings");
+        btnSetting.addClickEventListener(() => {
+            cc.app.viewmgr.replaceView(new LoginView());
+        });
+
+
         // SocketHelper.getInstance().setUpEnvironment("127.0.0.1", "8867");
         // var data = ccs.load(res.studio_HomeScene_node_HomeScene_json);
         // this.addChild(data.node);
