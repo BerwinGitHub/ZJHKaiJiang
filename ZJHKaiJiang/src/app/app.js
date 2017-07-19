@@ -14,10 +14,11 @@ var app = cc.Class.extend({
         this.helper = new helper();
         this.visiblerect = new visiblerect();
         this.dialogmgr = new dialogmgr();
+        this.toast = new Toast();
         this.proto = new proto();
         this.player = new player();
 
         this.viewmgr = ViewManager.getInstance();
-        this.sockets = new SocketUtility(SOCKET_TYPE.SOCKETIO);
+        this.socketmgr = new SocketUtility(SOCKET_TYPE.SOCKETIO);
     },
 });

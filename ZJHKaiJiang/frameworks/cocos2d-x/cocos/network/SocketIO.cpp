@@ -412,7 +412,9 @@ void SIOClientImpl::handshake()
     CCLOGINFO("SIOClientImpl::handshake() called");
 
     std::stringstream pre;
-    pre << "http://" << _uri << "/socket.io/1/?EIO=2&transport=polling&b64=true";
+    /* fixed by tangbowen */
+//    pre << "http://" << _uri << "/socket.io/1/?EIO=2&transport=polling&b64=true";
+    pre << "http://" << _uri << "/socket.io/?transport=polling&b64=0";
 
     HttpRequest* request = new (std::nothrow) HttpRequest();
     request->setUrl(pre.str());

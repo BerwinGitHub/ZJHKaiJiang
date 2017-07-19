@@ -7,7 +7,7 @@
 			<key>studio/com/images/ui/agree.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{515,408},{33,33}}</string>
+				<string>{{555,408},{33,33}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -117,7 +117,7 @@
 			<key>studio/com/images/ui/diamond.png</key>
 			<dict>
 				<key>frame</key>
-				<string>{{552,408},{35,28}}</string>
+				<string>{{592,407},{35,28}}</string>
 				<key>offset</key>
 				<string>{-1,0}</string>
 				<key>rotated</key>
@@ -278,6 +278,17 @@
 				<false />
 				<key>sourceSize</key>
 				<string>{96,96}</string>
+			</dict>
+			<key>studio/com/images/ui/loading.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{515,408},{36,36}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{36,36}</string>
 			</dict>
 		</dict>
 		<key>metadata</key>

@@ -27,6 +27,7 @@
       <FilePathData Path="studio/com/images/ui/user_face_m_96.png" />
       <FilePathData Path="studio/com/images/ui/user_face_mask_64.png" />
       <FilePathData Path="studio/com/images/ui/user_face_mask_96.png" />
+      <FilePathData Path="studio/com/images/ui/loading.png" />
     </ImageFiles>
     <MaxSize Width="1024" Height="1024" />
   </Content>

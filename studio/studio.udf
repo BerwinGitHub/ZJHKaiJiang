@@ -28,23 +28,5 @@
         <LastRunType Value="Mac" />
       </Value>
     </Item>
-    <Item Key="TabsParamsKey">
-      <Value ctype="TabsInfo">
-        <OpenedDocuments>
-          <FilePathData Path="studio/hall/layers/hall.csd" />
-          <FilePathData Path="studio/room/components/seat_left.csd" />
-          <FilePathData Path="studio/room/components/seat_right.csd" />
-          <FilePathData Path="studio/com/images/ui.csi" />
-          <FilePathData Path="studio/login/layers/login.csd" />
-          <FilePathData Path="studio/debug/node/console.csd" />
-          <FilePathData Path="studio/debug/node/debug.csd" />
-          <FilePathData Path="studio/room/images/ui.csi" />
-          <FilePathData Path="studio/room/images/card.csi" />
-          <FilePathData Path="studio/room/components/dialog_menu.csd" />
-          <FilePathData Path="studio/room/layers/room.csd" />
-        </OpenedDocuments>
-        <ActiveDocument Path="studio/room/images/card.csi" />
-      </Value>
-    </Item>
   </Properties>
 </UserData>

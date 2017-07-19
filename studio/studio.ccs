@@ -8,6 +8,7 @@
             <Folder Name="components">
               <Project Name="broadcast.csd" Type="Node" />
               <Project Name="dialog_help.csd" Type="Node" />
+              <Project Name="dialog_loading.csd" Type="Node" />
             </Folder>
             <Folder Name="fonts" />
             <Folder Name="images">
@@ -25,6 +26,7 @@
                 <Image Name="diamond.png" />
                 <Image Name="diamond_2.png" />
                 <Image Name="game_help_content.png" />
+                <Image Name="loading.png" />
                 <Image Name="public_btn_disable.png" />
                 <Image Name="public_btn_normal.png" />
                 <Image Name="public_btn_pressed.png" />

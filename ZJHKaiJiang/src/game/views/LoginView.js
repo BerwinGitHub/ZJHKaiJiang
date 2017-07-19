@@ -11,11 +11,7 @@ var LoginView = cc.View.extend({
 
         var btnLogin = ccui.helper.seekNodeByName(data.node, "btn_wechat");
         btnLogin.addClickEventListener(() => {
-            cc.app.dialogmgr.dialogConsole.show();
-            this.runAction(cc.sequence(cc.delayTime(3.0), cc.callFunc(() => {
-                cc.app.dialogmgr.dialogConsole.hide();
-                cc.app.viewmgr.replaceView(new HallView());
-            })))
+            this._viewController.login();
         });
 
         // SocketHelper.getInstance().setUpEnvironment("127.0.0.1", "8867");
@@ -45,14 +41,35 @@ var LoginView = cc.View.extend({
 
 var LoginController = cc.ViewController.extend({
 
-    ctor: function () {
+    onLogic: function () {
         this._super();
         // 链接服务器
-        cc.keySocketPipe = cc.app.sockets.connect("127.0.0.1", 8867);
+        // cc.keySocketPipe = cc.app.socketmgr.connect("127.0.0.1", 8867);
+        cc.keySocketPipe = cc.app.socketmgr.connect("192.168.1.80", 8867);
+        // cc.app.socketmgr.on(CSMapping.S2C_LOGIN_SUCCESS);
+        // cc.app.socketmgr.on(CSMapping.S2C_LOGIN_FAILED);
+        cc.app.events.onNode(this._target, CSMapping.S2C_LOGIN_SUCCESS, this.loginSuccess);
+        cc.app.events.onNode(this._target, CSMapping.S2C_LOGIN_FAILED, this.loginFailed);
+    },
+
+    loginSuccess: function () {
+        cc.app.toast.makeToask("登录成功", 3).show();
+        cc.app.dialogmgr.diaLoading.hide();
+        // cc.app.viewmgr.replaceView(new HallView());
+    },
+
+    loginFailed: function () {
+        cc.app.toast.makeToask("登录失败", 3).show();
+        cc.app.dialogmgr.diaLoading.hide();
     },
 
     login: function () {
-
+        cc.app.dialogmgr.diaLoading.show();
+        // 开始登录
+        var user = {deviceId: "BF35095B-4003-4AF2-BF2E-5B2EBA6BA748"};
+        var td = {action: 0, data: cc.app.proto.bytesify("User", user)};
+        var buffer = cc.app.proto.bytesify("TransferData", td);
+        cc.app.socketmgr.emit(CSMapping.C2S_LOGIN, JSON.stringify(buffer));
     },
 
     onEnter: function () {

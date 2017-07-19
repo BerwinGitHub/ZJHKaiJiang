@@ -17,6 +17,7 @@ var SocketUtility = cc.Class.extend({
 
     _socketPipes: null,
     _socketType: SOCKET_TYPE.SOCKETIO,
+    _latestKey: null,
 
     ctor: function (type = SOCKET_TYPE.SOCKETIO) {
         this._socketType = type;
@@ -31,6 +32,7 @@ var SocketUtility = cc.Class.extend({
      */
     connect: function (host, port) {
         var key = host + "-" + port;
+        this._latestKey = key;
         var pipe = this._socketPipes[key];
         if (!pipe) {
             if (this._socketType == SOCKET_TYPE.WEBSOCKET) {
@@ -50,6 +52,7 @@ var SocketUtility = cc.Class.extend({
      * @returns {*}
      */
     getSocket: function (key) {
+        key = key ? key : this._latestKey;
         return this._socketPipes[key];
     },
 
@@ -59,7 +62,8 @@ var SocketUtility = cc.Class.extend({
      * @param eventName
      * @param callback 取消这个参数，请用cc.app.events.onNode(this extends cc.Node, <eventName>, function);
      */
-    on: function (key, eventName) {
+    on: function (eventName, key) {
+        key = key ? key : this._latestKey;
         var pipe = this._socketPipes[key];
         if (pipe && pipe.on) {
             pipe.on(eventName);
@@ -71,7 +75,8 @@ var SocketUtility = cc.Class.extend({
      * @param key
      * @param data
      */
-    send: function (key, data) {
+    send: function (data, key) {
+        key = key ? key : this._latestKey;
         var pipe = this._socketPipes[key];
         if (pipe) {
             pipe.send(data);
@@ -84,7 +89,8 @@ var SocketUtility = cc.Class.extend({
      * @param eventName
      * @param data
      */
-    emit: function (key, eventName, data) {
+    emit: function (eventName, data, key) {
+        key = key ? key : this._latestKey;
         var pipe = this._socketPipes[key];
         if (pipe && pipe.emit) {
             pipe.emit(eventName, data);
@@ -96,6 +102,7 @@ var SocketUtility = cc.Class.extend({
      * @param key
      */
     close: function (key) {
+        key = key ? key : this._latestKey;
         var pipe = this._socketPipes[key];
         if (pipe) {
             pipe.close();

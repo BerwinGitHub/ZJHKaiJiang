@@ -5,6 +5,7 @@ var dialogmgr = cc.Class.extend({
 
     ctor: function () {
         this.dialogConsole = this.registerDialog(dialogconsole);
+        this.diaLoading = this.registerDialog(DialogLoading);
     },
 
     /**
@@ -91,6 +92,8 @@ var DialogMask = cc.Node.extend({
             var data = ccs.load(json);
             this.node = data.node;
             this.action = data.action;
+            this.node.setPosition(cc.winSize.width / 2, cc.winSize.height / 2);
+            this.node.runAction(this.action);
             this.addChild(data.node);
         }
     },

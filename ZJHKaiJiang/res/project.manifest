@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1500214318695",
+    "version": "1.0.1500476655374",
     "engineVersion": "3.10",
     "assets": {
         "res/Default/Button_Disable.png": {
@@ -46,11 +46,11 @@
             "compressed": false
         },
         "res/studio/com/images/ui.plist": {
-            "md5": "41606c9239c732898f9e26cb06a025f4",
+            "md5": "de3e9e60b6f1fc55a78e8c71ac5e55e2",
             "compressed": false
         },
         "res/studio/com/images/ui.png": {
-            "md5": "2825e7ece8a9b8c5a825e0e76ade28fc",
+            "md5": "0a8e70232ce2a6edd9fccdd737d12979",
             "compressed": false
         },
         "res/studio/debug/amts/inputHistory.json": {
@@ -90,7 +90,7 @@
             "compressed": false
         },
         "res/studio/hall/layers/hall.json": {
-            "md5": "9d8b1b6778dd40d1a6bbf11843054f3d",
+            "md5": "cc841e3a6b6b59cf6d5fc7ec92153c9b",
             "compressed": false
         },
         "res/studio/login/images/bg/bg_common.jpg": {
@@ -130,11 +130,11 @@
             "compressed": false
         },
         "res/studio/room/images/card.plist": {
-            "md5": "85417f687089284cb83e0fbaf8be3d4e",
+            "md5": "5e21b7298dc6ea3b3cf5e9a998008b87",
             "compressed": false
         },
         "res/studio/room/images/card.png": {
-            "md5": "41e3b1009197edfe40b460b875283366",
+            "md5": "22466a91155162b9cb66f34e17afbe49",
             "compressed": false
         },
         "res/studio/room/images/table.plist": {
@@ -150,15 +150,15 @@
             "compressed": false
         },
         "res/studio/room/images/ui.png": {
-            "md5": "dd82027cdfb20317eb3d4f34520ff35a",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "res/studio/room/layers/room.json": {
-            "md5": "2801564cbffe19e1ffa8ec484bc0d875",
+            "md5": "d41d8cd98f00b204e9800998ecf8427e",
             "compressed": false
         },
         "src/app/app.jsc": {
-            "md5": "1f9442de3170948b26e0e892a4ef2205",
+            "md5": "cc4176a1f4b60efcaba39ed869112937",
             "compressed": false
         },
         "src/app/player.jsc": {
@@ -166,7 +166,7 @@
             "compressed": false
         },
         "src/configs/configs.jsc": {
-            "md5": "6bdf2066671fc2b2139cfd69b74966e5",
+            "md5": "c7ae8a2e08a86d12c9b4eaec1178080f",
             "compressed": false
         },
         "src/framework/components/eventnode.jsc": {
@@ -202,11 +202,11 @@
             "compressed": false
         },
         "src/framework/core/proto.jsc": {
-            "md5": "fa59e402af7f65d1c045e80c3b5fb6a9",
+            "md5": "0f54329bae8799addad88061944e9e5d",
             "compressed": false
         },
         "src/framework/core/prototype.jsc": {
-            "md5": "2340e6a0c2e69909b9b3fb98757b566f",
+            "md5": "dcf6b8e91c1409a2497bcdec1963947d",
             "compressed": false
         },
         "src/framework/core/visiblerect.jsc": {
@@ -214,15 +214,15 @@
             "compressed": false
         },
         "src/framework/dialogs/_dialogmgr.jsc": {
-            "md5": "bcbc5282962e48c4ec90ebbb08c7554c",
+            "md5": "ad7046c9063e2eca754d233eabfb0ada",
             "compressed": false
         },
         "src/framework/dialogs/dialogconsole.jsc": {
-            "md5": "1b30f9e43d29ebf1873515d98de29bbe",
+            "md5": "3fad6445263ee22b19a4f190e0304e0d",
             "compressed": false
         },
         "src/framework/hotfix/HotFixScene.jsc": {
-            "md5": "837fa1c2e84b747d301036e86cd29a6b",
+            "md5": "bdc3039ab5c9769dc06edc0015916dee",
             "compressed": false
         },
         "src/framework/native/ad.jsc": {
@@ -258,7 +258,7 @@
             "compressed": false
         },
         "src/framework/network/socketutility.jsc": {
-            "md5": "ed07e172abfc0b6ab5efa7fd9ce64d21",
+            "md5": "6e016680281538dab4bbbd65782f55a8",
             "compressed": false
         },
         "src/framework/protobuf/bytebuffer.jsc": {
@@ -346,11 +346,11 @@
             "compressed": false
         },
         "src/game/views/LoginView.jsc": {
-            "md5": "c453b4afae9e920ebd323be014483f65",
+            "md5": "86225c40509dc6c1df548a8acc37dbb0",
             "compressed": false
         },
         "src/jsList.jsc": {
-            "md5": "c993a475fd280117eed19c66d5d2e160",
+            "md5": "57db53304a796ee63d839bad849f54c8",
             "compressed": false
         },
         "src/language.jsc": {
@@ -362,7 +362,31 @@
             "compressed": false
         },
         "src/resource.jsc": {
-            "md5": "5891df1658909ec2523fb13709629f65",
+            "md5": "eb1f26d9d8f4ec9dba536501eefc3efc",
+            "compressed": false
+        },
+        "res/proto/transfer.proto": {
+            "md5": "fa6e20311be98fc6237f8c35c2f6df69",
+            "compressed": false
+        },
+        "res/studio/com/components/dialog_loading.json": {
+            "md5": "d0db05da552813da487dd7e5acb19ace",
+            "compressed": false
+        },
+        "res/studio/com/components/dialog_toast.json": {
+            "md5": "315c0c1cdcdde1ec0776ae6c75416e85",
+            "compressed": false
+        },
+        "src/framework/dialogs/toast.jsc": {
+            "md5": "2d42c7ef79467334329747a800321a8f",
+            "compressed": false
+        },
+        "src/game/dialogs/DialogLoading.jsc": {
+            "md5": "442dabfab1566b5183033de59d67e996",
+            "compressed": false
+        },
+        "src/game/common/CSMapping.jsc": {
+            "md5": "be7f73e6c616195d0531d4fbb0918738",
             "compressed": false
         }
     },

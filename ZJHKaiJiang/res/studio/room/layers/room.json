@@ -1164,16 +1164,6 @@
                   "G": 65,
                   "B": 70
                 },
-                "DisabledFileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "studio/room/images/ui/btn_back.png",
-                  "Plist": "studio/room/images/ui.plist"
-                },
-                "PressedFileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "studio/room/images/ui/btn_back.png",
-                  "Plist": "studio/room/images/ui.plist"
-                },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
                   "Path": "studio/room/images/ui/btn_back.png",
@@ -1239,16 +1229,6 @@
                   "G": 65,
                   "B": 70
                 },
-                "DisabledFileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "studio/room/images/ui/btn_help.png",
-                  "Plist": "studio/room/images/ui.plist"
-                },
-                "PressedFileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "studio/room/images/ui/btn_help.png",
-                  "Plist": "studio/room/images/ui.plist"
-                },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
                   "Path": "studio/room/images/ui/btn_help.png",
@@ -1276,8 +1256,8 @@
                   "ScaleY": 0.5
                 },
                 "Position": {
-                  "X": 416.3668,
-                  "Y": 293.7126
+                  "X": 402.3661,
+                  "Y": 293.7125
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1293,10 +1273,10 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": 375.8668,
-                "RightMargin": -456.8668,
-                "TopMargin": -333.7126,
-                "BottomMargin": 253.7126,
+                "LeftMargin": 361.8661,
+                "RightMargin": -442.8661,
+                "TopMargin": -333.7125,
+                "BottomMargin": 253.7125,
                 "Tag": 515,
                 "ActionTag": -615448673,
                 "Size": {
@@ -1389,16 +1369,6 @@
                   "G": 65,
                   "B": 70
                 },
-                "DisabledFileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "studio/room/images/ui/btn_settings.png",
-                  "Plist": "studio/room/images/ui.plist"
-                },
-                "PressedFileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "studio/room/images/ui/btn_settings.png",
-                  "Plist": "studio/room/images/ui.plist"
-                },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
                   "Path": "studio/room/images/ui/btn_settings.png",
@@ -1489,7 +1459,7 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "LeftMargin": -624.5262,
+                "LeftMargin": -624.5263,
                 "RightMargin": 124.5263,
                 "TopMargin": -306.7735,
                 "BottomMargin": 276.7735,

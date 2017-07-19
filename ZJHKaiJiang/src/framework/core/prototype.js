@@ -186,6 +186,8 @@ cc.View = cc.Layer.extend({
         // Prompt
         this._layers.prompt = new cc.Layer();
         this.addChild(this._layers.prompt, this.ZORDER.Prompt);
+        //
+        this._viewController && this._viewController.onLogic();
     },
 
     addChildToBackground: function (child) {
@@ -230,6 +232,10 @@ cc.ViewController = cc.Node.extend({
     ctor: function (target) {
         this._super();
         this._target = target;
+    },
+
+    onLogic: function () {
+
     },
 
     onEnter: function () {

@@ -1169,16 +1169,6 @@
               "G": 65,
               "B": 70
             },
-            "DisabledFileData": {
-              "Type": "MarkedSubImage",
-              "Path": "studio/hall/images/ui/btn_hall_settings.png",
-              "Plist": "studio/hall/images/ui.plist"
-            },
-            "PressedFileData": {
-              "Type": "MarkedSubImage",
-              "Path": "studio/hall/images/ui/btn_hall_settings.png",
-              "Plist": "studio/hall/images/ui.plist"
-            },
             "NormalFileData": {
               "Type": "MarkedSubImage",
               "Path": "studio/hall/images/ui/btn_hall_settings.png",
@@ -1206,7 +1196,7 @@
               "ScaleY": 0.5
             },
             "Position": {
-              "X": 590.8402,
+              "X": 590.84,
               "Y": 299.0562
             },
             "Scale": {
@@ -1223,8 +1213,8 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": 550.3402,
-            "RightMargin": -631.3402,
+            "LeftMargin": 550.34,
+            "RightMargin": -631.34,
             "TopMargin": -354.5562,
             "BottomMargin": 243.5562,
             "Tag": 1282,
@@ -1243,16 +1233,6 @@
               "R": 65,
               "G": 65,
               "B": 70
-            },
-            "DisabledFileData": {
-              "Type": "MarkedSubImage",
-              "Path": "studio/hall/images/ui/btn_hall_help.png",
-              "Plist": "studio/hall/images/ui.plist"
-            },
-            "PressedFileData": {
-              "Type": "MarkedSubImage",
-              "Path": "studio/hall/images/ui/btn_hall_help.png",
-              "Plist": "studio/hall/images/ui.plist"
             },
             "NormalFileData": {
               "Type": "MarkedSubImage",
@@ -1319,16 +1299,6 @@
               "G": 65,
               "B": 70
             },
-            "DisabledFileData": {
-              "Type": "MarkedSubImage",
-              "Path": "studio/hall/images/ui/btn_hall_share.png",
-              "Plist": "studio/hall/images/ui.plist"
-            },
-            "PressedFileData": {
-              "Type": "MarkedSubImage",
-              "Path": "studio/hall/images/ui/btn_hall_share.png",
-              "Plist": "studio/hall/images/ui.plist"
-            },
             "NormalFileData": {
               "Type": "MarkedSubImage",
               "Path": "studio/hall/images/ui/btn_hall_share.png",
@@ -1394,16 +1364,6 @@
               "G": 65,
               "B": 70
             },
-            "DisabledFileData": {
-              "Type": "MarkedSubImage",
-              "Path": "studio/hall/images/ui/btn_hall_history.png",
-              "Plist": "studio/hall/images/ui.plist"
-            },
-            "PressedFileData": {
-              "Type": "MarkedSubImage",
-              "Path": "studio/hall/images/ui/btn_hall_history.png",
-              "Plist": "studio/hall/images/ui.plist"
-            },
             "NormalFileData": {
               "Type": "MarkedSubImage",
               "Path": "studio/hall/images/ui/btn_hall_history.png",
@@ -1468,16 +1428,6 @@
               "R": 65,
               "G": 65,
               "B": 70
-            },
-            "DisabledFileData": {
-              "Type": "MarkedSubImage",
-              "Path": "studio/hall/images/ui/btn_hall_mail.png",
-              "Plist": "studio/hall/images/ui.plist"
-            },
-            "PressedFileData": {
-              "Type": "MarkedSubImage",
-              "Path": "studio/hall/images/ui/btn_hall_mail.png",
-              "Plist": "studio/hall/images/ui.plist"
             },
             "NormalFileData": {
               "Type": "MarkedSubImage",
