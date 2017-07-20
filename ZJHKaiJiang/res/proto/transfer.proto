@@ -4,23 +4,15 @@ option java_outer_classname = "Protobufs";
 
 // repeated string names = 1;
 
-enum Action {
-	ACTION_CONNECT		=	0;	// socket连接
-	ACTION_CLOSED		=	1;	// socket关闭
-	ACTION_LOGIN		=	2;	// 登录
-	ACTION_MATCH		=	3;	// 匹配
-	ACTION_MATCH_CANCEL	=	4;	// 匹配取消
-	ACTION_MATCH_FAILED	=	5;	// 匹配失败
-	ACTION_MATCHED		=	6;	// 匹配到了
-	ACTION_GAMING		=	7;	// 游戏中
-	ACTION_GAMEND		=	8;	// 游戏结束
-}
+//enum Action {
+//	ACTION_CONNECT		=	0;	// socket连接
+//}
 
 // 数据传输原型
-message TransferData {
-	Action	action		= 1; // 数据类型(动作)
-    bytes data			= 2; // 传输的二进制数据
-}
+//message TransferData {
+//	Action	action		= 1; // 数据类型(动作)
+//    bytes data			= 2; // 传输的二进制数据
+//}
 
 message User {
 	string objectId					=	1;
@@ -30,25 +22,12 @@ message User {
 	int32 totalInning				=	5;
 	int32 winInning					=	6;
 	int32 diamond					=	7;
-	int32 coin						=	8;	
+	int32 coin						=	8;
 	string deviceId					=	9;
 	int32 id						=	10;
 	string authData					=	11;
 	uint64 createdAt				=	12;
 	uint64 updatedAt				=	13;
 	bool specialMode				=	14; // for test
-	
-}
-
-message Login {
-	User user = 1;		// 用户信息
-}
-
-message Match {
-	User enemy = 1;	// 敌人
-}
-
-message Gaming {
-	int32 ex = 1;
-	int32 ey = 2;
+	string headerUrl				=	15;
 }

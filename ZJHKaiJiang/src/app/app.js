@@ -19,6 +19,13 @@ var app = cc.Class.extend({
         this.player = new player();
 
         this.viewmgr = ViewManager.getInstance();
+
+        // Socket
         this.socketmgr = new SocketUtility(SOCKET_TYPE.SOCKETIO);
+        this.socketmgr.connect("192.168.1.80", 8868);
+        var mapping = CSMapping.S2C;
+        for (var key in mapping) {
+            this.socketmgr.on(mapping[key]);
+        }
     },
 });

@@ -14,6 +14,8 @@ var player = cc.Class.extend({
      */
     facebookToken: null,
 
+    user: null,
+
     ctor: function () {
 
     },

@@ -59,4 +59,28 @@ var core = cc.Class.extend({
                 table.push(i);
         return table[Math.floor(Math.random() * table.length)];
     },
+    /**
+     * Convert an Uint8Array into a string.
+     *
+     * @returns {String}
+     */
+    uint8ArrayToString: function (uint8array) {
+        // or [].slice.apply(arr)
+        var utf8 = Array.from(uint8array).map(function (item) {
+            return String.fromCharCode(item);
+        }).join('');
+        return decodeURIComponent(escape(utf8));
+    },
+
+    /**
+     * Convert a string into a Uint8Array.
+     *
+     * @returns {Uint8Array}
+     */
+    uint8ArrayFromString: function (str) {
+        var utf8 = unescape(encodeURIComponent(str));
+        return new Uint8Array(utf8.split('').map(function (item) {
+            return item.charCodeAt();
+        }));
+    }
 });

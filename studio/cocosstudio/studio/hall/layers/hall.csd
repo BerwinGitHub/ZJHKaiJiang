@@ -85,14 +85,14 @@
                         <FileData Type="MarkedSubImage" Path="studio/com/images/ui/coin.png" Plist="studio/com/images/ui.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="txt_coin" ActionTag="406534713" Tag="1688" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="40.0000" RightMargin="65.0000" TopMargin="1.0000" BottomMargin="1.0000" FontSize="20" LabelText="2000" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="45.0000" Y="23.0000" />
+                      <AbstractNodeData Name="txt_coin" ActionTag="406534713" Tag="1688" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="40.0000" RightMargin="10.0000" TopMargin="1.0000" BottomMargin="1.0000" IsCustomSize="True" FontSize="20" LabelText="0" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="100.0000" Y="23.0000" />
                         <AnchorPoint ScaleY="0.5000" />
                         <Position X="40.0000" Y="12.5000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="165" B="0" />
                         <PrePosition X="0.2667" Y="0.5000" />
-                        <PreSize X="0.3000" Y="0.9200" />
+                        <PreSize X="0.6667" Y="0.9200" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -119,14 +119,14 @@
                         <FileData Type="MarkedSubImage" Path="studio/com/images/ui/diamond_2.png" Plist="studio/com/images/ui.plist" />
                         <BlendFunc Src="1" Dst="771" />
                       </AbstractNodeData>
-                      <AbstractNodeData Name="txt_diamond" ActionTag="1834178148" Tag="1691" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="40.0000" RightMargin="98.0000" TopMargin="1.0000" BottomMargin="1.0000" FontSize="20" LabelText="5" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="12.0000" Y="23.0000" />
+                      <AbstractNodeData Name="txt_diamond" ActionTag="1834178148" Tag="1691" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="40.0000" RightMargin="10.0000" TopMargin="1.0000" BottomMargin="1.0000" IsCustomSize="True" FontSize="20" LabelText="0" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="100.0000" Y="23.0000" />
                         <AnchorPoint ScaleY="0.5000" />
                         <Position X="40.0000" Y="12.5000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="165" B="0" />
                         <PrePosition X="0.2667" Y="0.5000" />
-                        <PreSize X="0.0800" Y="0.9200" />
+                        <PreSize X="0.6667" Y="0.9200" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>
@@ -148,8 +148,6 @@
                     <PrePosition X="0.8195" Y="0.5262" />
                     <PreSize X="0.1370" Y="0.5882" />
                     <TextColor A="255" R="65" G="65" B="70" />
-                    <DisabledFileData Type="MarkedSubImage" Path="studio/com/images/ui/btn_charge.png" Plist="studio/com/images/ui.plist" />
-                    <PressedFileData Type="MarkedSubImage" Path="studio/com/images/ui/btn_charge.png" Plist="studio/com/images/ui.plist" />
                     <NormalFileData Type="MarkedSubImage" Path="studio/com/images/ui/btn_charge.png" Plist="studio/com/images/ui.plist" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />

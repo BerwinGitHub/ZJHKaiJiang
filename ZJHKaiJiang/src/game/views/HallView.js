@@ -8,6 +8,7 @@ var HallView = cc.View.extend({
         this._super();
         var data = ccs.load(res.studio_hall_layers_hall_json);
         this.addChildToCenter(data.node);
+        this._initUserInfo(data.node);
 
         var listView = ccui.helper.seekNodeByName(data.node, "listView");
         listView.addClickEventListener((data, index) => {
@@ -34,6 +35,21 @@ var HallView = cc.View.extend({
         //
         // cc.app.dialogmgr.dialogconsole.showWithGlobal();
 
+    },
+
+    _initUserInfo: function (node) {
+        //
+        var name = ccui.helper.seekNodeByName(node, "user_name");
+        name.string = cc.app.player.user.username;
+        // id
+        var id = ccui.helper.seekNodeByName(node, "user_id");
+        id.string = cc.app.player.user.id;
+        // coin
+        var coin = ccui.helper.seekNodeByName(node, "txt_coin");
+        coin.string = cc.app.player.user.coin;
+        // id
+        var diamond = ccui.helper.seekNodeByName(node, "txt_diamond");
+        diamond.string = cc.app.player.user.diamond;
     },
 
     onEnter: function () {

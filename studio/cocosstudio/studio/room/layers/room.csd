@@ -302,8 +302,6 @@
                 <PrePosition />
                 <PreSize X="0.0000" Y="0.0000" />
                 <TextColor A="255" R="65" G="65" B="70" />
-                <DisabledFileData Type="MarkedSubImage" Path="studio/room/images/ui/btn_message.png" Plist="studio/room/images/ui.plist" />
-                <PressedFileData Type="MarkedSubImage" Path="studio/room/images/ui/btn_message.png" Plist="studio/room/images/ui.plist" />
                 <NormalFileData Type="MarkedSubImage" Path="studio/room/images/ui/btn_message.png" Plist="studio/room/images/ui.plist" />
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />

@@ -89,6 +89,16 @@ var proto = cc.Class.extend({
     },
 
     /**
+     * 解析从服务器发来的数组字符串
+     * @param data
+     */
+    parseFromArrayString: function (messageName, data) {
+        var buffer = JSON.parse(data);
+        var pBuf = new Uint8Array(buffer);
+        return this.parse(messageName, pBuf);
+    },
+
+    /**
      * 得到MessageType的枚举类
      * @returns {*}
      */

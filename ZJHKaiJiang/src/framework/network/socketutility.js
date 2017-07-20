@@ -1,13 +1,6 @@
 /**
  * Created by Berwin on 2017/4/5.
  */
-var SOCKET_EVENT = {
-    OPENE: "socket_open", // soccket 打开
-    MESSAGE: "socket_message", // socket 收到Message
-    ERROR: "socket_error", // socket 报错
-    CLOSE: "socket_close", // socket 关闭
-};
-
 var SOCKET_TYPE = {
     SOCKETIO: 0,
     WEBSOCKET: 1,

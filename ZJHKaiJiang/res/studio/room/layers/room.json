@@ -1294,16 +1294,6 @@
                   "G": 65,
                   "B": 70
                 },
-                "DisabledFileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "studio/room/images/ui/btn_message.png",
-                  "Plist": "studio/room/images/ui.plist"
-                },
-                "PressedFileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "studio/room/images/ui/btn_message.png",
-                  "Plist": "studio/room/images/ui.plist"
-                },
                 "NormalFileData": {
                   "Type": "MarkedSubImage",
                   "Path": "studio/room/images/ui/btn_message.png",
