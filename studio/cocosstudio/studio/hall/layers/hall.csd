@@ -36,28 +36,28 @@
                     <FileData Type="MarkedSubImage" Path="studio/com/images/ui/user_face_m_96.png" Plist="studio/com/images/ui.plist" />
                     <BlendFunc Src="1" Dst="771" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="user_name" ActionTag="881085193" Tag="1684" IconVisible="False" LeftMargin="123.0963" RightMargin="324.9037" TopMargin="35.9226" BottomMargin="77.0774" FontSize="20" LabelText="游客2206" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="85.0000" Y="23.0000" />
+                  <AbstractNodeData Name="user_name" ActionTag="881085193" Tag="1684" IconVisible="False" LeftMargin="123.0963" RightMargin="299.9037" TopMargin="35.9226" BottomMargin="77.0774" IsCustomSize="True" FontSize="20" LabelText="游客00001" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="110.0000" Y="23.0000" />
                     <AnchorPoint ScaleY="0.5000" />
                     <Position X="123.0963" Y="88.5774" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition X="0.2309" Y="0.6513" />
-                    <PreSize X="0.1595" Y="0.1691" />
+                    <PreSize X="0.2064" Y="0.1691" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
                   <AbstractNodeData Name="user_id_txt" ActionTag="1312137018" Tag="1727" IconVisible="False" LeftMargin="123.0963" RightMargin="383.9037" TopMargin="72.9212" BottomMargin="40.0788" FontSize="20" LabelText="ID:" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="26.0000" Y="23.0000" />
                     <Children>
-                      <AbstractNodeData Name="user_id" ActionTag="-785604850" Tag="1728" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="30.0000" RightMargin="-71.0000" FontSize="20" LabelText="120543" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                        <Size X="67.0000" Y="23.0000" />
+                      <AbstractNodeData Name="user_id" ActionTag="-785604850" Tag="1728" IconVisible="False" PositionPercentYEnabled="True" LeftMargin="30.0000" RightMargin="-84.0000" IsCustomSize="True" FontSize="20" LabelText="120543" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                        <Size X="80.0000" Y="23.0000" />
                         <AnchorPoint ScaleY="0.5000" />
                         <Position X="30.0000" Y="11.5000" />
                         <Scale ScaleX="1.0000" ScaleY="1.0000" />
                         <CColor A="255" R="255" G="255" B="255" />
                         <PrePosition X="1.1538" Y="0.5000" />
-                        <PreSize X="2.5769" Y="1.0000" />
+                        <PreSize X="3.0769" Y="1.0000" />
                         <OutlineColor A="255" R="255" G="0" B="0" />
                         <ShadowColor A="255" R="110" G="110" B="110" />
                       </AbstractNodeData>

@@ -178,8 +178,9 @@
                     "ctype": "SpriteObjectData"
                   },
                   {
+                    "IsCustomSize": true,
                     "FontSize": 20,
-                    "LabelText": "游客2206",
+                    "LabelText": "游客00001",
                     "OutlineColor": {
                       "G": 0,
                       "B": 0
@@ -209,17 +210,17 @@
                       "Y": 0.6513
                     },
                     "PreSize": {
-                      "X": 0.1595,
+                      "X": 0.2064,
                       "Y": 0.1691
                     },
                     "LeftMargin": 123.0963,
-                    "RightMargin": 324.9037,
+                    "RightMargin": 299.9037,
                     "TopMargin": 35.9226,
                     "BottomMargin": 77.0774,
                     "Tag": 1684,
                     "ActionTag": 881085193,
                     "Size": {
-                      "X": 85.0,
+                      "X": 110.0,
                       "Y": 23.0
                     },
                     "Name": "user_name",
@@ -267,6 +268,7 @@
                     "Tag": 1727,
                     "Children": [
                       {
+                        "IsCustomSize": true,
                         "FontSize": 20,
                         "LabelText": "120543",
                         "OutlineColor": {
@@ -299,15 +301,15 @@
                           "Y": 0.5
                         },
                         "PreSize": {
-                          "X": 2.5769,
+                          "X": 3.0769,
                           "Y": 1.0
                         },
                         "LeftMargin": 30.0,
-                        "RightMargin": -71.0,
+                        "RightMargin": -84.0,
                         "Tag": 1728,
                         "ActionTag": -785604850,
                         "Size": {
-                          "X": 67.0,
+                          "X": 80.0,
                           "Y": 23.0
                         },
                         "Name": "user_id",

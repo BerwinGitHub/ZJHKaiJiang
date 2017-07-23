@@ -60,15 +60,12 @@ var LoginController = cc.ViewController.extend({
     },
 
     login: function () {
-        // cc.app.dialogmgr.diaLoading.show();
+        cc.app.dialogmgr.diaLoading.show();
         // 开始登录
-        var user = {deviceId: "BF35095B-4003-4AF2-BF2E-5B2EBA6BA748"};
+        var user = {deviceId: "BF35095B-4003-4AF2-BF2E-5B2EBA6BA748", username: "游客0001"};
         var buffer = cc.app.proto.bytesify("User", user);
-        console.log(JSON.stringify(buffer));
-        var str = cc.app.core.uint8ArrayToString(buffer);
-        console.log(str);
-        console.log(JSON.stringify(cc.app.core.uint8ArrayFromString(str)));
-        // cc.app.socketmgr.emit(CSMapping.C2S.LOGIN, JSON.stringify(buffer));
+        // console.log(JSON.stringify(buffer));
+        cc.app.socketmgr.emit(CSMapping.C2S.LOGIN, JSON.stringify(buffer));
 
         // var i = cc.app.core.randomInt(0, 10);
         // if (i < 5) {

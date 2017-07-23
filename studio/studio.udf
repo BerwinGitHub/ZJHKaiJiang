@@ -28,5 +28,15 @@
         <LastRunType Value="Mac" />
       </Value>
     </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="studio/room/images/card.csi" />
+          <FilePathData Path="studio/com/components/dialog_loading.csd" />
+          <FilePathData Path="studio/hall/layers/hall.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="studio/hall/layers/hall.csd" />
+      </Value>
+    </Item>
   </Properties>
 </UserData>
