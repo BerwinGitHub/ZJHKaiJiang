@@ -75,7 +75,9 @@ cc.game.onStart = function () {
     updateScene.runWithCallback("res/version.manifest", () => {
         cc.app = app = new app();
     }, () => {
-        cc.app.viewmgr.runWithView(new LoginView());
+        cc.app.viewmgr.runWithView(() => {
+            return new LoginView();
+        }, new ZJHGameController());
     });
 };
 cc.game.run();

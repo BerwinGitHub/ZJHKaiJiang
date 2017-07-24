@@ -31,3 +31,17 @@ message User {
 	bool specialMode				=	14; // for test
 	string headerUrl				=	15;
 }
+
+message Seat {
+	int32 seatID					=	1;
+	int32 callCoin					=	2;
+	User user						=	3;
+}
+
+message Table {
+	int32 tableID					=	1;
+	repeated Seat seats				=	2;
+	int32 minBet					=	3;
+	int32 maxBet					=	4;
+	int32 round						=	5;
+}

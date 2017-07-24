@@ -2,7 +2,7 @@
     "packageUrl": "http://192.168.1.80:9918/HotFixer",
     "remoteManifestUrl": "http://192.168.1.80:9918/HotFixer/res/project.manifest",
     "remoteVersionUrl": "http://192.168.1.80:9918/HotFixer/res/version.manifest",
-    "version": "1.0.1500561293027",
+    "version": "1.0.1500914434319",
     "engineVersion": "3.10",
     "assets": {
         "res/Default/Button_Disable.png": {
@@ -90,7 +90,7 @@
             "compressed": false
         },
         "res/studio/hall/layers/hall.json": {
-            "md5": "cc841e3a6b6b59cf6d5fc7ec92153c9b",
+            "md5": "1cb4c408aa9b4b00597eeee955ac6bf2",
             "compressed": false
         },
         "res/studio/login/images/bg/bg_common.jpg": {
@@ -154,15 +154,15 @@
             "compressed": false
         },
         "res/studio/room/layers/room.json": {
-            "md5": "d925b8ab8acc10ed68a2aac245ad8939",
+            "md5": "d1df01966d1701015dec8c30401bb41d",
             "compressed": false
         },
         "src/app/app.jsc": {
-            "md5": "139d0a516d1150a67a9ac122353cbed4",
+            "md5": "383dfda3ceb47b5b61c9f88e59afa68c",
             "compressed": false
         },
         "src/app/player.jsc": {
-            "md5": "ccb7db13dfd3e70cfdaec66da042e3a9",
+            "md5": "498a20d4147c91ca6083233334cd4b6b",
             "compressed": false
         },
         "src/configs/configs.jsc": {
@@ -182,7 +182,7 @@
             "compressed": false
         },
         "src/framework/core/core.jsc": {
-            "md5": "c7afc824cb51204d55e22c6f425b0edd",
+            "md5": "41f2bb4e08b97480f58a7d3b646e27d0",
             "compressed": false
         },
         "src/framework/core/datas.jsc": {
@@ -202,7 +202,7 @@
             "compressed": false
         },
         "src/framework/core/proto.jsc": {
-            "md5": "0f54329bae8799addad88061944e9e5d",
+            "md5": "ea0ea063166972545804e08c87f0cfa1",
             "compressed": false
         },
         "src/framework/core/prototype.jsc": {
@@ -278,7 +278,7 @@
             "compressed": false
         },
         "src/framework/view/viewmanager.jsc": {
-            "md5": "e38c9105ff7120292083f3f42f4f60bc",
+            "md5": "fe61d7961d4cd62988e651be6eeae6c9",
             "compressed": false
         },
         "src/game/datas/ad.jsc": {
@@ -338,7 +338,7 @@
             "compressed": false
         },
         "src/game/views/HallView.jsc": {
-            "md5": "ef303d4368da1fa664193b591fc76a61",
+            "md5": "836bd363de1ce9b6f8a44f9398ad0507",
             "compressed": false
         },
         "src/game/views/HomeView.jsc": {
@@ -346,11 +346,11 @@
             "compressed": false
         },
         "src/game/views/LoginView.jsc": {
-            "md5": "679ca8773b33406c47a885449e26eb47",
+            "md5": "6d18965aa3c8c730d84b38418bffe1e0",
             "compressed": false
         },
         "src/jsList.jsc": {
-            "md5": "57db53304a796ee63d839bad849f54c8",
+            "md5": "28545875565b7ad120bd09ff3747b8a9",
             "compressed": false
         },
         "src/language.jsc": {
@@ -366,7 +366,7 @@
             "compressed": false
         },
         "res/proto/transfer.proto": {
-            "md5": "4737d576a8cdaf23bfe7684f0351b848",
+            "md5": "d5836600e7d2863b0e391733cb0d3ebd",
             "compressed": false
         },
         "res/studio/com/components/dialog_loading.json": {
@@ -386,11 +386,19 @@
             "compressed": false
         },
         "src/game/common/CSMapping.jsc": {
-            "md5": "38b582a81a0f4f075378e9e0f586fd4c",
+            "md5": "64fe7486b323be013b50369b8abd100f",
             "compressed": false
         },
         "src/game/socket/socket.jsc": {
             "md5": "7a80c62bbc656c5e686b634b204e3ea0",
+            "compressed": false
+        },
+        "src/framework/view/gamecontroller.jsc": {
+            "md5": "758066d8c61be48a3442a62ab348a1f1",
+            "compressed": false
+        },
+        "src/game/controller/ZJHGameController.jsc": {
+            "md5": "b175891cab5ab29cfee7d1d4ce9dc609",
             "compressed": false
         }
     },

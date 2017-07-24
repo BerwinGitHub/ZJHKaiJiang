@@ -10,6 +10,11 @@ var ViewManager = {
     _gameScene: null,
 
     /**
+     * 游戏控制器，主要控制逻辑
+     */
+    _gameController: null,
+
+    /**
      * 游戏的根View
      */
     _rootView: null,
@@ -19,14 +24,19 @@ var ViewManager = {
      */
     _viewStack: null,
 
-    runWithView: function (view) {
+    runWithView: function (getView, gameController = null) {
         if (!this._gameScene) {
             this._viewStack = [];
             this._gameScene = new GameScene();
             this._rootView = this._gameScene.getRootView();
+            this._gameController = gameController;
+            this._rootView.addChild(this._gameController);
             cc.director.runScene(this._gameScene);
+            this._gameController && this._gameController.onStarted();
         }
+        var view = getView();
         this._rootView.addChild(view);
+        this._gameController && this._gameController.onReplaceView(null, view);
         this._viewStack.push(view);
     },
 
@@ -37,6 +47,8 @@ var ViewManager = {
      */
     replaceView: function (view, previousViewAction = null) {
         this._rootView.addChild(view);
+        var lastView = this._viewStack.length < 1 ? null : this._viewStack[this._viewStack.length - 1];
+        this._gameController && this._gameController.onReplaceView(lastView, view);
         this.popView(previousViewAction); // 弹出上个界面
         this._viewStack.push(view);
     },
@@ -48,6 +60,8 @@ var ViewManager = {
      */
     pushView: function (view, previousViewAction = null) {
         this._rootView.addChild(view);
+        var lastView = this._viewStack.length < 1 ? null : this._viewStack[this._viewStack.length - 1];
+        this._gameController && this._gameController.onPushView(lastView, view);
         this._viewStack.push(view);
         var previousView = this._viewStack[this._viewStack.length - 1];
         previousViewAction && previousView && previousView.runAction(previousViewAction);
@@ -59,6 +73,7 @@ var ViewManager = {
      */
     popView: function (viewAction = null) {
         var previousView = this._viewStack.pop();
+        this._gameController && this._gameController.onPopView(previousView);
         var action = viewAction ? cc.sequence(viewAction, cc.removeSelf()) : cc.removeSelf();
         previousView && previousView.runAction(action);
     },
