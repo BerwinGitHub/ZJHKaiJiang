@@ -13,7 +13,7 @@ var HttpSprite = cc.Sprite.extend({
 
     loadSpriteByUrl: function (imgUrl) {
         this._imgUrl = imgUrl;
-        cc.loader.loadImg(this._imgUrl, {isCrossOrigin: false}, (err, image) => {
+        cc.loader.loadImg(this._imgUrl, {isCrossOrigin: true}, (err, image) => {
             this.imageLoadFinish(err, image);
         });
     },
@@ -28,9 +28,16 @@ var HttpSprite = cc.Sprite.extend({
             cc.app.log.e("http sprite load img err:" + err);
             return;
         }
-        var spr = new cc.Sprite(image);
-        var texture = spr.getTexture();
-        this.initWithTexture(texture);
+        var texture = null;
+        if (cc.sys.isNative) {
+            texture = image;
+        } else {
+            var texture2d = new cc.Texture2D();
+            texture2d.initWithElement(image);
+            texture2d.handleLoadedTexture();
+            texture = texture2d;
+        }
+        texture && this.setTexture(texture);
     },
 
     onEnter: function () {

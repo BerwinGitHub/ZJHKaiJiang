@@ -736,7 +736,7 @@
               {
                 "IsBounceEnabled": true,
                 "ScrollDirectionType": 0,
-                "ClipAble": true,
+                "ClipAble": false,
                 "BackColorAlpha": 102,
                 "SingleColor": {
                   "R": 150,
@@ -809,13 +809,14 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.0,
-                      "Y": 0.0
+                      "Y": 0.1111
                     },
                     "PreSize": {
                       "X": 0.0781,
-                      "Y": 1.0
+                      "Y": 0.8889
                     },
                     "RightMargin": 1180.0,
+                    "BottomMargin": 50.0,
                     "Tag": 1259,
                     "ActionTag": -2030552991,
                     "Size": {
@@ -832,16 +833,6 @@
                       "R": 65,
                       "G": 65,
                       "B": 70
-                    },
-                    "DisabledFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/hall/images/ui/item_quick_start.png",
-                      "Plist": "studio/hall/images/ui.plist"
-                    },
-                    "PressedFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/hall/images/ui/item_quick_start.png",
-                      "Plist": "studio/hall/images/ui.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
@@ -863,6 +854,7 @@
                     },
                     "ShadowOffsetX": 2.0,
                     "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -879,14 +871,15 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.2102,
-                      "Y": 0.5
+                      "Y": 0.5556
                     },
                     "PreSize": {
                       "X": 0.2641,
-                      "Y": 1.0
+                      "Y": 0.8889
                     },
                     "LeftMargin": 100.0,
                     "RightMargin": 842.0,
+                    "BottomMargin": 50.0,
                     "Tag": 1256,
                     "ActionTag": -2019685933,
                     "ZOrder": 1,
@@ -927,14 +920,15 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.3422,
-                      "Y": 0.0
+                      "Y": 0.1111
                     },
                     "PreSize": {
                       "X": 0.0391,
-                      "Y": 1.0
+                      "Y": 0.8889
                     },
                     "LeftMargin": 438.0,
                     "RightMargin": 792.0,
+                    "BottomMargin": 50.0,
                     "Tag": 1260,
                     "ActionTag": 1069580070,
                     "ZOrder": 2,
@@ -952,16 +946,6 @@
                       "R": 65,
                       "G": 65,
                       "B": 70
-                    },
-                    "DisabledFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/hall/images/ui/item_join_room.png",
-                      "Plist": "studio/hall/images/ui.plist"
-                    },
-                    "PressedFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/hall/images/ui/item_join_room.png",
-                      "Plist": "studio/hall/images/ui.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
@@ -983,6 +967,7 @@
                     },
                     "ShadowOffsetX": 2.0,
                     "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -999,14 +984,15 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.5133,
-                      "Y": 0.5
+                      "Y": 0.5556
                     },
                     "PreSize": {
                       "X": 0.2641,
-                      "Y": 1.0
+                      "Y": 0.8889
                     },
                     "LeftMargin": 488.0,
                     "RightMargin": 454.0,
+                    "BottomMargin": 50.0,
                     "Tag": 1257,
                     "ActionTag": -1988434037,
                     "ZOrder": 3,
@@ -1047,14 +1033,15 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.6453,
-                      "Y": 0.0
+                      "Y": 0.1111
                     },
                     "PreSize": {
                       "X": 0.0391,
-                      "Y": 1.0
+                      "Y": 0.8889
                     },
                     "LeftMargin": 826.0,
                     "RightMargin": 404.0,
+                    "BottomMargin": 50.0,
                     "Tag": 1261,
                     "ActionTag": -1912419637,
                     "ZOrder": 4,
@@ -1072,16 +1059,6 @@
                       "R": 65,
                       "G": 65,
                       "B": 70
-                    },
-                    "DisabledFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/hall/images/ui/item_create_room.png",
-                      "Plist": "studio/hall/images/ui.plist"
-                    },
-                    "PressedFileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/hall/images/ui/item_create_room.png",
-                      "Plist": "studio/hall/images/ui.plist"
                     },
                     "NormalFileData": {
                       "Type": "MarkedSubImage",
@@ -1103,6 +1080,7 @@
                     },
                     "ShadowOffsetX": 2.0,
                     "ShadowOffsetY": -2.0,
+                    "TouchEnable": true,
                     "AnchorPoint": {
                       "ScaleX": 0.5,
                       "ScaleY": 0.5
@@ -1119,14 +1097,15 @@
                     "IconVisible": false,
                     "PrePosition": {
                       "X": 0.8164,
-                      "Y": 0.5
+                      "Y": 0.5556
                     },
                     "PreSize": {
                       "X": 0.2641,
-                      "Y": 1.0
+                      "Y": 0.8889
                     },
                     "LeftMargin": 876.0,
                     "RightMargin": 66.0,
+                    "BottomMargin": 50.0,
                     "Tag": 1258,
                     "ActionTag": 1802702414,
                     "ZOrder": 5,

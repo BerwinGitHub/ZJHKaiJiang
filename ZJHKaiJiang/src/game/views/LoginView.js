@@ -41,10 +41,14 @@ var LoginView = cc.View.extend({
 
 var LoginController = cc.ViewController.extend({
 
+    _error: null,
+
     onLogic: function () {
         this._super();
-        cc.app.events.onNode(this._target, CSMapping.S2C.LOGIN_SUCCESS, this.loginSuccess);
-        cc.app.events.onNode(this._target, CSMapping.S2C.LOGIN_FAILED, this.loginFailed);
+        this._error = false;
+        cc.app.events.onNode(this._target, CSMapping.S2C.LOGIN_SUCCESS, (d) => this.loginSuccess(d));
+        cc.app.events.onNode(this._target, CSMapping.S2C.LOGIN_FAILED, (d) => this.loginFailed(d));
+        cc.app.events.onNode(this._target, "error", () => this.error());
     },
 
     loginSuccess: function (data) {
@@ -54,12 +58,23 @@ var LoginController = cc.ViewController.extend({
         cc.app.viewmgr.replaceView(new HallView());
     },
 
+    error: function () {
+        this._error = true;
+        cc.app.toast.makeToask("网络错误", 3).show();
+    },
+
     loginFailed: function (data) {
+        cc.app.player.user = null;
         cc.app.toast.makeToask("登录失败", 3).show();
         cc.app.dialogmgr.diaLoading.hide();
+        cc.app.viewmgr.replaceView(new HallView());
     },
 
     login: function () {
+        if (this._error) {
+            this.loginFailed(null);
+            return;
+        }
         cc.app.dialogmgr.diaLoading.show();
         // 开始登录
         var user = {deviceId: "BF35095B-4003-4AF2-BF2E-5B2EBA6BA748", username: "游客0001"};

@@ -5,39 +5,35 @@
 var HallView = cc.View.extend({
 
     ctor: function () {
-        this._super();
+        this._super(new HallController(this));
         var data = ccs.load(res.studio_hall_layers_hall_json);
         this.addChildToCenter(data.node);
         this._initUserInfo(data.node);
 
-        var listView = ccui.helper.seekNodeByName(data.node, "listView");
-        listView.addClickEventListener((data, index) => {
-            console.log(data);
-            console.log(index);
-            cc.app.viewmgr.replaceView(new GameView());
+        var item = ccui.helper.seekNodeByName(data.node, "item_0");
+        item.addClickEventListener(() => {
+            this._viewController.quickStart();
+        });
+
+        var item = ccui.helper.seekNodeByName(data.node, "item_2");
+        item.addClickEventListener(() => {
+            this._viewController.joinRoom();
+        });
+
+        var item = ccui.helper.seekNodeByName(data.node, "item_3");
+        item.addClickEventListener(() => {
+            this._viewController.createRoom();
         });
 
         var btnSetting = ccui.helper.seekNodeByName(data.node, "btn_settings");
         btnSetting.addClickEventListener(() => {
             cc.app.viewmgr.replaceView(new LoginView());
         });
-
-
-        // SocketHelper.getInstance().setUpEnvironment("127.0.0.1", "8867");
-        // var data = ccs.load(res.studio_HomeScene_node_HomeScene_json);
-        // this.addChild(data.node);
-        //
-        // var btn = cc.app.helper.ui.findNodeByName(data.node, "Button_1");
-        // btn.addClickEventListener(this.onHallClick);
-        //
-        // this.nodeAmt = cc.app.helper.ui.findNodeByName(data.node, "amtNode");
-        // this.nodeAmt.action.play("ani", true);
-        //
-        // cc.app.dialogmgr.dialogconsole.showWithGlobal();
-
     },
 
     _initUserInfo: function (node) {
+        if (!cc.app.player.user)
+            return;
         //
         var name = ccui.helper.seekNodeByName(node, "user_name");
         name.string = cc.app.player.user.username;
@@ -50,6 +46,19 @@ var HallView = cc.View.extend({
         // id
         var diamond = ccui.helper.seekNodeByName(node, "txt_diamond");
         diamond.string = cc.app.player.user.diamond;
+        // header
+        var header = ccui.helper.seekNodeByName(node, "user_header");
+        var headerBorder = ccui.helper.seekNodeByName(node, "user_header_border");
+        headerBorder.setLocalZOrder(100);
+        var clip = new cc.Sprite("#studio/com/images/ui/user_face_mask_96.png");
+        var faceClip = new cc.ClippingNode(clip);
+        faceClip.setAlphaThreshold(0.01);
+        var face = new HttpSprite(cc.app.player.user.headerUrl);
+        if (face) {
+            face.setLocalZOrder(0);
+            faceClip.addChildToCenter(face);
+        }
+        header.addChildToCenter(faceClip);
     },
 
     onEnter: function () {
@@ -61,4 +70,48 @@ var HallView = cc.View.extend({
         this._super();
 
     },
+});
+
+var HallController = cc.ViewController.extend({
+
+    onLogic: function () {
+        this._super();
+        cc.app.events.onNode(this._target, CSMapping.S2C.ENTER_TABLE_SUCCESS, this.enterSuccess);
+        cc.app.events.onNode(this._target, CSMapping.S2C.ENTER_TABLE_FAILED, this.enterFailed);
+    },
+
+    enterSuccess: function (data) {
+        cc.app.dialogmgr.diaLoading.hide();
+        console.log(data);
+    },
+
+    enterFailed: function () {
+        cc.app.dialogmgr.diaLoading.hide();
+        cc.app.toast.makeToask("进入房间失败", 3).show();
+
+    },
+
+    quickStart: function () {
+        cc.app.dialogmgr.diaLoading.show();
+        cc.app.socketmgr.emit(CSMapping.C2S.QUICK_START, null);
+    },
+
+    joinRoom: function () {
+
+    },
+
+    createRoom: function () {
+
+    },
+
+    onEnter: function () {
+        this._super();
+        console.log("logic onEnter");
+    },
+
+    onExit: function () {
+        this._super();
+        console.log("logic onExit");
+    },
+
 });

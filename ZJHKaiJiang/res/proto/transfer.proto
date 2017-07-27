@@ -28,15 +28,15 @@ message User {
 	string authData					=	11;
 	uint64 createdAt				=	12;
 	uint64 updatedAt				=	13;
-	bool specialMode				=	14; // for test
+	bool placement					=	14; // for test
 	string headerUrl				=	15;
 }
 
 message Seat {
 	int32 seatID					=	1;
 	int32 callCoin					=	2;
-	bool isPrepare					=	3;
-	User user						=	4;
+	User user						=	3;
+	bool isPrepared					=	4;
 }
 
 message Table {

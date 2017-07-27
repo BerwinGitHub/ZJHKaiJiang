@@ -11,14 +11,15 @@ var CSMapping = {
         GAMEL: "game",
     },
     S2C: { // SERVER TO CLIENT
+
         LOGIN_SUCCESS: "loginSuccess",
         LOGIN_FAILED: "loginFailed",
 
-        USER_EXIT_TABLE: "userExitTable", // 玩家退出桌子
-        USER_ENTER_TABLE: "userEnterTable", // 玩家进入桌子
-        MATCHED_TABLE_SUCCESS: "matchTableSuccess", // 匹配/加入桌子成功
-        MATCHED_TABLE_FAILED: "matchTableFailed", // 匹配/加入桌子失败
-        CREATE_TABLE_SUCCESS: "createTableSuccess", // 创建桌子成功
-        CREATE_TABLE_FAILED: "createTableFailed", // 创建桌子失败
+        USER_EXIT_TABLE: "userExitTable", // 玩家退出桌子  Prrotobuf -> Seat
+        USER_ENTER_TABLE: "userEnterTable", // 玩家进入桌子  Prrotobuf -> Seat
+        ENTER_TABLE_SUCCESS: "enterTableSuccess", // 创建桌子成功
+        ENTER_TABLE_FAILED: "enterTableFailed", // 创建桌子失败
+
+        USER_PREPARE: "userPrepare", // 玩家准备 Prrotobuf -> Seat
     },
 };
