@@ -4,5 +4,7 @@
  */
 
 var language = {
-    btnClick: "You click the button."
+    btnClick: "You click the button.",
+    netError: "网络异常",
+    netDisconnect: "网络断开",
 };

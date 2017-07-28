@@ -82,7 +82,10 @@ var HallController = cc.ViewController.extend({
 
     enterSuccess: function (data) {
         cc.app.dialogmgr.diaLoading.hide();
-        console.log(data);
+        var table = cc.app.proto.parseFromArrayString("Table", data);
+        cc.app.player.data.table = table;
+        console.log(JSON.stringify(table));
+        cc.app.viewmgr.replaceView(new GameView());
     },
 
     enterFailed: function () {

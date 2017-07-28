@@ -91,7 +91,11 @@ var ViewManager = {
     },
 
     getViewStack: function () {
-        this._viewStack;
+        return this._viewStack;
+    },
+
+    getGameController: function () {
+        return this._gameController;
     },
 
     getInstance: function () {

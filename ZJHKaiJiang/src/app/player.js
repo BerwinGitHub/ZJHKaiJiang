@@ -16,8 +16,10 @@ var player = cc.Class.extend({
 
     user: null,
 
-    ctor: function () {
+    data: null,
 
+    ctor: function () {
+        this.data = {};
     },
 
 });

@@ -41,11 +41,8 @@ var LoginView = cc.View.extend({
 
 var LoginController = cc.ViewController.extend({
 
-    _error: null,
-
     onLogic: function () {
         this._super();
-        this._error = false;
         cc.app.events.onNode(this._target, CSMapping.S2C.LOGIN_SUCCESS, (d) => this.loginSuccess(d));
         cc.app.events.onNode(this._target, CSMapping.S2C.LOGIN_FAILED, (d) => this.loginFailed(d));
         cc.app.events.onNode(this._target, "error", () => this.error());
@@ -59,7 +56,6 @@ var LoginController = cc.ViewController.extend({
     },
 
     error: function () {
-        this._error = true;
         cc.app.toast.makeToask("网络错误", 3).show();
     },
 
@@ -71,7 +67,7 @@ var LoginController = cc.ViewController.extend({
     },
 
     login: function () {
-        if (this._error) {
+        if (!cc.app.viewmgr.getGameController().isNetworkAvaliable()) {
             this.loginFailed(null);
             return;
         }
