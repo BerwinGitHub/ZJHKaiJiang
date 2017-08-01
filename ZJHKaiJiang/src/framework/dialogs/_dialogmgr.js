@@ -21,8 +21,11 @@ var dialogmgr = cc.Class.extend({
             return;
         }
         dialog.__instance = null;
+        dialog.__isHide = false;
         dialog.show = (inView = true) => {
             cc.director.getScheduler().schedule(() => {
+                if (dialog.__isHide)
+                    return;
                 var dia = new dialog(parameters);
                 var view = (inView ? cc.app.viewmgr.getRunningView() : cc.app.viewmgr.getRootView());
                 view.addChildToDialog(dia);
@@ -31,6 +34,7 @@ var dialogmgr = cc.Class.extend({
             }, this, 0, 0, 0, false, "dialog_show_in_local");
         };
         dialog.hide = () => {
+            dialog.__isHide = true;
             dialog.__instance && dialog.__instance.hide();
         };
         return dialog;

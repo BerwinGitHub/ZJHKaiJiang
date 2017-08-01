@@ -15,8 +15,8 @@ var ZJHGameController = GameController.extend({
         cc.app.events.onNode(this, "connect", (d) => this.netConnect(d));
         cc.app.events.onNode(this, "disconnect", (d) => this.netDisConnect(d));
         cc.app.events.onNode(this, "error", (d) => this.netError(d));
-        // cc.app.socketmgr.connect("192.168.1.80", 8868);
-        cc.app.socketmgr.connect("192.168.0.209", 8868);
+        cc.app.socketmgr.connect("192.168.1.80", 8868);
+        // cc.app.socketmgr.connect("192.168.0.209", 8868);
         // 注册所有mapping事件,在界面上注册接收即可
         var mapping = CSMapping.S2C;
         for (var key in mapping) {
@@ -27,6 +27,7 @@ var ZJHGameController = GameController.extend({
 
     netConnect: function () {
         this._networkAvailable = true;
+        cc.app.toast.makeToask(language.netConnect, 3).show();
     },
 
     netDisConnect: function () {

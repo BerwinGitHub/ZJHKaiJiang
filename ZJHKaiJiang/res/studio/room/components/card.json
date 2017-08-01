@@ -1,0 +1,262 @@
+{
+  "ID": "cbfd4e29-4072-424c-8b56-3408d995892e",
+  "Version": "3.10.0.0",
+  "Name": "card",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "ActivedAnimationName": "amt_chat",
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [
+        {
+          "StartIndex": 0,
+          "EndIndex": 45,
+          "Name": "amt_opt",
+          "ctype": "AnimationInfoData"
+        },
+        {
+          "StartIndex": 50,
+          "EndIndex": 125,
+          "Name": "amt_chat",
+          "ctype": "AnimationInfoData"
+        }
+      ],
+      "ObjectData": {
+        "Tag": 114,
+        "Children": [
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "studio/room/images/cards/game_poker14.png",
+              "Plist": "studio/room/images/card.plist"
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "RightMargin": -75.0,
+            "TopMargin": -99.0,
+            "Tag": 102,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "studio/room/images/cards/poker_b2.png",
+                  "Plist": "studio/room/images/card.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 3.75,
+                  "Y": 95.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PrePosition": {
+                  "X": 0.05,
+                  "Y": 0.9596
+                },
+                "PreSize": {
+                  "X": 0.2533,
+                  "Y": 0.2828
+                },
+                "LeftMargin": 3.75,
+                "RightMargin": 52.25,
+                "TopMargin": 4.0,
+                "BottomMargin": 67.0,
+                "Tag": 105,
+                "ActionTag": -1075105920,
+                "Size": {
+                  "X": 19.0,
+                  "Y": 28.0
+                },
+                "Name": "num",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "studio/room/images/cards/game_daheitao.png",
+                  "Plist": "studio/room/images/card.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleX": 1.0
+                },
+                "Position": {
+                  "X": 71.25,
+                  "Y": 4.95
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PositionPercentXEnabled": true,
+                "PositionPercentYEnabled": true,
+                "PrePosition": {
+                  "X": 0.95,
+                  "Y": 0.05
+                },
+                "PreSize": {
+                  "X": 0.6933,
+                  "Y": 0.5859
+                },
+                "LeftMargin": 19.25,
+                "RightMargin": 3.75,
+                "TopMargin": 36.05,
+                "BottomMargin": 4.95,
+                "Tag": 103,
+                "ActionTag": 1263882597,
+                "Size": {
+                  "X": 52.0,
+                  "Y": 58.0
+                },
+                "Name": "color_b",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "studio/room/images/cards/game_xiaocaohua.png",
+                  "Plist": "studio/room/images/card.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {
+                  "ScaleY": 1.0
+                },
+                "Position": {
+                  "X": 5.0,
+                  "Y": 65.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0667,
+                  "Y": 0.6566
+                },
+                "PreSize": {
+                  "X": 0.24,
+                  "Y": 0.2121
+                },
+                "LeftMargin": 5.0,
+                "RightMargin": 52.0,
+                "TopMargin": 34.0,
+                "BottomMargin": 44.0,
+                "Tag": 104,
+                "ActionTag": 1330108494,
+                "Size": {
+                  "X": 18.0,
+                  "Y": 21.0
+                },
+                "Name": "color_s",
+                "ctype": "SpriteObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "MarkedSubImage",
+                  "Path": "studio/room/images/cards/game_poker11.png",
+                  "Plist": "studio/room/images/card.plist"
+                },
+                "BlendFunc": {
+                  "Src": 1,
+                  "Dst": 771
+                },
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "PreSize": {
+                  "X": 1.0,
+                  "Y": 1.0
+                },
+                "Tag": 106,
+                "ActionTag": -1780524838,
+                "Size": {
+                  "X": 75.0,
+                  "Y": 99.0
+                },
+                "Name": "cover",
+                "ctype": "SpriteObjectData"
+              }
+            ],
+            "ActionTag": -883974403,
+            "Size": {
+              "X": 75.0,
+              "Y": 99.0
+            },
+            "Name": "poker",
+            "ctype": "SpriteObjectData"
+          }
+        ],
+        "Size": {
+          "X": 0.0,
+          "Y": 0.0
+        },
+        "Name": "Node",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "../images/card.plist",
+        "../images/card.png"
+      ],
+      "ctype": "GameFileData"
+    }
+  },
+  "Type": "Node"
+}

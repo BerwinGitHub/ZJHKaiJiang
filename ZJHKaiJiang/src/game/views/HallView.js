@@ -81,16 +81,15 @@ var HallController = cc.ViewController.extend({
     },
 
     enterSuccess: function (data) {
-        cc.app.dialogmgr.diaLoading.hide();
         var table = cc.app.proto.parseFromArrayString("Table", data);
         cc.app.player.data.table = table;
-        console.log(JSON.stringify(table));
         cc.app.viewmgr.replaceView(new GameView());
+        cc.app.dialogmgr.diaLoading.hide();
     },
 
     enterFailed: function () {
         cc.app.dialogmgr.diaLoading.hide();
-        cc.app.toast.makeToask("进入房间失败", 3).show();
+        cc.app.toast.makeToask(language.enterRoomErr, 3).show();
 
     },
 
@@ -109,12 +108,10 @@ var HallController = cc.ViewController.extend({
 
     onEnter: function () {
         this._super();
-        console.log("logic onEnter");
     },
 
     onExit: function () {
         this._super();
-        console.log("logic onExit");
     },
 
 });

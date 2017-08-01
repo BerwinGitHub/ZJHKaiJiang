@@ -102,6 +102,7 @@
               <Project Name="dialog_menu.csd" Type="Node" />
               <Project Name="seat_left.csd" Type="Node" />
               <Project Name="seat_right.csd" Type="Node" />
+              <Project Name="card.csd" Type="Node" />
             </Folder>
             <Folder Name="fonts">
               <Fnt Name="game_num_money.fnt" />
@@ -144,45 +145,6 @@
                 <Image Name="poker_bk.png" />
                 <Image Name="poker_bq.png" />
                 <Image Name="poker_bt.png" />
-                <Image Name="poker_c1_s.png" />
-                <Image Name="poker_c10_s.png" />
-                <Image Name="poker_c11_s.png" />
-                <Image Name="poker_c12_s.png" />
-                <Image Name="poker_c13_s.png" />
-                <Image Name="poker_c2_s.png" />
-                <Image Name="poker_c3_s.png" />
-                <Image Name="poker_c4_s.png" />
-                <Image Name="poker_c5_s.png" />
-                <Image Name="poker_c6_s.png" />
-                <Image Name="poker_c7_s.png" />
-                <Image Name="poker_c8_s.png" />
-                <Image Name="poker_c9_s.png" />
-                <Image Name="poker_d1_s.png" />
-                <Image Name="poker_d10_s.png" />
-                <Image Name="poker_d11_s.png" />
-                <Image Name="poker_d12_s.png" />
-                <Image Name="poker_d13_s.png" />
-                <Image Name="poker_d2_s.png" />
-                <Image Name="poker_d3_s.png" />
-                <Image Name="poker_d4_s.png" />
-                <Image Name="poker_d5_s.png" />
-                <Image Name="poker_d6_s.png" />
-                <Image Name="poker_d7_s.png" />
-                <Image Name="poker_d8_s.png" />
-                <Image Name="poker_d9_s.png" />
-                <Image Name="poker_h1_s.png" />
-                <Image Name="poker_h10_s.png" />
-                <Image Name="poker_h11_s.png" />
-                <Image Name="poker_h12_s.png" />
-                <Image Name="poker_h13_s.png" />
-                <Image Name="poker_h2_s.png" />
-                <Image Name="poker_h3_s.png" />
-                <Image Name="poker_h4_s.png" />
-                <Image Name="poker_h5_s.png" />
-                <Image Name="poker_h6_s.png" />
-                <Image Name="poker_h7_s.png" />
-                <Image Name="poker_h8_s.png" />
-                <Image Name="poker_h9_s.png" />
                 <Image Name="poker_r2.png" />
                 <Image Name="poker_r3.png" />
                 <Image Name="poker_r4.png" />
@@ -196,19 +158,6 @@
                 <Image Name="poker_rk.png" />
                 <Image Name="poker_rq.png" />
                 <Image Name="poker_rt.png" />
-                <Image Name="poker_s1_s.png" />
-                <Image Name="poker_s10_s.png" />
-                <Image Name="poker_s11_s.png" />
-                <Image Name="poker_s12_s.png" />
-                <Image Name="poker_s13_s.png" />
-                <Image Name="poker_s2_s.png" />
-                <Image Name="poker_s3_s.png" />
-                <Image Name="poker_s4_s.png" />
-                <Image Name="poker_s5_s.png" />
-                <Image Name="poker_s6_s.png" />
-                <Image Name="poker_s7_s.png" />
-                <Image Name="poker_s8_s.png" />
-                <Image Name="poker_s9_s.png" />
               </Folder>
               <Folder Name="ui">
                 <Image Name="btn_audio.png" />

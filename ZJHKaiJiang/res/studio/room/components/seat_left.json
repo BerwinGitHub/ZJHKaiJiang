@@ -7,7 +7,7 @@
       "Animation": {
         "Duration": 125,
         "Speed": 1.0,
-        "ActivedAnimationName": "amt_chat",
+        "ActivedAnimationName": "amt_opt",
         "Timelines": [
           {
             "ActionTag": -2141380223,
@@ -406,7 +406,7 @@
                   {
                     "FileData": {
                       "Type": "MarkedSubImage",
-                      "Path": "studio/com/images/ui/user_face_m_64.png",
+                      "Path": "studio/com/images/ui/user_face_m_96.png",
                       "Plist": "studio/com/images/ui.plist"
                     },
                     "BlendFunc": {
@@ -418,12 +418,12 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": -49.9523,
+                      "X": -49.9507,
                       "Y": 14.5349
                     },
                     "Scale": {
-                      "ScaleX": 1.0,
-                      "ScaleY": 1.0
+                      "ScaleX": 0.7,
+                      "ScaleY": 0.7
                     },
                     "CColor": {},
                     "IconVisible": false,
@@ -435,16 +435,16 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": -81.9523,
-                    "RightMargin": 17.9523,
-                    "TopMargin": -46.5349,
-                    "BottomMargin": -17.4651,
+                    "LeftMargin": -97.9507,
+                    "RightMargin": 1.9507,
+                    "TopMargin": -62.5349,
+                    "BottomMargin": -33.4651,
                     "Tag": 135,
                     "Children": [
                       {
                         "FileData": {
                           "Type": "MarkedSubImage",
-                          "Path": "studio/com/images/ui/user_face_b_64.png",
+                          "Path": "studio/com/images/ui/user_face_b_96.png",
                           "Plist": "studio/com/images/ui.plist"
                         },
                         "BlendFunc": {
@@ -456,8 +456,8 @@
                           "ScaleY": 0.5
                         },
                         "Position": {
-                          "X": 32.0,
-                          "Y": 32.0
+                          "X": 48.0,
+                          "Y": 48.0
                         },
                         "Scale": {
                           "ScaleX": 1.0,
@@ -478,8 +478,8 @@
                         "Tag": 128,
                         "ActionTag": 1731742744,
                         "Size": {
-                          "X": 64.0,
-                          "Y": 64.0
+                          "X": 96.0,
+                          "Y": 96.0
                         },
                         "Name": "user_header_border",
                         "ctype": "SpriteObjectData"
@@ -487,8 +487,8 @@
                     ],
                     "ActionTag": 771338164,
                     "Size": {
-                      "X": 64.0,
-                      "Y": 64.0
+                      "X": 96.0,
+                      "Y": 96.0
                     },
                     "Name": "user_header",
                     "ctype": "SpriteObjectData"
@@ -515,7 +515,7 @@
                       "ScaleY": 0.4075
                     },
                     "Position": {
-                      "X": -50.5931,
+                      "X": -50.5947,
                       "Y": -28.8097
                     },
                     "Scale": {
@@ -532,8 +532,8 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": -84.9491,
-                    "RightMargin": 14.9491,
+                    "LeftMargin": -84.9507,
+                    "RightMargin": 14.9507,
                     "TopMargin": 20.5147,
                     "BottomMargin": -34.5147,
                     "Tag": 129,
@@ -567,7 +567,7 @@
                       "ScaleY": 0.5
                     },
                     "Position": {
-                      "X": -49.9523,
+                      "X": -49.9507,
                       "Y": -43.192
                     },
                     "Scale": {
@@ -584,8 +584,8 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": -84.9523,
-                    "RightMargin": 14.9523,
+                    "LeftMargin": -84.9507,
+                    "RightMargin": 14.9507,
                     "TopMargin": 36.192,
                     "BottomMargin": -50.192,
                     "Tag": 136,
@@ -630,29 +630,28 @@
                 "RightMargin": 90.0,
                 "TopMargin": 55.0,
                 "BottomMargin": 55.0,
-                "Tag": 138,
+                "Tag": 129,
                 "Children": [
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/room/images/cards/game_poker14.png",
-                      "Plist": "studio/room/images/card.plist"
+                      "Type": "Normal",
+                      "Path": "studio/room/components/card.json",
+                      "Plist": ""
                     },
-                    "BlendFunc": {
-                      "Src": 1,
-                      "Dst": 771
-                    },
+                    "StretchWidthEnable": false,
+                    "StretchHeightEnable": false,
+                    "InnerActionSpeed": 1.0,
                     "AnchorPoint": {},
                     "Position": {
-                      "X": -5.8161,
-                      "Y": -52.192
+                      "X": 3.3454,
+                      "Y": -52.623
                     },
                     "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
                     },
                     "CColor": {},
-                    "IconVisible": false,
+                    "IconVisible": true,
                     "PrePosition": {
                       "X": 0.0,
                       "Y": 0.0
@@ -661,40 +660,39 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": -5.8161,
-                    "RightMargin": -69.1839,
-                    "TopMargin": -46.808,
-                    "BottomMargin": -52.192,
-                    "Tag": 145,
-                    "ActionTag": 1796693511,
+                    "LeftMargin": 3.3454,
+                    "RightMargin": -3.3454,
+                    "TopMargin": 52.623,
+                    "BottomMargin": -52.623,
+                    "Tag": 130,
+                    "ActionTag": 724379076,
                     "Size": {
-                      "X": 75.0,
-                      "Y": 99.0
+                      "X": 0.0,
+                      "Y": 0.0
                     },
                     "Name": "poker_0",
-                    "ctype": "SpriteObjectData"
+                    "ctype": "ProjectNodeObjectData"
                   },
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/room/images/cards/game_poker14.png",
-                      "Plist": "studio/room/images/card.plist"
+                      "Type": "Normal",
+                      "Path": "studio/room/components/card.json",
+                      "Plist": ""
                     },
-                    "BlendFunc": {
-                      "Src": 1,
-                      "Dst": 771
-                    },
+                    "StretchWidthEnable": false,
+                    "StretchHeightEnable": false,
+                    "InnerActionSpeed": 1.0,
                     "AnchorPoint": {},
                     "Position": {
-                      "X": 14.184,
-                      "Y": -52.192
+                      "X": 23.1728,
+                      "Y": -52.623
                     },
                     "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
                     },
                     "CColor": {},
-                    "IconVisible": false,
+                    "IconVisible": true,
                     "PrePosition": {
                       "X": 0.0,
                       "Y": 0.0
@@ -703,40 +701,39 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": 14.184,
-                    "RightMargin": -89.184,
-                    "TopMargin": -46.808,
-                    "BottomMargin": -52.192,
-                    "Tag": 146,
-                    "ActionTag": 1675389777,
+                    "LeftMargin": 23.1728,
+                    "RightMargin": -23.1728,
+                    "TopMargin": 52.623,
+                    "BottomMargin": -52.623,
+                    "Tag": 137,
+                    "ActionTag": 833626531,
                     "Size": {
-                      "X": 75.0,
-                      "Y": 99.0
+                      "X": 0.0,
+                      "Y": 0.0
                     },
                     "Name": "poker_1",
-                    "ctype": "SpriteObjectData"
+                    "ctype": "ProjectNodeObjectData"
                   },
                   {
                     "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/room/images/cards/game_poker14.png",
-                      "Plist": "studio/room/images/card.plist"
+                      "Type": "Normal",
+                      "Path": "studio/room/components/card.json",
+                      "Plist": ""
                     },
-                    "BlendFunc": {
-                      "Src": 1,
-                      "Dst": 771
-                    },
+                    "StretchWidthEnable": false,
+                    "StretchHeightEnable": false,
+                    "InnerActionSpeed": 1.0,
                     "AnchorPoint": {},
                     "Position": {
-                      "X": 34.184,
-                      "Y": -52.192
+                      "X": 43.0002,
+                      "Y": -52.623
                     },
                     "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
+                      "ScaleX": 0.5,
+                      "ScaleY": 0.5
                     },
                     "CColor": {},
-                    "IconVisible": false,
+                    "IconVisible": true,
                     "PrePosition": {
                       "X": 0.0,
                       "Y": 0.0
@@ -745,152 +742,26 @@
                       "X": 0.0,
                       "Y": 0.0
                     },
-                    "LeftMargin": 34.184,
-                    "RightMargin": -109.184,
-                    "TopMargin": -46.808,
-                    "BottomMargin": -52.192,
-                    "Tag": 147,
-                    "ActionTag": 1612836381,
+                    "LeftMargin": 43.0002,
+                    "RightMargin": -43.0002,
+                    "TopMargin": 52.623,
+                    "BottomMargin": -52.623,
+                    "Tag": 144,
+                    "ActionTag": -326447952,
                     "Size": {
-                      "X": 75.0,
-                      "Y": 99.0
+                      "X": 0.0,
+                      "Y": 0.0
                     },
                     "Name": "poker_2",
-                    "ctype": "SpriteObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/room/images/cards/game_poker11.png",
-                      "Plist": "studio/room/images/card.plist"
-                    },
-                    "BlendFunc": {
-                      "Src": 1,
-                      "Dst": 771
-                    },
-                    "AnchorPoint": {},
-                    "Position": {
-                      "X": -5.8161,
-                      "Y": -52.192
-                    },
-                    "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "PreSize": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "LeftMargin": -5.8161,
-                    "RightMargin": -69.1839,
-                    "TopMargin": -46.808,
-                    "BottomMargin": -52.192,
-                    "Tag": 137,
-                    "ActionTag": -1981564168,
-                    "Size": {
-                      "X": 75.0,
-                      "Y": 99.0
-                    },
-                    "Name": "pcker_cover_0",
-                    "ctype": "SpriteObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/room/images/cards/game_poker11.png",
-                      "Plist": "studio/room/images/card.plist"
-                    },
-                    "BlendFunc": {
-                      "Src": 1,
-                      "Dst": 771
-                    },
-                    "AnchorPoint": {},
-                    "Position": {
-                      "X": 14.184,
-                      "Y": -52.192
-                    },
-                    "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "PreSize": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "LeftMargin": 14.184,
-                    "RightMargin": -89.184,
-                    "TopMargin": -46.808,
-                    "BottomMargin": -52.192,
-                    "Tag": 140,
-                    "ActionTag": -1715801620,
-                    "Size": {
-                      "X": 75.0,
-                      "Y": 99.0
-                    },
-                    "Name": "pcker_cover_1",
-                    "ctype": "SpriteObjectData"
-                  },
-                  {
-                    "FileData": {
-                      "Type": "MarkedSubImage",
-                      "Path": "studio/room/images/cards/game_poker11.png",
-                      "Plist": "studio/room/images/card.plist"
-                    },
-                    "BlendFunc": {
-                      "Src": 1,
-                      "Dst": 771
-                    },
-                    "AnchorPoint": {},
-                    "Position": {
-                      "X": 34.184,
-                      "Y": -52.192
-                    },
-                    "Scale": {
-                      "ScaleX": 0.6,
-                      "ScaleY": 0.6
-                    },
-                    "CColor": {},
-                    "IconVisible": false,
-                    "PrePosition": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "PreSize": {
-                      "X": 0.0,
-                      "Y": 0.0
-                    },
-                    "LeftMargin": 34.184,
-                    "RightMargin": -109.184,
-                    "TopMargin": -46.808,
-                    "BottomMargin": -52.192,
-                    "Tag": 141,
-                    "ActionTag": 1214321608,
-                    "Size": {
-                      "X": 75.0,
-                      "Y": 99.0
-                    },
-                    "Name": "pcker_cover_2",
-                    "ctype": "SpriteObjectData"
+                    "ctype": "ProjectNodeObjectData"
                   }
                 ],
-                "ActionTag": -1710336058,
+                "ActionTag": -663035210,
                 "Size": {
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "Name": "pocker",
+                "Name": "pockers",
                 "ctype": "SingleNodeObjectData"
               },
               {
@@ -1112,7 +983,7 @@
                 "AnchorPoint": {},
                 "Position": {
                   "X": 90.0,
-                  "Y": 35.0
+                  "Y": 37.6667
                 },
                 "Scale": {
                   "ScaleX": 1.0,
@@ -1122,7 +993,7 @@
                 "IconVisible": true,
                 "PrePosition": {
                   "X": 0.5,
-                  "Y": 0.3182
+                  "Y": 0.3424
                 },
                 "PreSize": {
                   "X": 0.0,
@@ -1130,8 +1001,8 @@
                 },
                 "LeftMargin": 90.0,
                 "RightMargin": 90.0,
-                "TopMargin": 75.0,
-                "BottomMargin": 35.0,
+                "TopMargin": 72.3333,
+                "BottomMargin": 37.6667,
                 "Tag": 171,
                 "Children": [
                   {
@@ -1235,7 +1106,7 @@
                   "X": 0.0,
                   "Y": 0.0
                 },
-                "Alpha": 0,
+                "Alpha": 34,
                 "Name": "opt_node",
                 "ctype": "SingleNodeObjectData"
               }
@@ -1261,10 +1132,9 @@
         "../../com/images/ui.png",
         "../fonts/gamingMoneyNumber.fnt",
         "../fonts/gamingMoneyNumber.png",
-        "../images/card.plist",
-        "../images/card.png",
         "../images/ui.plist",
-        "../images/ui.png"
+        "../images/ui.png",
+        "card.json"
       ],
       "ctype": "GameFileData"
     }

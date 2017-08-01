@@ -45,23 +45,18 @@ var LoginController = cc.ViewController.extend({
         this._super();
         cc.app.events.onNode(this._target, CSMapping.S2C.LOGIN_SUCCESS, (d) => this.loginSuccess(d));
         cc.app.events.onNode(this._target, CSMapping.S2C.LOGIN_FAILED, (d) => this.loginFailed(d));
-        cc.app.events.onNode(this._target, "error", () => this.error());
     },
 
     loginSuccess: function (data) {
         cc.app.player.user = cc.app.proto.parseFromArrayString("User", data);
-        cc.app.toast.makeToask("登录成功", 3).show();
+        cc.app.toast.makeToask(language.loginSuccess, 3).show();
         cc.app.dialogmgr.diaLoading.hide();
         cc.app.viewmgr.replaceView(new HallView());
     },
 
-    error: function () {
-        cc.app.toast.makeToask("网络错误", 3).show();
-    },
-
     loginFailed: function (data) {
         cc.app.player.user = null;
-        cc.app.toast.makeToask("登录失败", 3).show();
+        cc.app.toast.makeToask(language.loginFailed, 3).show();
         cc.app.dialogmgr.diaLoading.hide();
         cc.app.viewmgr.replaceView(new HallView());
     },
@@ -73,7 +68,12 @@ var LoginController = cc.ViewController.extend({
         }
         cc.app.dialogmgr.diaLoading.show();
         // 开始登录
-        var user = {deviceId: "BF35095B-4003-4AF2-BF2E-5B2EBA6BA748", username: "游客0001"};
+        var user = null;
+        if (cc.sys.isNative) {
+            user = {deviceId: "BF35095B-4003-4AF2-BF2E-5B2EBA6BA748"};
+        } else {
+            user = {deviceId: "AFR5045B-4003-2AF2-BF2E-5B2EBA6BA748"};
+        }
         var buffer = cc.app.proto.bytesify("User", user);
         // console.log(JSON.stringify(buffer));
         cc.app.socketmgr.emit(CSMapping.C2S.LOGIN, JSON.stringify(buffer));

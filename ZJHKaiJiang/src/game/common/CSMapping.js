@@ -8,6 +8,7 @@ var CSMapping = {
         QUICK_START: "quickStart",
         CREATE_ROOM: "createRoom",
         JOIN_ROOM: "joinRoom",
+        EXIT_ROOM: "exitRoom",
         GAMEL: "game",
     },
     S2C: { // SERVER TO CLIENT
