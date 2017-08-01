@@ -399,49 +399,49 @@
      * @expose
      */
     ByteBufferPrototype.writeBitSet = function(value, offset) {
-      var relative = typeof offset === 'undefined';
-      if (relative) offset = this.offset;
-      if (!this.noAssert) {
-        if (!(value instanceof Array))
-          throw TypeError("Illegal BitSet: Not an array");
-        if (typeof offset !== 'number' || offset % 1 !== 0)
-            throw TypeError("Illegal offset: "+offset+" (not an integer)");
-        offset >>>= 0;
-        if (offset < 0 || offset + 0 > this.buffer.byteLength)
-            throw RangeError("Illegal offset: 0 <= "+offset+" (+"+0+") <= "+this.buffer.byteLength);
-      }
+        var relative = typeof offset === 'undefined';
+        if (relative) offset = this.offset;
+        if (!this.noAssert) {
+            if (!(value instanceof Array))
+                throw TypeError("Illegal BitSet: Not an array");
+            if (typeof offset !== 'number' || offset % 1 !== 0)
+                throw TypeError("Illegal offset: "+offset+" (not an integer)");
+            offset >>>= 0;
+            if (offset < 0 || offset + 0 > this.buffer.byteLength)
+                throw RangeError("Illegal offset: 0 <= "+offset+" (+"+0+") <= "+this.buffer.byteLength);
+        }
 
-      var start = offset,
-          bits = value.length,
-          bytes = (bits >> 3),
-          bit = 0,
-          k;
+        var start = offset,
+            bits = value.length,
+            bytes = (bits >> 3),
+            bit = 0,
+            k;
 
-      offset += this.writeVarint32(bits,offset);
+        offset += this.writeVarint32(bits,offset);
 
-      while(bytes--) {
-        k = (!!value[bit++] & 1) |
-            ((!!value[bit++] & 1) << 1) |
-            ((!!value[bit++] & 1) << 2) |
-            ((!!value[bit++] & 1) << 3) |
-            ((!!value[bit++] & 1) << 4) |
-            ((!!value[bit++] & 1) << 5) |
-            ((!!value[bit++] & 1) << 6) |
-            ((!!value[bit++] & 1) << 7);
-        this.writeByte(k,offset++);
-      }
+        while(bytes--) {
+            k = (!!value[bit++] & 1) |
+                ((!!value[bit++] & 1) << 1) |
+                ((!!value[bit++] & 1) << 2) |
+                ((!!value[bit++] & 1) << 3) |
+                ((!!value[bit++] & 1) << 4) |
+                ((!!value[bit++] & 1) << 5) |
+                ((!!value[bit++] & 1) << 6) |
+                ((!!value[bit++] & 1) << 7);
+            this.writeByte(k,offset++);
+        }
 
-      if(bit < bits) {
-        var m = 0; k = 0;
-        while(bit < bits) k = k | ((!!value[bit++] & 1) << (m++));
-        this.writeByte(k,offset++);
-      }
+        if(bit < bits) {
+            var m = 0; k = 0;
+            while(bit < bits) k = k | ((!!value[bit++] & 1) << (m++));
+            this.writeByte(k,offset++);
+        }
 
-      if (relative) {
-        this.offset = offset;
-        return this;
-      }
-      return offset - start;
+        if (relative) {
+            this.offset = offset;
+            return this;
+        }
+        return offset - start;
     }
 
     /**
@@ -451,40 +451,40 @@
      * @expose
      */
     ByteBufferPrototype.readBitSet = function(offset) {
-      var relative = typeof offset === 'undefined';
-      if (relative) offset = this.offset;
+        var relative = typeof offset === 'undefined';
+        if (relative) offset = this.offset;
 
-      var ret = this.readVarint32(offset),
-          bits = ret.value,
-          bytes = (bits >> 3),
-          bit = 0,
-          value = [],
-          k;
+        var ret = this.readVarint32(offset),
+            bits = ret.value,
+            bytes = (bits >> 3),
+            bit = 0,
+            value = [],
+            k;
 
-      offset += ret.length;
+        offset += ret.length;
 
-      while(bytes--) {
-        k = this.readByte(offset++);
-        value[bit++] = !!(k & 0x01);
-        value[bit++] = !!(k & 0x02);
-        value[bit++] = !!(k & 0x04);
-        value[bit++] = !!(k & 0x08);
-        value[bit++] = !!(k & 0x10);
-        value[bit++] = !!(k & 0x20);
-        value[bit++] = !!(k & 0x40);
-        value[bit++] = !!(k & 0x80);
-      }
+        while(bytes--) {
+            k = this.readByte(offset++);
+            value[bit++] = !!(k & 0x01);
+            value[bit++] = !!(k & 0x02);
+            value[bit++] = !!(k & 0x04);
+            value[bit++] = !!(k & 0x08);
+            value[bit++] = !!(k & 0x10);
+            value[bit++] = !!(k & 0x20);
+            value[bit++] = !!(k & 0x40);
+            value[bit++] = !!(k & 0x80);
+        }
 
-      if(bit < bits) {
-        var m = 0;
-        k = this.readByte(offset++);
-        while(bit < bits) value[bit++] = !!((k >> (m++)) & 1);
-      }
+        if(bit < bits) {
+            var m = 0;
+            k = this.readByte(offset++);
+            while(bit < bits) value[bit++] = !!((k >> (m++)) & 1);
+        }
 
-      if (relative) {
-        this.offset = offset;
-      }
-      return value;
+        if (relative) {
+            this.offset = offset;
+        }
+        return value;
     }
     /**
      * Reads the specified number of bytes.
@@ -1299,7 +1299,7 @@
      LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
      OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
      THE SOFTWARE.
-    */
+     */
 
     /**
      * Reads an IEEE754 float from a byte array.
@@ -1566,7 +1566,7 @@
     ByteBuffer.calculateVarint32 = function(value) {
         // ref: src/google/protobuf/io/coded_stream.cc
         value = value >>> 0;
-             if (value < 1 << 7 ) return 1;
+        if (value < 1 << 7 ) return 1;
         else if (value < 1 << 14) return 2;
         else if (value < 1 << 21) return 3;
         else if (value < 1 << 28) return 4;
@@ -1881,16 +1881,16 @@
                 part2 = 0,
                 b  = 0;
             b = this.view[offset++]; part0  = (b & 0x7F)      ; if ( b & 0x80                                                   ) {
-            b = this.view[offset++]; part0 |= (b & 0x7F) <<  7; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
-            b = this.view[offset++]; part0 |= (b & 0x7F) << 14; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
-            b = this.view[offset++]; part0 |= (b & 0x7F) << 21; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
-            b = this.view[offset++]; part1  = (b & 0x7F)      ; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
-            b = this.view[offset++]; part1 |= (b & 0x7F) <<  7; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
-            b = this.view[offset++]; part1 |= (b & 0x7F) << 14; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
-            b = this.view[offset++]; part1 |= (b & 0x7F) << 21; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
-            b = this.view[offset++]; part2  = (b & 0x7F)      ; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
-            b = this.view[offset++]; part2 |= (b & 0x7F) <<  7; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
-            throw Error("Buffer overrun"); }}}}}}}}}}
+                b = this.view[offset++]; part0 |= (b & 0x7F) <<  7; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
+                    b = this.view[offset++]; part0 |= (b & 0x7F) << 14; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
+                        b = this.view[offset++]; part0 |= (b & 0x7F) << 21; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
+                            b = this.view[offset++]; part1  = (b & 0x7F)      ; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
+                                b = this.view[offset++]; part1 |= (b & 0x7F) <<  7; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
+                                    b = this.view[offset++]; part1 |= (b & 0x7F) << 14; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
+                                        b = this.view[offset++]; part1 |= (b & 0x7F) << 21; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
+                                            b = this.view[offset++]; part2  = (b & 0x7F)      ; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
+                                                b = this.view[offset++]; part2 |= (b & 0x7F) <<  7; if ((b & 0x80) || (this.noAssert && typeof b === 'undefined')) {
+                                                    throw Error("Buffer overrun"); }}}}}}}}}}
             var value = Long.fromBits(part0 | (part1 << 28), (part1 >>> 4) | (part2) << 24, false);
             if (relative) {
                 this.offset = offset;
@@ -2409,7 +2409,7 @@
 
     /**
      * Appends this ByteBuffer's contents to another ByteBuffer. This will overwrite any contents at and after the
-        specified offset up to the length of this ByteBuffer's data.
+     specified offset up to the length of this ByteBuffer's data.
      * @param {!ByteBuffer} target Target ByteBuffer
      * @param {number=} offset Offset to append to. Will use and increase {@link ByteBuffer#offset} by the number of bytes
      *  read if omitted.
@@ -2981,8 +2981,8 @@
             return "ByteBufferAB(offset="+this.offset+",markedOffset="+this.markedOffset+",limit="+this.limit+",capacity="+this.capacity()+")";
         if (typeof encoding === 'number')
             encoding = "utf8",
-            begin = encoding,
-            end = begin;
+                begin = encoding,
+                end = begin;
         switch (encoding) {
             case "utf8":
                 return this.toUTF8(begin, end);
@@ -3057,14 +3057,14 @@
                     t = (b&0xf)<<2;
                     if ((b = src()) !== null)
                         dst(aout[(t|((b>>6)&0x3))&0x3f]),
-                        dst(aout[b&0x3f]);
+                            dst(aout[b&0x3f]);
                     else
                         dst(aout[t&0x3f]),
-                        dst(61);
+                            dst(61);
                 } else
                     dst(aout[t&0x3f]),
-                    dst(61),
-                    dst(61);
+                        dst(61),
+                        dst(61);
             }
         };
 
@@ -3207,7 +3207,7 @@
             chars.push(this.view[begin++]);
             if (chars.length >= 1024)
                 parts.push(String.fromCharCode.apply(String, chars)),
-                chars = [];
+                    chars = [];
         }
         return parts.join('') + String.fromCharCode.apply(String, chars);
     };
@@ -3521,22 +3521,22 @@
             var cp = null;
             if (typeof src === 'number')
                 cp = src,
-                src = function() { return null; };
+                    src = function() { return null; };
             while (cp !== null || (cp = src()) !== null) {
                 if (cp < 0x80)
                     dst(cp&0x7F);
                 else if (cp < 0x800)
                     dst(((cp>>6)&0x1F)|0xC0),
-                    dst((cp&0x3F)|0x80);
+                        dst((cp&0x3F)|0x80);
                 else if (cp < 0x10000)
                     dst(((cp>>12)&0x0F)|0xE0),
-                    dst(((cp>>6)&0x3F)|0x80),
-                    dst((cp&0x3F)|0x80);
+                        dst(((cp>>6)&0x3F)|0x80),
+                        dst((cp&0x3F)|0x80);
                 else
                     dst(((cp>>18)&0x07)|0xF0),
-                    dst(((cp>>12)&0x3F)|0x80),
-                    dst(((cp>>6)&0x3F)|0x80),
-                    dst((cp&0x3F)|0x80);
+                        dst(((cp>>12)&0x3F)|0x80),
+                        dst(((cp>>6)&0x3F)|0x80),
+                        dst((cp&0x3F)|0x80);
                 cp = null;
             }
         };
@@ -3563,13 +3563,13 @@
                     dst(a);
                 else if ((a&0xE0) === 0xC0)
                     ((b = src()) === null) && fail([a, b]),
-                    dst(((a&0x1F)<<6) | (b&0x3F));
+                        dst(((a&0x1F)<<6) | (b&0x3F));
                 else if ((a&0xF0) === 0xE0)
                     ((b=src()) === null || (c=src()) === null) && fail([a, b, c]),
-                    dst(((a&0x0F)<<12) | ((b&0x3F)<<6) | (c&0x3F));
+                        dst(((a&0x0F)<<12) | ((b&0x3F)<<6) | (c&0x3F));
                 else if ((a&0xF8) === 0xF0)
                     ((b=src()) === null || (c=src()) === null || (d=src()) === null) && fail([a, b, c ,d]),
-                    dst(((a&0x07)<<18) | ((b&0x3F)<<12) | ((c&0x3F)<<6) | (d&0x3F));
+                        dst(((a&0x07)<<18) | ((b&0x3F)<<12) | ((c&0x3F)<<6) | (d&0x3F));
                 else throw RangeError("Illegal starting byte: "+a);
             }
         };
@@ -3615,8 +3615,8 @@
                     dst(cp);
                 else
                     cp -= 0x10000,
-                    dst((cp>>10)+0xD800),
-                    dst((cp%0x400)+0xDC00);
+                        dst((cp>>10)+0xD800),
+                        dst((cp%0x400)+0xDC00);
                 cp = null;
             }
         };

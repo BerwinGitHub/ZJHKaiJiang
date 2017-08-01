@@ -248,7 +248,7 @@
         if (typeof unsigned === 'number') {
             // For goog.math.long compatibility
             radix = unsigned,
-            unsigned = false;
+                unsigned = false;
         } else {
             unsigned = !! unsigned;
         }
@@ -970,8 +970,8 @@
             var log2 = Math.ceil(Math.log(approx) / Math.LN2),
                 delta = (log2 <= 48) ? 1 : pow_dbl(2, log2 - 48),
 
-            // Decrease the approximation until it is smaller than the remainder.  Note
-            // that if it is too large, the product overflows and is negative.
+                // Decrease the approximation until it is smaller than the remainder.  Note
+                // that if it is too large, the product overflows and is negative.
                 approxRes = fromNumber(approx),
                 approxRem = approxRes.mul(divisor);
             while (approxRem.isNegative() || approxRem.gt(rem)) {
@@ -1175,11 +1175,11 @@
         var hi = this.high,
             lo = this.low;
         return [
-             lo         & 0xff,
+            lo         & 0xff,
             (lo >>>  8) & 0xff,
             (lo >>> 16) & 0xff,
             (lo >>> 24) & 0xff,
-             hi         & 0xff,
+            hi         & 0xff,
             (hi >>>  8) & 0xff,
             (hi >>> 16) & 0xff,
             (hi >>> 24) & 0xff
@@ -1197,11 +1197,11 @@
             (hi >>> 24) & 0xff,
             (hi >>> 16) & 0xff,
             (hi >>>  8) & 0xff,
-             hi         & 0xff,
+            hi         & 0xff,
             (lo >>> 24) & 0xff,
             (lo >>> 16) & 0xff,
             (lo >>>  8) & 0xff,
-             lo         & 0xff
+            lo         & 0xff
         ];
     }
 

@@ -55,7 +55,7 @@ var proto = cc.Class.extend({
                 cb(null, data);
             }
         };
-        cc.loader.register(["proto"], loader);
+        // cc.loader.register(["proto"], loader);
     },
 
     /**
@@ -64,16 +64,18 @@ var proto = cc.Class.extend({
      * @param payload
      * @returns {*}
      */
-    bytesify: function (messageName, payload) {
-        var ProtoMessage = this._getMessage(messageName);
-        var err = ProtoMessage.message.verify(payload);
-        if (err) {
-            console.log("Message:(" + messageName + ") verify payload err:" + err);
-            return null;
-        }
-        var message = ProtoMessage.message.create(payload);
-        var buffer = ProtoMessage.message.encode(message).finish();
-        return buffer;
+    bytesify: function (message, payload) {
+        var pd = message.create(payload);
+        return message.encode(pd).finish();
+        // var ProtoMessage = this._getMessage(message);
+        // var err = ProtoMessage.message.verify(payload);
+        // if (err) {
+        //     console.log("Message:(" + message + ") verify payload err:" + err);
+        //     return null;
+        // }
+        // var message = ProtoMessage.message.create(payload);
+        // var buffer = ProtoMessage.message.encode(message).finish();
+        // return buffer;
     },
 
     /**
@@ -92,10 +94,11 @@ var proto = cc.Class.extend({
      * 解析从服务器发来的数组字符串
      * @param data
      */
-    parseFromArrayString: function (messageName, data) {
+    parseFromArrayString: function (message, data) {
         var buffer = data.split(','); // 不用用JSON.parse("[]") 在iOS上面不能转成数组，最好用拆分的方式
-        var pBuf = new Uint8Array(buffer);
-        return this.parse(messageName, pBuf);
+        var u8 = new Uint8Array(buffer);
+        return message.decode(u8);
+        // return this.parse(message, u8);
     },
 
     /**
@@ -126,7 +129,7 @@ var proto = cc.Class.extend({
             var msg = null;
             try {
                 msg = this.roots[i].lookupType(name);
-                return {root: this.roots[i], message: msg}; // 如果不throw err就表明找到了，并返回
+                return {message: msg}; // 如果不throw err就表明找到了，并返回
             } catch (e) {
             }
         }

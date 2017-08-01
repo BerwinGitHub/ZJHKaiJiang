@@ -60,6 +60,7 @@ var GameView = cc.View.extend({
     },
 
     addSeat: function (seatData) {
+        console.log(JSON.stringify(seatData));
         var seatID = seatData.seatID ? seatData.seatID : 0;
         var ccoin = seatData.callCoin ? seatData.callCoin : 0; // 下注的金额
         // node
@@ -89,7 +90,6 @@ var GameView = cc.View.extend({
 
     removeSeat: function (seatData) {
         var seatID = seatData.seatID ? seatData.seatID : 0;
-        console.log("移除的SeatID:" + seatID);
         cc.app.toast.makeToask("移除的SeatID:" + seatID, 3).show();
         var seatNode = this._getSeatNodeBySeatID(seatID);
         seatNode.visible = false;
@@ -115,13 +115,12 @@ var GameController = cc.ViewController.extend({
     },
 
     userEneterTable: function (data) {
-        var seat = cc.app.proto.parseFromArrayString("Seat", data);
+        var seat = cc.app.proto.parseFromArrayString($root.Seat, data);
         this._target.addSeat(seat);
-
     },
 
     userExitTable: function (data) {
-        var seat = cc.app.proto.parseFromArrayString("Seat", data);
+        var seat = cc.app.proto.parseFromArrayString($root.Seat, data);
         this._target.removeSeat(seat);
 
     },

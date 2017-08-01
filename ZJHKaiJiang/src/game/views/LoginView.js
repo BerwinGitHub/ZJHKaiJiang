@@ -48,7 +48,7 @@ var LoginController = cc.ViewController.extend({
     },
 
     loginSuccess: function (data) {
-        cc.app.player.user = cc.app.proto.parseFromArrayString("User", data);
+        cc.app.player.user = cc.app.proto.parseFromArrayString($root.User, data);
         cc.app.toast.makeToask(language.loginSuccess, 3).show();
         cc.app.dialogmgr.diaLoading.hide();
         cc.app.viewmgr.replaceView(new HallView());
@@ -58,7 +58,7 @@ var LoginController = cc.ViewController.extend({
         cc.app.player.user = null;
         cc.app.toast.makeToask(language.loginFailed, 3).show();
         cc.app.dialogmgr.diaLoading.hide();
-        cc.app.viewmgr.replaceView(new HallView());
+        // cc.app.viewmgr.replaceView(new HallView());
     },
 
     login: function () {
@@ -74,7 +74,7 @@ var LoginController = cc.ViewController.extend({
         } else {
             user = {deviceId: "AFR5045B-4003-2AF2-BF2E-5B2EBA6BA748"};
         }
-        var buffer = cc.app.proto.bytesify("User", user);
+        var buffer = cc.app.proto.bytesify($root.User, user);
         // console.log(JSON.stringify(buffer));
         cc.app.socketmgr.emit(CSMapping.C2S.LOGIN, JSON.stringify(buffer));
 

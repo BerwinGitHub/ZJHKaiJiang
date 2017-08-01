@@ -23,6 +23,7 @@ var res = {
     "studio_hall_layers_hall_json": "res/studio/hall/layers/hall.json",
     "studio_login_images_bg_bg_common_jpg": "res/studio/login/images/bg/bg_common.jpg",
     "studio_login_layers_login_json": "res/studio/login/layers/login.json",
+    "studio_room_components_card_json": "res/studio/room/components/card.json",
     "studio_room_components_dialog_menu_json": "res/studio/room/components/dialog_menu.json",
     "studio_room_components_seat_left_json": "res/studio/room/components/seat_left.json",
     "studio_room_components_seat_right_json": "res/studio/room/components/seat_right.json",
