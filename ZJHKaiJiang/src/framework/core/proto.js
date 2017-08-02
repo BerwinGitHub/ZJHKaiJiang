@@ -95,7 +95,7 @@ var proto = cc.Class.extend({
      * @param data
      */
     parseFromArrayString: function (message, data) {
-        var buffer = data.split(','); // 不用用JSON.parse("[]") 在iOS上面不能转成数组，最好用拆分的方式
+        var buffer = data.replace(/\"/g, "").split(','); // 不用用JSON.parse("[]") 在iOS上面不能转成数组，最好用拆分的方式
         var u8 = new Uint8Array(buffer);
         return message.decode(u8);
         // return this.parse(message, u8);

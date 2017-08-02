@@ -536,9 +536,8 @@
                       "ScaleY": 1.0
                     },
                     "CColor": {
-                      "R": 230,
-                      "G": 230,
-                      "B": 250
+                      "G": 165,
+                      "B": 0
                     },
                     "IconVisible": false,
                     "PositionPercentXEnabled": true,
@@ -1131,6 +1130,62 @@
             "ctype": "SpriteObjectData"
           },
           {
+            "FontSize": 45,
+            "LabelText": "开江炸金花",
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 0,
+              "G": 139,
+              "B": 101
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 80.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 2,
+              "G": 125,
+              "B": 78
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -112.5,
+            "RightMargin": -112.5,
+            "TopMargin": -106.0,
+            "BottomMargin": 54.0,
+            "Tag": 1149,
+            "ActionTag": 1737139788,
+            "Size": {
+              "X": 225.0,
+              "Y": 52.0
+            },
+            "Alpha": 76,
+            "Name": "Text_10",
+            "ctype": "TextObjectData"
+          },
+          {
             "AnchorPoint": {},
             "Position": {
               "X": 90.9994,
@@ -1451,14 +1506,14 @@
                 },
                 "LeftMargin": -624.5263,
                 "RightMargin": 124.5263,
-                "TopMargin": -306.7735,
-                "BottomMargin": 276.7735,
+                "TopMargin": -314.2735,
+                "BottomMargin": 269.2735,
                 "Tag": 563,
                 "Children": [
                   {
                     "IsCustomSize": true,
-                    "FontSize": 18,
-                    "LabelText": "新手房--第27桌     单注:100     封顶:2000",
+                    "FontSize": 20,
+                    "LabelText": "普通房--第27桌     单注:100     封顶:2000",
                     "VerticalAlignmentType": "VT_Center",
                     "OutlineColor": {
                       "G": 0,
@@ -1477,14 +1532,13 @@
                     },
                     "Position": {
                       "X": 250.0,
-                      "Y": 15.0
+                      "Y": 22.5
                     },
                     "Scale": {
                       "ScaleX": 1.0,
                       "ScaleY": 1.0
                     },
-                    "RotationSkewX": 0.2457,
-                    "RotationSkewY": 0.2453,
+                    "RotationSkewY": -0.0004,
                     "CColor": {
                       "R": 192,
                       "G": 190,
@@ -1497,19 +1551,19 @@
                       "X": 0.5,
                       "Y": 0.5
                     },
+                    "PercentHeightEnable": true,
+                    "PercentHeightEnabled": true,
                     "PreSize": {
                       "X": 0.9,
-                      "Y": 0.7667
+                      "Y": 1.0
                     },
                     "LeftMargin": 25.0,
                     "RightMargin": 25.0,
-                    "TopMargin": 3.5,
-                    "BottomMargin": 3.5,
                     "Tag": 564,
                     "ActionTag": 202434952,
                     "Size": {
                       "X": 450.0,
-                      "Y": 23.0
+                      "Y": 45.0
                     },
                     "Name": "rule_txt",
                     "ctype": "TextObjectData"
@@ -1518,7 +1572,7 @@
                 "ActionTag": 1443871650,
                 "Size": {
                   "X": 500.0,
-                  "Y": 30.0
+                  "Y": 45.0
                 },
                 "Name": "rule",
                 "ctype": "ImageViewObjectData"

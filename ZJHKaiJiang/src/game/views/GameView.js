@@ -60,7 +60,6 @@ var GameView = cc.View.extend({
     },
 
     addSeat: function (seatData) {
-        console.log(JSON.stringify(seatData));
         var seatID = seatData.seatID ? seatData.seatID : 0;
         var ccoin = seatData.callCoin ? seatData.callCoin : 0; // 下注的金额
         // node
@@ -127,12 +126,10 @@ var GameController = cc.ViewController.extend({
 
     onEnter: function () {
         this._super();
-        console.log("logic onEnter");
     },
 
     onExit: function () {
         this._super();
-        console.log("logic onExit");
     },
 
 });

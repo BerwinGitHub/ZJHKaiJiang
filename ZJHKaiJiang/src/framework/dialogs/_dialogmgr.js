@@ -144,10 +144,12 @@ var DialogMask = cc.Node.extend({
     hide: function () {
         if (this._parameters.hide) {
             this._parameters.hide(() => {
-                this.removeFromParent();
+                if (this._parent)
+                    this.removeFromParent();
             });
         } else {
-            this.removeFromParent();
+            if (this._parent)
+                this.removeFromParent();
         }
     },
 

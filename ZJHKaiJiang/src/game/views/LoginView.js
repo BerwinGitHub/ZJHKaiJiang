@@ -88,12 +88,10 @@ var LoginController = cc.ViewController.extend({
 
     onEnter: function () {
         this._super();
-        console.log("logic onEnter");
     },
 
     onExit: function () {
         this._super();
-        console.log("logic onExit");
     },
 
 });

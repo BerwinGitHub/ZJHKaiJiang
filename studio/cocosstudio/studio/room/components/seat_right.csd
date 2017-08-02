@@ -176,31 +176,31 @@
               <AbstractNodeData Name="pockers" ActionTag="-1710336058" Tag="138" IconVisible="True" LeftMargin="90.0000" RightMargin="90.0000" TopMargin="55.0000" BottomMargin="55.0000" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
-                  <AbstractNodeData Name="poker_0" ActionTag="-322991098" Tag="108" IconVisible="True" LeftMargin="-82.3842" RightMargin="82.3842" TopMargin="52.6230" BottomMargin="-52.6230" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+                  <AbstractNodeData Name="poker_0" ActionTag="-322991098" Tag="108" IconVisible="True" LeftMargin="-85.0000" RightMargin="85.0000" TopMargin="50.0000" BottomMargin="-50.0000" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
                     <Size X="0.0000" Y="0.0000" />
                     <AnchorPoint />
-                    <Position X="-82.3842" Y="-52.6230" />
-                    <Scale ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="-85.0000" Y="-50.0000" />
+                    <Scale ScaleX="0.6000" ScaleY="0.6000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
                     <FileData Type="Normal" Path="studio/room/components/card.csd" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="poker_1" ActionTag="-1196186781" Tag="115" IconVisible="True" LeftMargin="-62.5567" RightMargin="62.5567" TopMargin="52.6230" BottomMargin="-52.6230" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+                  <AbstractNodeData Name="poker_1" ActionTag="-1196186781" Tag="115" IconVisible="True" LeftMargin="-60.0000" RightMargin="60.0000" TopMargin="50.0000" BottomMargin="-50.0000" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
                     <Size X="0.0000" Y="0.0000" />
                     <AnchorPoint />
-                    <Position X="-62.5567" Y="-52.6230" />
-                    <Scale ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="-60.0000" Y="-50.0000" />
+                    <Scale ScaleX="0.6000" ScaleY="0.6000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
                     <FileData Type="Normal" Path="studio/room/components/card.csd" Plist="" />
                   </AbstractNodeData>
-                  <AbstractNodeData Name="poker_2" ActionTag="-1349078290" Tag="122" IconVisible="True" LeftMargin="-42.7292" RightMargin="42.7292" TopMargin="52.6230" BottomMargin="-52.6230" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+                  <AbstractNodeData Name="poker_2" ActionTag="-1349078290" Tag="122" IconVisible="True" LeftMargin="-35.0000" RightMargin="35.0000" TopMargin="50.0000" BottomMargin="-50.0000" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
                     <Size X="0.0000" Y="0.0000" />
                     <AnchorPoint />
-                    <Position X="-42.7292" Y="-52.6230" />
-                    <Scale ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position X="-35.0000" Y="-50.0000" />
+                    <Scale ScaleX="0.6000" ScaleY="0.6000" />
                     <CColor A="255" R="255" G="255" B="255" />
                     <PrePosition />
                     <PreSize X="0.0000" Y="0.0000" />
@@ -214,13 +214,13 @@
                 <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="use_coin" ActionTag="91455395" Tag="142" IconVisible="False" LeftMargin="24.6604" RightMargin="100.3396" TopMargin="18.2396" BottomMargin="55.7604" LabelText="1000" ctype="TextBMFontObjectData">
+              <AbstractNodeData Name="use_coin" ActionTag="91455395" Tag="142" IconVisible="False" LeftMargin="24.6604" RightMargin="100.3396" TopMargin="16.0000" BottomMargin="58.0000" LabelText="1000" ctype="TextBMFontObjectData">
                 <Size X="55.0000" Y="36.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="52.1604" Y="73.7604" />
+                <Position X="52.1604" Y="76.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.2898" Y="0.6705" />
+                <PrePosition X="0.2898" Y="0.6909" />
                 <PreSize X="0.3056" Y="0.3273" />
                 <LabelBMFontFile_CNB Type="Normal" Path="studio/room/fonts/gamingMoneyNumber.fnt" Plist="" />
               </AbstractNodeData>
@@ -267,7 +267,7 @@
                 <PrePosition X="0.5000" Y="0.5000" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
-              <AbstractNodeData Name="opt_node" ActionTag="1801394363" Tag="171" IconVisible="True" LeftMargin="90.0000" RightMargin="90.0000" TopMargin="55.0000" BottomMargin="55.0000" ctype="SingleNodeObjectData">
+              <AbstractNodeData Name="opt_node" ActionTag="1801394363" Alpha="0" Tag="171" IconVisible="True" LeftMargin="90.0000" RightMargin="90.0000" TopMargin="75.0000" BottomMargin="35.0000" ctype="SingleNodeObjectData">
                 <Size X="0.0000" Y="0.0000" />
                 <Children>
                   <AbstractNodeData Name="opt_bg" ActionTag="-1620520451" Tag="151" IconVisible="False" LeftMargin="64.1425" RightMargin="-144.1425" TopMargin="-59.3703" BottomMargin="-0.6297" Scale9Enable="True" LeftEage="33" RightEage="33" TopEage="23" BottomEage="23" Scale9OriginX="33" Scale9OriginY="23" Scale9Width="36" Scale9Height="26" ctype="ImageViewObjectData">
@@ -293,10 +293,10 @@
                   </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
-                <Position X="90.0000" Y="55.0000" />
+                <Position X="90.0000" Y="35.0000" />
                 <Scale ScaleX="1.0000" ScaleY="1.0000" />
                 <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5000" Y="0.5000" />
+                <PrePosition X="0.5000" Y="0.3182" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
             </Children>

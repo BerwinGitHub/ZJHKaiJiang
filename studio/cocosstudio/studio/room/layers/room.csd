@@ -121,7 +121,7 @@
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="54.0000" Y="11.0000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                    <CColor A="255" R="230" G="230" B="250" />
+                    <CColor A="255" R="255" G="165" B="0" />
                     <PrePosition X="0.5000" Y="0.5500" />
                     <PreSize X="0.3981" Y="1.0000" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
@@ -264,6 +264,17 @@
             <FileData Type="MarkedSubImage" Path="studio/room/images/bg_normal.jpg" Plist="studio/room/images/table.plist" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
+          <AbstractNodeData Name="Text_10" ActionTag="1737139788" Alpha="76" Tag="1149" IconVisible="False" LeftMargin="-112.5000" RightMargin="-112.5000" TopMargin="-106.0000" BottomMargin="54.0000" FontSize="45" LabelText="开江炸金花" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="225.0000" Y="52.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position Y="80.0000" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="2" G="125" B="78" />
+            <PrePosition />
+            <PreSize X="0.0000" Y="0.0000" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="0" G="139" B="101" />
+          </AbstractNodeData>
           <AbstractNodeData Name="ui_nodes" ActionTag="-912854751" Tag="512" IconVisible="True" LeftMargin="90.9994" RightMargin="-90.9994" TopMargin="-21.9245" BottomMargin="21.9245" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <Children>
@@ -319,17 +330,17 @@
                 <OutlineColor A="255" R="255" G="0" B="0" />
                 <ShadowColor A="255" R="110" G="110" B="110" />
               </AbstractNodeData>
-              <AbstractNodeData Name="rule" ActionTag="1443871650" Tag="563" IconVisible="False" LeftMargin="-624.5263" RightMargin="124.5263" TopMargin="-306.7735" BottomMargin="276.7735" Scale9Enable="True" LeftEage="31" RightEage="31" TopEage="8" BottomEage="8" Scale9OriginX="31" Scale9OriginY="8" Scale9Width="34" Scale9Height="9" ctype="ImageViewObjectData">
-                <Size X="500.0000" Y="30.0000" />
+              <AbstractNodeData Name="rule" ActionTag="1443871650" Tag="563" IconVisible="False" LeftMargin="-624.5263" RightMargin="124.5263" TopMargin="-314.2735" BottomMargin="269.2735" Scale9Enable="True" LeftEage="31" RightEage="31" TopEage="8" BottomEage="8" Scale9OriginX="31" Scale9OriginY="8" Scale9Width="34" Scale9Height="9" ctype="ImageViewObjectData">
+                <Size X="500.0000" Y="45.0000" />
                 <Children>
-                  <AbstractNodeData Name="rule_txt" ActionTag="202434952" Tag="564" RotationSkewX="0.2457" RotationSkewY="0.2453" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" LeftMargin="25.0000" RightMargin="25.0000" TopMargin="3.5000" BottomMargin="3.5000" IsCustomSize="True" FontSize="18" LabelText="新手房--第27桌     单注:100     封顶:2000" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-                    <Size X="450.0000" Y="23.0000" />
+                  <AbstractNodeData Name="rule_txt" ActionTag="202434952" Tag="564" RotationSkewY="-0.0004" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentHeightEnable="True" PercentHeightEnabled="True" LeftMargin="25.0000" RightMargin="25.0000" IsCustomSize="True" FontSize="20" LabelText="普通房--第27桌     单注:100     封顶:2000" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                    <Size X="450.0000" Y="45.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                    <Position X="250.0000" Y="15.0000" />
+                    <Position X="250.0000" Y="22.5000" />
                     <Scale ScaleX="1.0000" ScaleY="1.0000" />
                     <CColor A="255" R="192" G="190" B="190" />
                     <PrePosition X="0.5000" Y="0.5000" />
-                    <PreSize X="0.9000" Y="0.7667" />
+                    <PreSize X="0.9000" Y="1.0000" />
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
