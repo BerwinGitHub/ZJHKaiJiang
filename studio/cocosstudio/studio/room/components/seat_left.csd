@@ -227,7 +227,7 @@
                 <PreSize X="0.3056" Y="0.3273" />
                 <LabelBMFontFile_CNB Type="Normal" Path="studio/room/fonts/gamingMoneyNumber.fnt" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="prepare" ActionTag="-1340700933" VisibleForFrame="False" Tag="576" IconVisible="False" LeftMargin="181.5919" RightMargin="-55.5919" TopMargin="3.0798" BottomMargin="32.9202" ctype="SpriteObjectData">
+              <AbstractNodeData Name="prepare" ActionTag="-1340700933" Tag="576" IconVisible="False" LeftMargin="181.5919" RightMargin="-55.5919" TopMargin="3.0798" BottomMargin="32.9202" ctype="SpriteObjectData">
                 <Size X="54.0000" Y="74.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="208.5919" Y="69.9202" />

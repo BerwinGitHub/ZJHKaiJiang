@@ -10,6 +10,8 @@ var CSMapping = {
         JOIN_ROOM: "joinRoom",
         EXIT_ROOM: "exitRoom",
         GAMEL: "game",
+
+        USER_PREPARE: "userPrepare",
     },
     S2C: { // SERVER TO CLIENT
 
@@ -21,6 +23,6 @@ var CSMapping = {
         ENTER_TABLE_SUCCESS: "enterTableSuccess", // 创建桌子成功
         ENTER_TABLE_FAILED: "enterTableFailed", // 创建桌子失败
 
-        USER_PREPARE: "userPrepare", // 玩家准备 Prrotobuf -> Seat
+        USER_PREPARED: "userPrepared", // 玩家准备 Prrotobuf -> Seat
     },
 };

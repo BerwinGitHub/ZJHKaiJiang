@@ -99,10 +99,10 @@
           <Folder Name="room">
             <Folder Name="animations" />
             <Folder Name="components">
+              <Project Name="card.csd" Type="Node" />
               <Project Name="dialog_menu.csd" Type="Node" />
               <Project Name="seat_left.csd" Type="Node" />
               <Project Name="seat_right.csd" Type="Node" />
-              <Project Name="card.csd" Type="Node" />
             </Folder>
             <Folder Name="fonts">
               <Fnt Name="game_num_money.fnt" />

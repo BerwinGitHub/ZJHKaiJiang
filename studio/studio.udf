@@ -11,7 +11,7 @@
         <iOS_Target Value="studio-mobile" />
         <iOS_BundleID Value="iPhone Developer: berwin.net@gmail.com (3355FNS8AS)" />
         <Platform Value="None" />
-        <RunPlatform Value="None" />
+        <RunPlatform Value="Mac" />
         <FrameworkVersion Value="cocos2d-x-3.10" />
         <IsDebugKeystore Value="True" />
         <KeystorePassword Value="" />
@@ -26,6 +26,18 @@
         <LastPublishType Value="Resource" />
         <IsLastPublish Value="True" />
         <LastRunType Value="Mac" />
+      </Value>
+    </Item>
+    <Item Key="TabsParamsKey">
+      <Value ctype="TabsInfo">
+        <OpenedDocuments>
+          <FilePathData Path="studio/com/components/dialog_loading.csd" />
+          <FilePathData Path="studio/room/components/seat_left.csd" />
+          <FilePathData Path="studio/room/components/seat_right.csd" />
+          <FilePathData Path="studio/room/components/card.csd" />
+          <FilePathData Path="studio/room/layers/room.csd" />
+        </OpenedDocuments>
+        <ActiveDocument Path="studio/room/components/seat_left.csd" />
       </Value>
     </Item>
   </Properties>

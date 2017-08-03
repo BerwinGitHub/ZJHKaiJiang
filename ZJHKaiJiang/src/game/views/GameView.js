@@ -13,6 +13,8 @@ var GameView = cc.View.extend({
         this._super(new GameController(this));
         var data = ccs.load(res.studio_room_layers_room_json);
         this.addChildToCenter(data.node);
+        // 初始化按钮
+        this._initButton(data.node);
         this._seatsMapping = [0, 1, 2, 3, 4, 5, 6];
         // 隐藏掉所有的位置
         this.seatNodes = [];
@@ -30,6 +32,72 @@ var GameView = cc.View.extend({
         });
     },
 
+    _initButton: function (node) {
+        var keyNames = ["btn_follow", "btn_giveup", "btn_compare", "btn_watch", "btn_add", "btn_follow_always", "btn_prepare"];
+        var functions = [this._gameFollow, this._gameGiveup, this._gameCompare, this._gameWatch, this._gameAdd, this._gameFollowAlways, this._gamePrepare];
+        for (var i = 0; i < keyNames.length; i++) {
+            var btn = ccui.helper.seekNodeByName(node, keyNames[i]);
+            btn.addClickEventListener(functions[i]);
+        }
+    },
+
+    /**
+     * 准备
+     * @private
+     */
+    _gamePrepare: function (btn) {
+        cc.app.socketmgr.emit(CSMapping.C2S.USER_PREPARE, null);
+        btn.visible = false;
+    },
+
+    /**
+     * 比牌
+     * @private
+     */
+    _gameCompare: function (btn) {
+
+    },
+
+    /**
+     * 看牌
+     * @private
+     */
+    _gameWatch: function (btn) {
+
+    },
+
+    /**
+     * 加注
+     * @private
+     */
+    _gameAdd: function (btn) {
+
+    },
+
+    /**
+     * 跟到底
+     * @private
+     */
+    _gameFollowAlways: function (btn) {
+
+    },
+
+    /**
+     * 跟注
+     * @private
+     */
+    _gameFollow: function () {
+
+    },
+
+    /**
+     * 弃牌
+     * @private
+     */
+    _gameGiveup: function () {
+
+    },
+
     _updateTable: function () {
         var table = cc.app.player.data.table;
         if (!table)
@@ -40,7 +108,7 @@ var GameView = cc.View.extend({
         this._handleSeat(seats);
         // 初始化Seat
         seats.forEach((seat) => {
-            this.addSeat(seat);
+            this.updateSeat(seat);
         });
     },
 
@@ -59,7 +127,7 @@ var GameView = cc.View.extend({
         return this.seatNodes[this._seatsMapping[seatID]];
     },
 
-    addSeat: function (seatData) {
+    updateSeat: function (seatData) {
         var seatID = seatData.seatID ? seatData.seatID : 0;
         var ccoin = seatData.callCoin ? seatData.callCoin : 0; // 下注的金额
         // node
@@ -67,10 +135,12 @@ var GameView = cc.View.extend({
         var nCallCoin = ccui.helper.seekNodeByName(seatNode, "use_coin");
         var nName = ccui.helper.seekNodeByName(seatNode, "user_name");
         var nCoin = ccui.helper.seekNodeByName(seatNode, "user_coin");
+        var nPrepare = ccui.helper.seekNodeByName(seatNode, "prepare");
         //
         nCallCoin.string = ccoin;
         nName.string = seatData.user.username;
         nCoin.string = seatData.user.coin;// 用户的金币
+        nPrepare.visible = seatData.isPrepared;
         // avatar
         var header = ccui.helper.seekNodeByName(seatNode, "user_header");
         var headerBorder = ccui.helper.seekNodeByName(seatNode, "user_header_border");
@@ -111,17 +181,24 @@ var GameController = cc.ViewController.extend({
         this._super();
         cc.app.events.onNode(this._target, CSMapping.S2C.USER_ENTER_TABLE, (d) => this.userEneterTable(d));
         cc.app.events.onNode(this._target, CSMapping.S2C.USER_EXIT_TABLE, (d) => this.userExitTable(d));
+        cc.app.events.onNode(this._target, CSMapping.S2C.USER_PREPARED, (d) => this.userPrepared(d));
+
     },
 
     userEneterTable: function (data) {
         var seat = cc.app.proto.parseFromArrayString($root.Seat, data);
-        this._target.addSeat(seat);
+        this._target.updateSeat(seat);
     },
 
     userExitTable: function (data) {
         var seat = cc.app.proto.parseFromArrayString($root.Seat, data);
         this._target.removeSeat(seat);
 
+    },
+
+    userPrepared: function (data) {
+        var seat = cc.app.proto.parseFromArrayString($root.Seat, data);
+        this._target.updateSeat(seat);
     },
 
     onEnter: function () {

@@ -246,6 +246,21 @@
                     <OutlineColor A="255" R="255" G="0" B="0" />
                     <ShadowColor A="255" R="110" G="110" B="110" />
                   </AbstractNodeData>
+                  <AbstractNodeData Name="btn_prepare" ActionTag="765507945" Tag="292" IconVisible="False" LeftMargin="-110.0000" RightMargin="-110.0000" TopMargin="-10.0000" BottomMargin="-90.0000" TouchEnable="True" FontSize="35" ButtonText="准备开始" Scale9Enable="True" LeftEage="70" RightEage="70" TopEage="11" BottomEage="11" Scale9OriginX="70" Scale9OriginY="11" Scale9Width="20" Scale9Height="80" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="ButtonObjectData">
+                    <Size X="220.0000" Y="100.0000" />
+                    <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                    <Position Y="-40.0000" />
+                    <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                    <CColor A="255" R="255" G="255" B="255" />
+                    <PrePosition />
+                    <PreSize X="0.0000" Y="0.0000" />
+                    <TextColor A="255" R="0" G="84" B="0" />
+                    <DisabledFileData Type="MarkedSubImage" Path="studio/com/images/ui/public_btn_disable.png" Plist="studio/com/images/ui.plist" />
+                    <PressedFileData Type="MarkedSubImage" Path="studio/com/images/ui/public_btn_pressed.png" Plist="studio/com/images/ui.plist" />
+                    <NormalFileData Type="MarkedSubImage" Path="studio/com/images/ui/public_btn_normal.png" Plist="studio/com/images/ui.plist" />
+                    <OutlineColor A="255" R="255" G="0" B="0" />
+                    <ShadowColor A="255" R="110" G="110" B="110" />
+                  </AbstractNodeData>
                 </Children>
                 <AnchorPoint />
                 <Position X="640.0000" Y="380.0000" />
