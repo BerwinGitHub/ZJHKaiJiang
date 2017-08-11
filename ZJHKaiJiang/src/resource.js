@@ -8,6 +8,7 @@ var res = {
     "Default_CheckBox_Disable_png": "res/Default/CheckBox_Disable.png",
     "HelloWorld_png": "res/HelloWorld.png",
     "loading_js": "res/loading.js",
+    "magic_png": "res/magic.png",
     "proto_transfer_proto": "res/proto/transfer.proto",
     "studio_com_components_broadcast_json": "res/studio/com/components/broadcast.json",
     "studio_com_components_dialog_help_json": "res/studio/com/components/dialog_help.json",

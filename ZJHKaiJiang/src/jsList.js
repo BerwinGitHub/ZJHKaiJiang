@@ -31,6 +31,7 @@ var jsList = [
     "src/framework/view/gamecontroller.js",
     "src/framework/view/scene.js",
     "src/framework/view/viewmanager.js",
+    "src/game/Filter.js",
     "src/game/common/CSMapping.js",
     "src/game/controller/ZJHGameController.js",
     "src/game/dialogs/DialogLoading.js",
