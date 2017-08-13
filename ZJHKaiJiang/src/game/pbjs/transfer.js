@@ -1,10 +1,6 @@
-/**
- * Created by Berwin on 2017/8/2.
- */
 /*eslint-disable block-scoped-var, no-redeclare, no-control-regex, no-prototype-builtins*/
 "use strict";
 
-// var $protobuf = require("protobufjs/minimal");
 var $protobuf = protobuf;
 
 // Common aliases
@@ -258,54 +254,54 @@ $root.User = (function() {
         while (reader.pos < end) {
             var tag = reader.uint32();
             switch (tag >>> 3) {
-                case 1:
-                    message.objectId = reader.string();
-                    break;
-                case 2:
-                    message.username = reader.string();
-                    break;
-                case 3:
-                    message.mobilePhoneNumberVerified = reader.bool();
-                    break;
-                case 4:
-                    message.mobilePhoneNumber = reader.string();
-                    break;
-                case 5:
-                    message.totalInning = reader.int32();
-                    break;
-                case 6:
-                    message.winInning = reader.int32();
-                    break;
-                case 7:
-                    message.diamond = reader.int32();
-                    break;
-                case 8:
-                    message.coin = reader.int32();
-                    break;
-                case 9:
-                    message.deviceId = reader.string();
-                    break;
-                case 10:
-                    message.id = reader.int32();
-                    break;
-                case 11:
-                    message.authData = reader.string();
-                    break;
-                case 12:
-                    message.createdAt = reader.uint64();
-                    break;
-                case 13:
-                    message.updatedAt = reader.uint64();
-                    break;
-                case 14:
-                    message.placement = reader.bool();
-                    break;
-                case 15:
-                    message.headerUrl = reader.string();
-                    break;
-                default:
-                    reader.skipType(tag & 7);
-                    break;
+            case 1:
+                message.objectId = reader.string();
+                break;
+            case 2:
+                message.username = reader.string();
+                break;
+            case 3:
+                message.mobilePhoneNumberVerified = reader.bool();
+                break;
+            case 4:
+                message.mobilePhoneNumber = reader.string();
+                break;
+            case 5:
+                message.totalInning = reader.int32();
+                break;
+            case 6:
+                message.winInning = reader.int32();
+                break;
+            case 7:
+                message.diamond = reader.int32();
+                break;
+            case 8:
+                message.coin = reader.int32();
+                break;
+            case 9:
+                message.deviceId = reader.string();
+                break;
+            case 10:
+                message.id = reader.int32();
+                break;
+            case 11:
+                message.authData = reader.string();
+                break;
+            case 12:
+                message.createdAt = reader.uint64();
+                break;
+            case 13:
+                message.updatedAt = reader.uint64();
+                break;
+            case 14:
+                message.placement = reader.bool();
+                break;
+            case 15:
+                message.headerUrl = reader.string();
+                break;
+            default:
+                reader.skipType(tag & 7);
+                break;
             }
         }
         return message;
@@ -660,21 +656,21 @@ $root.Seat = (function() {
         while (reader.pos < end) {
             var tag = reader.uint32();
             switch (tag >>> 3) {
-                case 1:
-                    message.seatID = reader.int32();
-                    break;
-                case 2:
-                    message.callCoin = reader.int32();
-                    break;
-                case 3:
-                    message.user = $root.User.decode(reader, reader.uint32());
-                    break;
-                case 4:
-                    message.isPrepared = reader.bool();
-                    break;
-                default:
-                    reader.skipType(tag & 7);
-                    break;
+            case 1:
+                message.seatID = reader.int32();
+                break;
+            case 2:
+                message.callCoin = reader.int32();
+                break;
+            case 3:
+                message.user = $root.User.decode(reader, reader.uint32());
+                break;
+            case 4:
+                message.isPrepared = reader.bool();
+                break;
+            default:
+                reader.skipType(tag & 7);
+                break;
             }
         }
         return message;
@@ -931,26 +927,26 @@ $root.Table = (function() {
         while (reader.pos < end) {
             var tag = reader.uint32();
             switch (tag >>> 3) {
-                case 1:
-                    message.tableID = reader.int32();
-                    break;
-                case 2:
-                    if (!(message.seats && message.seats.length))
-                        message.seats = [];
-                    message.seats.push($root.Seat.decode(reader, reader.uint32()));
-                    break;
-                case 3:
-                    message.minBet = reader.int32();
-                    break;
-                case 4:
-                    message.maxBet = reader.int32();
-                    break;
-                case 5:
-                    message.round = reader.int32();
-                    break;
-                default:
-                    reader.skipType(tag & 7);
-                    break;
+            case 1:
+                message.tableID = reader.int32();
+                break;
+            case 2:
+                if (!(message.seats && message.seats.length))
+                    message.seats = [];
+                message.seats.push($root.Seat.decode(reader, reader.uint32()));
+                break;
+            case 3:
+                message.minBet = reader.int32();
+                break;
+            case 4:
+                message.maxBet = reader.int32();
+                break;
+            case 5:
+                message.round = reader.int32();
+                break;
+            default:
+                reader.skipType(tag & 7);
+                break;
             }
         }
         return message;
@@ -1089,6 +1085,420 @@ $root.Table = (function() {
     };
 
     return Table;
+})();
+
+/**
+ * GameAction enum.
+ * @exports GameAction
+ * @enum {string}
+ * @property {number} PREPARE=0 PREPARE value
+ * @property {number} ADDBET=1 ADDBET value
+ * @property {number} FOLLOW=2 FOLLOW value
+ * @property {number} GIVEUP=3 GIVEUP value
+ * @property {number} COMPARE=4 COMPARE value
+ * @property {number} WATCH=5 WATCH value
+ * @property {number} COUNTDOWN_START=6 COUNTDOWN_START value
+ * @property {number} SEND_CARD=7 SEND_CARD value
+ * @property {number} TURN=8 TURN value
+ * @property {number} END=9 END value
+ */
+$root.GameAction = (function() {
+    var valuesById = {}, values = Object.create(valuesById);
+    values[valuesById[0] = "PREPARE"] = 0;
+    values[valuesById[1] = "ADDBET"] = 1;
+    values[valuesById[2] = "FOLLOW"] = 2;
+    values[valuesById[3] = "GIVEUP"] = 3;
+    values[valuesById[4] = "COMPARE"] = 4;
+    values[valuesById[5] = "WATCH"] = 5;
+    values[valuesById[6] = "COUNTDOWN_START"] = 6;
+    values[valuesById[7] = "SEND_CARD"] = 7;
+    values[valuesById[8] = "TURN"] = 8;
+    values[valuesById[9] = "END"] = 9;
+    return values;
+})();
+
+$root.GameOperate = (function() {
+
+    /**
+     * Properties of a GameOperate.
+     * @exports IGameOperate
+     * @interface IGameOperate
+     * @property {GameAction} [action] GameOperate action
+     * @property {number} [seatID] GameOperate seatID
+     * @property {number} [placementSeatID] GameOperate placementSeatID
+     * @property {number} [coin] GameOperate coin
+     * @property {Array.<Uint8Array>} [cards] GameOperate cards
+     * @property {number|Long} [millis] GameOperate millis
+     */
+
+    /**
+     * Constructs a new GameOperate.
+     * @exports GameOperate
+     * @classdesc Represents a GameOperate.
+     * @constructor
+     * @param {IGameOperate=} [properties] Properties to set
+     */
+    function GameOperate(properties) {
+        this.cards = [];
+        if (properties)
+            for (var keys = Object.keys(properties), i = 0; i < keys.length; ++i)
+                if (properties[keys[i]] != null)
+                    this[keys[i]] = properties[keys[i]];
+    }
+
+    /**
+     * GameOperate action.
+     * @member {GameAction}action
+     * @memberof GameOperate
+     * @instance
+     */
+    GameOperate.prototype.action = 0;
+
+    /**
+     * GameOperate seatID.
+     * @member {number}seatID
+     * @memberof GameOperate
+     * @instance
+     */
+    GameOperate.prototype.seatID = 0;
+
+    /**
+     * GameOperate placementSeatID.
+     * @member {number}placementSeatID
+     * @memberof GameOperate
+     * @instance
+     */
+    GameOperate.prototype.placementSeatID = 0;
+
+    /**
+     * GameOperate coin.
+     * @member {number}coin
+     * @memberof GameOperate
+     * @instance
+     */
+    GameOperate.prototype.coin = 0;
+
+    /**
+     * GameOperate cards.
+     * @member {Array.<Uint8Array>}cards
+     * @memberof GameOperate
+     * @instance
+     */
+    GameOperate.prototype.cards = $util.emptyArray;
+
+    /**
+     * GameOperate millis.
+     * @member {number|Long}millis
+     * @memberof GameOperate
+     * @instance
+     */
+    GameOperate.prototype.millis = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
+
+    /**
+     * Creates a new GameOperate instance using the specified properties.
+     * @function create
+     * @memberof GameOperate
+     * @static
+     * @param {IGameOperate=} [properties] Properties to set
+     * @returns {GameOperate} GameOperate instance
+     */
+    GameOperate.create = function create(properties) {
+        return new GameOperate(properties);
+    };
+
+    /**
+     * Encodes the specified GameOperate message. Does not implicitly {@link GameOperate.verify|verify} messages.
+     * @function encode
+     * @memberof GameOperate
+     * @static
+     * @param {IGameOperate} message GameOperate message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    GameOperate.encode = function encode(message, writer) {
+        if (!writer)
+            writer = $Writer.create();
+        if (message.action != null && message.hasOwnProperty("action"))
+            writer.uint32(/* id 1, wireType 0 =*/8).int32(message.action);
+        if (message.seatID != null && message.hasOwnProperty("seatID"))
+            writer.uint32(/* id 2, wireType 0 =*/16).int32(message.seatID);
+        if (message.placementSeatID != null && message.hasOwnProperty("placementSeatID"))
+            writer.uint32(/* id 3, wireType 0 =*/24).int32(message.placementSeatID);
+        if (message.coin != null && message.hasOwnProperty("coin"))
+            writer.uint32(/* id 4, wireType 0 =*/32).int32(message.coin);
+        if (message.cards != null && message.cards.length)
+            for (var i = 0; i < message.cards.length; ++i)
+                writer.uint32(/* id 5, wireType 2 =*/42).bytes(message.cards[i]);
+        if (message.millis != null && message.hasOwnProperty("millis"))
+            writer.uint32(/* id 6, wireType 0 =*/48).uint64(message.millis);
+        return writer;
+    };
+
+    /**
+     * Encodes the specified GameOperate message, length delimited. Does not implicitly {@link GameOperate.verify|verify} messages.
+     * @function encodeDelimited
+     * @memberof GameOperate
+     * @static
+     * @param {IGameOperate} message GameOperate message or plain object to encode
+     * @param {$protobuf.Writer} [writer] Writer to encode to
+     * @returns {$protobuf.Writer} Writer
+     */
+    GameOperate.encodeDelimited = function encodeDelimited(message, writer) {
+        return this.encode(message, writer).ldelim();
+    };
+
+    /**
+     * Decodes a GameOperate message from the specified reader or buffer.
+     * @function decode
+     * @memberof GameOperate
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @param {number} [length] Message length if known beforehand
+     * @returns {GameOperate} GameOperate
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    GameOperate.decode = function decode(reader, length) {
+        if (!(reader instanceof $Reader))
+            reader = $Reader.create(reader);
+        var end = length === undefined ? reader.len : reader.pos + length, message = new $root.GameOperate();
+        while (reader.pos < end) {
+            var tag = reader.uint32();
+            switch (tag >>> 3) {
+            case 1:
+                message.action = reader.int32();
+                break;
+            case 2:
+                message.seatID = reader.int32();
+                break;
+            case 3:
+                message.placementSeatID = reader.int32();
+                break;
+            case 4:
+                message.coin = reader.int32();
+                break;
+            case 5:
+                if (!(message.cards && message.cards.length))
+                    message.cards = [];
+                message.cards.push(reader.bytes());
+                break;
+            case 6:
+                message.millis = reader.uint64();
+                break;
+            default:
+                reader.skipType(tag & 7);
+                break;
+            }
+        }
+        return message;
+    };
+
+    /**
+     * Decodes a GameOperate message from the specified reader or buffer, length delimited.
+     * @function decodeDelimited
+     * @memberof GameOperate
+     * @static
+     * @param {$protobuf.Reader|Uint8Array} reader Reader or buffer to decode from
+     * @returns {GameOperate} GameOperate
+     * @throws {Error} If the payload is not a reader or valid buffer
+     * @throws {$protobuf.util.ProtocolError} If required fields are missing
+     */
+    GameOperate.decodeDelimited = function decodeDelimited(reader) {
+        if (!(reader instanceof $Reader))
+            reader = new $Reader(reader);
+        return this.decode(reader, reader.uint32());
+    };
+
+    /**
+     * Verifies a GameOperate message.
+     * @function verify
+     * @memberof GameOperate
+     * @static
+     * @param {Object.<string,*>} message Plain object to verify
+     * @returns {string|null} `null` if valid, otherwise the reason why it is not
+     */
+    GameOperate.verify = function verify(message) {
+        if (typeof message !== "object" || message === null)
+            return "object expected";
+        if (message.action != null && message.hasOwnProperty("action"))
+            switch (message.action) {
+            default:
+                return "action: enum value expected";
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+                break;
+            }
+        if (message.seatID != null && message.hasOwnProperty("seatID"))
+            if (!$util.isInteger(message.seatID))
+                return "seatID: integer expected";
+        if (message.placementSeatID != null && message.hasOwnProperty("placementSeatID"))
+            if (!$util.isInteger(message.placementSeatID))
+                return "placementSeatID: integer expected";
+        if (message.coin != null && message.hasOwnProperty("coin"))
+            if (!$util.isInteger(message.coin))
+                return "coin: integer expected";
+        if (message.cards != null && message.hasOwnProperty("cards")) {
+            if (!Array.isArray(message.cards))
+                return "cards: array expected";
+            for (var i = 0; i < message.cards.length; ++i)
+                if (!(message.cards[i] && typeof message.cards[i].length === "number" || $util.isString(message.cards[i])))
+                    return "cards: buffer[] expected";
+        }
+        if (message.millis != null && message.hasOwnProperty("millis"))
+            if (!$util.isInteger(message.millis) && !(message.millis && $util.isInteger(message.millis.low) && $util.isInteger(message.millis.high)))
+                return "millis: integer|Long expected";
+        return null;
+    };
+
+    /**
+     * Creates a GameOperate message from a plain object. Also converts values to their respective internal types.
+     * @function fromObject
+     * @memberof GameOperate
+     * @static
+     * @param {Object.<string,*>} object Plain object
+     * @returns {GameOperate} GameOperate
+     */
+    GameOperate.fromObject = function fromObject(object) {
+        if (object instanceof $root.GameOperate)
+            return object;
+        var message = new $root.GameOperate();
+        switch (object.action) {
+        case "PREPARE":
+        case 0:
+            message.action = 0;
+            break;
+        case "ADDBET":
+        case 1:
+            message.action = 1;
+            break;
+        case "FOLLOW":
+        case 2:
+            message.action = 2;
+            break;
+        case "GIVEUP":
+        case 3:
+            message.action = 3;
+            break;
+        case "COMPARE":
+        case 4:
+            message.action = 4;
+            break;
+        case "WATCH":
+        case 5:
+            message.action = 5;
+            break;
+        case "COUNTDOWN_START":
+        case 6:
+            message.action = 6;
+            break;
+        case "SEND_CARD":
+        case 7:
+            message.action = 7;
+            break;
+        case "TURN":
+        case 8:
+            message.action = 8;
+            break;
+        case "END":
+        case 9:
+            message.action = 9;
+            break;
+        }
+        if (object.seatID != null)
+            message.seatID = object.seatID | 0;
+        if (object.placementSeatID != null)
+            message.placementSeatID = object.placementSeatID | 0;
+        if (object.coin != null)
+            message.coin = object.coin | 0;
+        if (object.cards) {
+            if (!Array.isArray(object.cards))
+                throw TypeError(".GameOperate.cards: array expected");
+            message.cards = [];
+            for (var i = 0; i < object.cards.length; ++i)
+                if (typeof object.cards[i] === "string")
+                    $util.base64.decode(object.cards[i], message.cards[i] = $util.newBuffer($util.base64.length(object.cards[i])), 0);
+                else if (object.cards[i].length)
+                    message.cards[i] = object.cards[i];
+        }
+        if (object.millis != null)
+            if ($util.Long)
+                (message.millis = $util.Long.fromValue(object.millis)).unsigned = true;
+            else if (typeof object.millis === "string")
+                message.millis = parseInt(object.millis, 10);
+            else if (typeof object.millis === "number")
+                message.millis = object.millis;
+            else if (typeof object.millis === "object")
+                message.millis = new $util.LongBits(object.millis.low >>> 0, object.millis.high >>> 0).toNumber(true);
+        return message;
+    };
+
+    /**
+     * Creates a plain object from a GameOperate message. Also converts values to other types if specified.
+     * @function toObject
+     * @memberof GameOperate
+     * @static
+     * @param {GameOperate} message GameOperate
+     * @param {$protobuf.IConversionOptions} [options] Conversion options
+     * @returns {Object.<string,*>} Plain object
+     */
+    GameOperate.toObject = function toObject(message, options) {
+        if (!options)
+            options = {};
+        var object = {};
+        if (options.arrays || options.defaults)
+            object.cards = [];
+        if (options.defaults) {
+            object.action = options.enums === String ? "PREPARE" : 0;
+            object.seatID = 0;
+            object.placementSeatID = 0;
+            object.coin = 0;
+            if ($util.Long) {
+                var long = new $util.Long(0, 0, true);
+                object.millis = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
+            } else
+                object.millis = options.longs === String ? "0" : 0;
+        }
+        if (message.action != null && message.hasOwnProperty("action"))
+            object.action = options.enums === String ? $root.GameAction[message.action] : message.action;
+        if (message.seatID != null && message.hasOwnProperty("seatID"))
+            object.seatID = message.seatID;
+        if (message.placementSeatID != null && message.hasOwnProperty("placementSeatID"))
+            object.placementSeatID = message.placementSeatID;
+        if (message.coin != null && message.hasOwnProperty("coin"))
+            object.coin = message.coin;
+        if (message.cards && message.cards.length) {
+            object.cards = [];
+            for (var j = 0; j < message.cards.length; ++j)
+                object.cards[j] = options.bytes === String ? $util.base64.encode(message.cards[j], 0, message.cards[j].length) : options.bytes === Array ? Array.prototype.slice.call(message.cards[j]) : message.cards[j];
+        }
+        if (message.millis != null && message.hasOwnProperty("millis"))
+            if (typeof message.millis === "number")
+                object.millis = options.longs === String ? String(message.millis) : message.millis;
+            else
+                object.millis = options.longs === String ? $util.Long.prototype.toString.call(message.millis) : options.longs === Number ? new $util.LongBits(message.millis.low >>> 0, message.millis.high >>> 0).toNumber(true) : message.millis;
+        return object;
+    };
+
+    /**
+     * Converts this GameOperate to JSON.
+     * @function toJSON
+     * @memberof GameOperate
+     * @instance
+     * @returns {Object.<string,*>} JSON object
+     */
+    GameOperate.prototype.toJSON = function toJSON() {
+        return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+    };
+
+    return GameOperate;
 })();
 
 // module.exports = $root;

@@ -9,7 +9,7 @@ var CSMapping = {
         CREATE_ROOM: "createRoom",
         JOIN_ROOM: "joinRoom",
         EXIT_ROOM: "exitRoom",
-        GAMEL: "game",
+        GAMEING: "gameing",
 
         USER_PREPARE: "userPrepare",
     },

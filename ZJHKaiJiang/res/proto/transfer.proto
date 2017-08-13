@@ -46,3 +46,25 @@ message Table {
 	int32 maxBet					=	4;
 	int32 round						=	5;
 }
+
+enum GameAction {
+	PREPARE						=	0;// 准备
+	ADDBET						=	1;// 加注
+	FOLLOW						=	2;// 跟注
+	GIVEUP						=	3;// 放弃
+	COMPARE						=	4;// 比牌
+	WATCH						=	5;// 看牌
+	COUNTDOWN_START				=	6;// 倒计时开始
+	SEND_CARD					=	7;// 发牌
+	TURN						=	8;// 到某个人出牌
+	END							=	9;// 游戏结束
+}
+
+message GameOperate {
+	GameAction action				=	1;
+	int32 seatID					=	2;
+	int32 placementSeatID			=	3; // 用户比较的第二个玩家ID/
+	int32 coin						=	4;
+	repeated bytes cards			=	5; // 牌
+	uint64 millis					=	6; // 时间
+}

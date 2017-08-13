@@ -46,7 +46,8 @@ var GameView = cc.View.extend({
      * @private
      */
     _gamePrepare: function (btn) {
-        cc.app.socketmgr.emit(CSMapping.C2S.USER_PREPARE, null);
+        var opt = {action: $root.GameAction.PREPARE};
+        cc.app.socketmgr.emit(CSMapping.C2S.GAMEING, app.proto.bytesify($root.GameOperate, opt));
         btn.visible = false;
     },
 
@@ -185,6 +186,12 @@ var GameController = cc.ViewController.extend({
 
     },
 
+    userPrepared: function (data) {
+        // TODO 等待修改，现在传过来的是GameOperate
+        var seat = cc.app.proto.parseFromArrayString($root.Seat, data);
+        this._target.updateSeat(seat);
+    },
+
     userEneterTable: function (data) {
         var seat = cc.app.proto.parseFromArrayString($root.Seat, data);
         this._target.updateSeat(seat);
@@ -194,11 +201,6 @@ var GameController = cc.ViewController.extend({
         var seat = cc.app.proto.parseFromArrayString($root.Seat, data);
         this._target.removeSeat(seat);
 
-    },
-
-    userPrepared: function (data) {
-        var seat = cc.app.proto.parseFromArrayString($root.Seat, data);
-        this._target.updateSeat(seat);
     },
 
     onEnter: function () {

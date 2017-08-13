@@ -6,14 +6,26 @@ var LoginView = cc.View.extend({
 
     ctor: function () {
         this._super(new LoginController(this));
-        // var data = ccs.load(res.studio_login_layers_login_json);
-        // this.addChildToCenter(data.node);
-        //
-        // var btnLogin = ccui.helper.seekNodeByName(data.node, "btn_wechat");
-        // btnLogin.addClickEventListener(() => {
-        //     this._viewController.login();
-        // });
+        var data = ccs.load(res.studio_login_layers_login_json);
+        this.addChildToCenter(data.node);
 
+        var btnLogin = ccui.helper.seekNodeByName(data.node, "btn_wechat");
+        btnLogin.addClickEventListener(() => {
+            this._viewController.login();
+        });
+    },
+
+    onEnter: function () {
+        this._super();
+
+    },
+
+    onExit: function () {
+        this._super();
+
+    },
+
+    testGL: function () {
         var n = [];
         var x = 0, y = 0, w = 195, h = 275, space = 5;
         for (y = 0; y + h < cc.winSize.height; y += h + space) {
@@ -39,29 +51,6 @@ var LoginView = cc.View.extend({
         cc.Filter.motionBlur(n[5], 15, 0.0625, cc.p(-0.01, 0));
         console.log("6 start.");
         cc.Filter.shedBlur(n[6], cc.p(0.5, 0.5), 1.0 / h, 50.0);
-
-        // SocketHelper.getInstance().setUpEnvironment("127.0.0.1", "8867");
-        // var data = ccs.load(res.studio_HomeScene_node_HomeScene_json);
-        // this.addChild(data.node);
-        //
-        // var btn = cc.app.helper.ui.findNodeByName(data.node, "Button_1");
-        // btn.addClickEventListener(this.onHallClick);
-        //
-        // this.nodeAmt = cc.app.helper.ui.findNodeByName(data.node, "amtNode");
-        // this.nodeAmt.action.play("ani", true);
-        //
-        // cc.app.dialogmgr.dialogconsole.showWithGlobal();
-
-    },
-
-    onEnter: function () {
-        this._super();
-
-    },
-
-    onExit: function () {
-        this._super();
-
     },
 });
 
