@@ -1112,7 +1112,7 @@
                     "ctype": "ButtonObjectData"
                   },
                   {
-                    "FontSize": 40,
+                    "FontSize": 35,
                     "ButtonText": "准备开始",
                     "TextColor": {
                       "R": 0,
@@ -1194,6 +1194,39 @@
                 },
                 "Name": "opt_nodes",
                 "ctype": "SingleNodeObjectData"
+              },
+              {
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 640.0,
+                  "Y": 500.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.6944
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 640.0,
+                "RightMargin": 640.0,
+                "TopMargin": 220.0,
+                "BottomMargin": 500.0,
+                "Tag": 577,
+                "ActionTag": 1141347271,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "dealCards",
+                "ctype": "SingleNodeObjectData"
               }
             ],
             "ActionTag": 508554984,
@@ -1226,7 +1259,7 @@
             },
             "Position": {
               "X": 0.0,
-              "Y": 80.0
+              "Y": 100.0
             },
             "Scale": {
               "ScaleX": 1.0,
@@ -1248,8 +1281,8 @@
             },
             "LeftMargin": -112.5,
             "RightMargin": -112.5,
-            "TopMargin": -106.0,
-            "BottomMargin": 54.0,
+            "TopMargin": -126.0,
+            "BottomMargin": 74.0,
             "Tag": 1149,
             "ActionTag": 1737139788,
             "Size": {
@@ -1660,6 +1693,62 @@
             },
             "Name": "ui_nodes",
             "ctype": "SingleNodeObjectData"
+          },
+          {
+            "IsCustomSize": true,
+            "FontSize": 18,
+            "LabelText": "5秒后开始游戏",
+            "HorizontalAlignmentType": "HT_Center",
+            "VerticalAlignmentType": "VT_Center",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 0,
+              "G": 139,
+              "B": 101
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 0.0,
+              "Y": 50.28
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 165,
+              "G": 42,
+              "B": 42
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -83.5,
+            "RightMargin": -83.5,
+            "TopMargin": -60.78,
+            "BottomMargin": 39.78,
+            "Tag": 576,
+            "ActionTag": 822174473,
+            "Size": {
+              "X": 167.0,
+              "Y": 21.0
+            },
+            "Name": "lbl_start",
+            "ctype": "TextObjectData"
           }
         ],
         "Size": {

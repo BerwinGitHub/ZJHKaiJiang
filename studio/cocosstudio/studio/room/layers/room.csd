@@ -269,6 +269,15 @@
                 <PrePosition X="0.5000" Y="0.5278" />
                 <PreSize X="0.0000" Y="0.0000" />
               </AbstractNodeData>
+              <AbstractNodeData Name="dealCards" ActionTag="1141347271" Tag="577" IconVisible="True" LeftMargin="640.0000" RightMargin="640.0000" TopMargin="220.0000" BottomMargin="500.0000" ctype="SingleNodeObjectData">
+                <Size X="0.0000" Y="0.0000" />
+                <AnchorPoint />
+                <Position X="640.0000" Y="500.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="255" G="255" B="255" />
+                <PrePosition X="0.5000" Y="0.6944" />
+                <PreSize X="0.0000" Y="0.0000" />
+              </AbstractNodeData>
             </Children>
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="0.0001" />
@@ -279,10 +288,10 @@
             <FileData Type="MarkedSubImage" Path="studio/room/images/bg_normal.jpg" Plist="studio/room/images/table.plist" />
             <BlendFunc Src="770" Dst="771" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Text_10" ActionTag="1737139788" Alpha="76" Tag="1149" IconVisible="False" LeftMargin="-112.5000" RightMargin="-112.5000" TopMargin="-106.0000" BottomMargin="54.0000" FontSize="45" LabelText="开江炸金花" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+          <AbstractNodeData Name="Text_10" ActionTag="1737139788" Alpha="76" Tag="1149" IconVisible="False" LeftMargin="-112.5000" RightMargin="-112.5000" TopMargin="-126.0000" BottomMargin="74.0000" FontSize="45" LabelText="开江炸金花" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
             <Size X="225.0000" Y="52.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position Y="80.0000" />
+            <Position Y="100.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="2" G="125" B="78" />
             <PrePosition />
@@ -375,6 +384,17 @@
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />
             <PreSize X="0.0000" Y="0.0000" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="lbl_start" ActionTag="822174473" Tag="576" IconVisible="False" LeftMargin="-83.5000" RightMargin="-83.5000" TopMargin="-60.7800" BottomMargin="39.7800" IsCustomSize="True" FontSize="18" LabelText="5秒后开始游戏" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+            <Size X="167.0000" Y="21.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <Position Y="50.2800" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="165" G="42" B="42" />
+            <PrePosition />
+            <PreSize X="0.0000" Y="0.0000" />
+            <OutlineColor A="255" R="255" G="0" B="0" />
+            <ShadowColor A="255" R="0" G="139" B="101" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

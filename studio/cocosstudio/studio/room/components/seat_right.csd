@@ -113,6 +113,15 @@
       <ObjectData Name="Node" Tag="114" ctype="GameNodeObjectData">
         <Size X="0.0000" Y="0.0000" />
         <Children>
+          <AbstractNodeData Name="count_down" ActionTag="-947920917" Tag="84" IconVisible="True" ctype="SingleNodeObjectData">
+            <Size X="0.0000" Y="0.0000" />
+            <AnchorPoint />
+            <Position />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition />
+            <PreSize X="0.0000" Y="0.0000" />
+          </AbstractNodeData>
           <AbstractNodeData Name="seat_bg" ActionTag="-1244693725" Tag="127" IconVisible="False" LeftMargin="-90.0000" RightMargin="-90.0000" TopMargin="-55.0000" BottomMargin="-55.0000" ctype="SpriteObjectData">
             <Size X="180.0000" Y="110.0000" />
             <Children>
@@ -224,7 +233,7 @@
                 <PreSize X="0.3056" Y="0.3273" />
                 <LabelBMFontFile_CNB Type="Normal" Path="studio/room/fonts/gamingMoneyNumber.fnt" Plist="" />
               </AbstractNodeData>
-              <AbstractNodeData Name="prepare" ActionTag="639473045" VisibleForFrame="False" Tag="674" IconVisible="False" LeftMargin="-55.8769" RightMargin="181.8769" TopMargin="4.7450" BottomMargin="31.2550" FlipX="True" ctype="SpriteObjectData">
+              <AbstractNodeData Name="prepare" ActionTag="639473045" Tag="674" IconVisible="False" LeftMargin="-55.8769" RightMargin="181.8769" TopMargin="4.7450" BottomMargin="31.2550" FlipX="True" ctype="SpriteObjectData">
                 <Size X="54.0000" Y="74.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                 <Position X="-28.8769" Y="68.2550" />
@@ -233,17 +242,6 @@
                 <PrePosition X="-0.1604" Y="0.6205" />
                 <PreSize X="0.3000" Y="0.6727" />
                 <FileData Type="MarkedSubImage" Path="studio/room/images/ui/prepare.png" Plist="studio/room/images/ui.plist" />
-                <BlendFunc Src="1" Dst="771" />
-              </AbstractNodeData>
-              <AbstractNodeData Name="count_down" ActionTag="2088213290" VisibleForFrame="False" Tag="144" IconVisible="False" LeftMargin="-3.0000" RightMargin="-3.0000" TopMargin="-3.0000" BottomMargin="-3.0000" ctype="SpriteObjectData">
-                <Size X="186.0000" Y="116.0000" />
-                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-                <Position X="90.0000" Y="55.0000" />
-                <Scale ScaleX="1.0000" ScaleY="1.0000" />
-                <CColor A="255" R="255" G="255" B="255" />
-                <PrePosition X="0.5000" Y="0.5000" />
-                <PreSize X="1.0333" Y="1.0545" />
-                <FileData Type="MarkedSubImage" Path="studio/room/images/ui/count_down.png" Plist="studio/room/images/ui.plist" />
                 <BlendFunc Src="1" Dst="771" />
               </AbstractNodeData>
               <AbstractNodeData Name="chat_node" ActionTag="696997434" Tag="172" IconVisible="True" LeftMargin="90.0000" RightMargin="90.0000" TopMargin="55.0000" BottomMargin="55.0000" ctype="SingleNodeObjectData">

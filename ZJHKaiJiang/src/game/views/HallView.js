@@ -84,7 +84,8 @@ var HallController = cc.ViewController.extend({
         var table = cc.app.proto.parseFromArrayString($root.Table, data);
         cc.app.player.data.table = table;
         cc.app.dialogmgr.diaLoading.hide();
-        cc.app.viewmgr.replaceView(new GameView());
+        cc.gameView = new GameView();
+        cc.app.viewmgr.replaceView(cc.gameView);
     },
 
     enterFailed: function () {

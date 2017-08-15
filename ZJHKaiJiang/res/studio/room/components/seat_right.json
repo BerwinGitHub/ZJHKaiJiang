@@ -327,6 +327,35 @@
         "Tag": 114,
         "Children": [
           {
+            "AnchorPoint": {},
+            "Position": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": true,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Tag": 84,
+            "ActionTag": -947920917,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "Name": "count_down",
+            "ctype": "SingleNodeObjectData"
+          },
+          {
             "FileData": {
               "Type": "MarkedSubImage",
               "Path": "studio/room/images/ui/seat_bg.png",
@@ -836,54 +865,7 @@
                   "X": 54.0,
                   "Y": 74.0
                 },
-                "VisibleForFrame": false,
                 "Name": "prepare",
-                "ctype": "SpriteObjectData"
-              },
-              {
-                "FileData": {
-                  "Type": "MarkedSubImage",
-                  "Path": "studio/room/images/ui/count_down.png",
-                  "Plist": "studio/room/images/ui.plist"
-                },
-                "BlendFunc": {
-                  "Src": 1,
-                  "Dst": 771
-                },
-                "AnchorPoint": {
-                  "ScaleX": 0.5,
-                  "ScaleY": 0.5
-                },
-                "Position": {
-                  "X": 90.0,
-                  "Y": 55.0
-                },
-                "Scale": {
-                  "ScaleX": 1.0,
-                  "ScaleY": 1.0
-                },
-                "CColor": {},
-                "IconVisible": false,
-                "PrePosition": {
-                  "X": 0.5,
-                  "Y": 0.5
-                },
-                "PreSize": {
-                  "X": 1.0333,
-                  "Y": 1.0545
-                },
-                "LeftMargin": -3.0,
-                "RightMargin": -3.0,
-                "TopMargin": -3.0,
-                "BottomMargin": -3.0,
-                "Tag": 144,
-                "ActionTag": 2088213290,
-                "Size": {
-                  "X": 186.0,
-                  "Y": 116.0
-                },
-                "VisibleForFrame": false,
-                "Name": "count_down",
                 "ctype": "SpriteObjectData"
               },
               {

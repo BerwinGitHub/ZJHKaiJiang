@@ -23,6 +23,8 @@ var CSMapping = {
         ENTER_TABLE_SUCCESS: "enterTableSuccess", // 创建桌子成功
         ENTER_TABLE_FAILED: "enterTableFailed", // 创建桌子失败
 
+        GAMEING: "gameing",
+
         USER_PREPARED: "userPrepared", // 玩家准备 Prrotobuf -> Seat
     },
 };
