@@ -37,6 +37,7 @@ message Seat {
 	int32 callCoin					=	2;
 	User user						=	3;
 	bool isPrepared					=	4;
+	bool isWatched					=	5;
 }
 
 message Table {
@@ -64,7 +65,8 @@ message GameOperate {
 	GameAction action				=	1;
 	int32 seatID					=	2;
 	int32 placementSeatID			=	3; // 用户比较的第二个玩家ID/
-	int32 coin						=	4;
-	repeated bytes cards			=	5; // 牌
-	uint64 millis					=	6; // 时间
+	int32 winnerSeatID				=	4; // 用户比较的第二个玩家ID/
+	int32 coin						=	5;
+	repeated bytes cards			=	6; // 牌
+	uint64 millis					=	7; // 时间
 }

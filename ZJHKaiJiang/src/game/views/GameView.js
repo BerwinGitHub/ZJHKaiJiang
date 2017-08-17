@@ -16,11 +16,13 @@ var GameView = cc.View.extend({
     _seatsMapping: null,// 本地位置和服务器位置对应表
     _dealCardsNode: null,//
     _startTimeNode: null,
+    _node: null,
 
     ctor: function () {
         this._super(new GameController(this));
         var data = ccs.load(res.studio_room_layers_room_json);
         this.addChildToCenter(data.node);
+        this._node = data.node;
         this._dealCardsNode = ccui.helper.seekNodeByName(data.node, "dealCards");
         this._startTimeNode = ccui.helper.seekNodeByName(data.node, "lbl_start");
         this._startTimeNode.visible = false;
@@ -273,6 +275,24 @@ var GameView = cc.View.extend({
         seatNode.visible = false;
     },
 
+    lockButtons: function () {
+        var keyNames = ["btn_follow", "btn_compare", "btn_add"];
+        for (var i = 0; i < keyNames.length; i++) {
+            var btn = ccui.helper.seekNodeByName(this._node, keyNames[i]);
+            btn && btn.setTouchEnabled(false);
+            btn && btn.setBright(false);
+        }
+    },
+
+    unlockButtons: function () {
+        var keyNames = ["btn_follow", "btn_compare", "btn_add"];
+        for (var i = 0; i < keyNames.length; i++) {
+            var btn = ccui.helper.seekNodeByName(this._node, keyNames[i]);
+            btn && btn.setTouchEnabled(true);
+            btn && btn.setBright(true);
+        }
+    },
+
     onEnter: function () {
         this._super();
 
@@ -306,6 +326,7 @@ var GameController = cc.ViewController.extend({
     pollingExecute: function (data) {
         var go = cc.app.proto.parseFromArrayString($root.GameOperate, data);
         if (go.action == $root.GameAction.PREPARE) { // 用户准备
+            this._target.lockButtons();
             var seat = this._seatEntities[go.seatID];
             seat.isPrepared = true;
             this._preparedSeat[seat.seatID] = seat;
@@ -316,10 +337,16 @@ var GameController = cc.ViewController.extend({
             this._target.dealCard(go.seatID ? go.seatID : 0);
         } else if (go.action == $root.GameAction.TURN) { // 该自己操作
             var seatID = go.seatID ? go.seatID : 0;
-            this._target.turnCountDown(seatID, go.millis.toNumber() / 1000.0, () => {
+            if (seatID == this._target._mySeatID) {
+                this._target.unlockButtons();
+            } else {
+                this._target.lockButtons();
+            }
+            this._target.turnCountDown(seatID, (go.millis.toNumber() - Date.now()) / 1000.0, () => {
             });
         } else if (go.action == $root.GameAction.END) { // 一轮结束
             this._preparedSeat = null;
+            this._target.lockButtons();
         }
     },
 

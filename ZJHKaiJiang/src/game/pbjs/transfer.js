@@ -542,6 +542,7 @@ $root.Seat = (function() {
      * @property {number} [callCoin] Seat callCoin
      * @property {IUser} [user] Seat user
      * @property {boolean} [isPrepared] Seat isPrepared
+     * @property {boolean} [isWatched] Seat isWatched
      */
 
     /**
@@ -591,6 +592,14 @@ $root.Seat = (function() {
     Seat.prototype.isPrepared = false;
 
     /**
+     * Seat isWatched.
+     * @member {boolean}isWatched
+     * @memberof Seat
+     * @instance
+     */
+    Seat.prototype.isWatched = false;
+
+    /**
      * Creates a new Seat instance using the specified properties.
      * @function create
      * @memberof Seat
@@ -622,6 +631,8 @@ $root.Seat = (function() {
             $root.User.encode(message.user, writer.uint32(/* id 3, wireType 2 =*/26).fork()).ldelim();
         if (message.isPrepared != null && message.hasOwnProperty("isPrepared"))
             writer.uint32(/* id 4, wireType 0 =*/32).bool(message.isPrepared);
+        if (message.isWatched != null && message.hasOwnProperty("isWatched"))
+            writer.uint32(/* id 5, wireType 0 =*/40).bool(message.isWatched);
         return writer;
     };
 
@@ -667,6 +678,9 @@ $root.Seat = (function() {
                 break;
             case 4:
                 message.isPrepared = reader.bool();
+                break;
+            case 5:
+                message.isWatched = reader.bool();
                 break;
             default:
                 reader.skipType(tag & 7);
@@ -717,6 +731,9 @@ $root.Seat = (function() {
         if (message.isPrepared != null && message.hasOwnProperty("isPrepared"))
             if (typeof message.isPrepared !== "boolean")
                 return "isPrepared: boolean expected";
+        if (message.isWatched != null && message.hasOwnProperty("isWatched"))
+            if (typeof message.isWatched !== "boolean")
+                return "isWatched: boolean expected";
         return null;
     };
 
@@ -743,6 +760,8 @@ $root.Seat = (function() {
         }
         if (object.isPrepared != null)
             message.isPrepared = Boolean(object.isPrepared);
+        if (object.isWatched != null)
+            message.isWatched = Boolean(object.isWatched);
         return message;
     };
 
@@ -764,6 +783,7 @@ $root.Seat = (function() {
             object.callCoin = 0;
             object.user = null;
             object.isPrepared = false;
+            object.isWatched = false;
         }
         if (message.seatID != null && message.hasOwnProperty("seatID"))
             object.seatID = message.seatID;
@@ -773,6 +793,8 @@ $root.Seat = (function() {
             object.user = $root.User.toObject(message.user, options);
         if (message.isPrepared != null && message.hasOwnProperty("isPrepared"))
             object.isPrepared = message.isPrepared;
+        if (message.isWatched != null && message.hasOwnProperty("isWatched"))
+            object.isWatched = message.isWatched;
         return object;
     };
 
@@ -1126,6 +1148,7 @@ $root.GameOperate = (function() {
      * @property {GameAction} [action] GameOperate action
      * @property {number} [seatID] GameOperate seatID
      * @property {number} [placementSeatID] GameOperate placementSeatID
+     * @property {number} [winnerSeatID] GameOperate winnerSeatID
      * @property {number} [coin] GameOperate coin
      * @property {Array.<Uint8Array>} [cards] GameOperate cards
      * @property {number|Long} [millis] GameOperate millis
@@ -1169,6 +1192,14 @@ $root.GameOperate = (function() {
      * @instance
      */
     GameOperate.prototype.placementSeatID = 0;
+
+    /**
+     * GameOperate winnerSeatID.
+     * @member {number}winnerSeatID
+     * @memberof GameOperate
+     * @instance
+     */
+    GameOperate.prototype.winnerSeatID = 0;
 
     /**
      * GameOperate coin.
@@ -1224,13 +1255,15 @@ $root.GameOperate = (function() {
             writer.uint32(/* id 2, wireType 0 =*/16).int32(message.seatID);
         if (message.placementSeatID != null && message.hasOwnProperty("placementSeatID"))
             writer.uint32(/* id 3, wireType 0 =*/24).int32(message.placementSeatID);
+        if (message.winnerSeatID != null && message.hasOwnProperty("winnerSeatID"))
+            writer.uint32(/* id 4, wireType 0 =*/32).int32(message.winnerSeatID);
         if (message.coin != null && message.hasOwnProperty("coin"))
-            writer.uint32(/* id 4, wireType 0 =*/32).int32(message.coin);
+            writer.uint32(/* id 5, wireType 0 =*/40).int32(message.coin);
         if (message.cards != null && message.cards.length)
             for (var i = 0; i < message.cards.length; ++i)
-                writer.uint32(/* id 5, wireType 2 =*/42).bytes(message.cards[i]);
+                writer.uint32(/* id 6, wireType 2 =*/50).bytes(message.cards[i]);
         if (message.millis != null && message.hasOwnProperty("millis"))
-            writer.uint32(/* id 6, wireType 0 =*/48).uint64(message.millis);
+            writer.uint32(/* id 7, wireType 0 =*/56).uint64(message.millis);
         return writer;
     };
 
@@ -1275,14 +1308,17 @@ $root.GameOperate = (function() {
                 message.placementSeatID = reader.int32();
                 break;
             case 4:
-                message.coin = reader.int32();
+                message.winnerSeatID = reader.int32();
                 break;
             case 5:
+                message.coin = reader.int32();
+                break;
+            case 6:
                 if (!(message.cards && message.cards.length))
                     message.cards = [];
                 message.cards.push(reader.bytes());
                 break;
-            case 6:
+            case 7:
                 message.millis = reader.uint64();
                 break;
             default:
@@ -1342,6 +1378,9 @@ $root.GameOperate = (function() {
         if (message.placementSeatID != null && message.hasOwnProperty("placementSeatID"))
             if (!$util.isInteger(message.placementSeatID))
                 return "placementSeatID: integer expected";
+        if (message.winnerSeatID != null && message.hasOwnProperty("winnerSeatID"))
+            if (!$util.isInteger(message.winnerSeatID))
+                return "winnerSeatID: integer expected";
         if (message.coin != null && message.hasOwnProperty("coin"))
             if (!$util.isInteger(message.coin))
                 return "coin: integer expected";
@@ -1416,6 +1455,8 @@ $root.GameOperate = (function() {
             message.seatID = object.seatID | 0;
         if (object.placementSeatID != null)
             message.placementSeatID = object.placementSeatID | 0;
+        if (object.winnerSeatID != null)
+            message.winnerSeatID = object.winnerSeatID | 0;
         if (object.coin != null)
             message.coin = object.coin | 0;
         if (object.cards) {
@@ -1459,6 +1500,7 @@ $root.GameOperate = (function() {
             object.action = options.enums === String ? "PREPARE" : 0;
             object.seatID = 0;
             object.placementSeatID = 0;
+            object.winnerSeatID = 0;
             object.coin = 0;
             if ($util.Long) {
                 var long = new $util.Long(0, 0, true);
@@ -1472,6 +1514,8 @@ $root.GameOperate = (function() {
             object.seatID = message.seatID;
         if (message.placementSeatID != null && message.hasOwnProperty("placementSeatID"))
             object.placementSeatID = message.placementSeatID;
+        if (message.winnerSeatID != null && message.hasOwnProperty("winnerSeatID"))
+            object.winnerSeatID = message.winnerSeatID;
         if (message.coin != null && message.hasOwnProperty("coin"))
             object.coin = message.coin;
         if (message.cards && message.cards.length) {
