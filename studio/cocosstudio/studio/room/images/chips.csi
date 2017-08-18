@@ -1,0 +1,28 @@
+<PlistInfoProjectFile>
+  <PropertyGroup Name="chips" Type="Plist" ID="d7ab46e0-1262-41a4-b3c1-8b12557702af" Version="3.10.0.0" />
+  <Content ExportType="Png" SortAlgorithm="MaxRects" PicturePadding="2" AllowRotation="True" AllowAnySize="True" AllowTrim="True" ctype="PlistInfoData">
+    <ImageFiles>
+      <FilePathData Path="studio/room/images/chips/chip10_10.png" />
+      <FilePathData Path="studio/room/images/chips/chip10_100.png" />
+      <FilePathData Path="studio/room/images/chips/chip10_30.png" />
+      <FilePathData Path="studio/room/images/chips/chip10_50.png" />
+      <FilePathData Path="studio/room/images/chips/chip10_80.png" />
+      <FilePathData Path="studio/room/images/chips/chip100_100.png" />
+      <FilePathData Path="studio/room/images/chips/chip100_1000.png" />
+      <FilePathData Path="studio/room/images/chips/chip100_300.png" />
+      <FilePathData Path="studio/room/images/chips/chip100_500.png" />
+      <FilePathData Path="studio/room/images/chips/chip100_800.png" />
+      <FilePathData Path="studio/room/images/chips/chip1000_1000.png" />
+      <FilePathData Path="studio/room/images/chips/chip1000_10000.png" />
+      <FilePathData Path="studio/room/images/chips/chip1000_3000.png" />
+      <FilePathData Path="studio/room/images/chips/chip1000_5000.png" />
+      <FilePathData Path="studio/room/images/chips/chip1000_8000.png" />
+      <FilePathData Path="studio/room/images/chips/chip10000_10000.png" />
+      <FilePathData Path="studio/room/images/chips/chip10000_100000.png" />
+      <FilePathData Path="studio/room/images/chips/chip10000_30000.png" />
+      <FilePathData Path="studio/room/images/chips/chip10000_50000.png" />
+      <FilePathData Path="studio/room/images/chips/chip10000_80000.png" />
+    </ImageFiles>
+    <MaxSize Width="1024" Height="1024" />
+  </Content>
+</PlistInfoProjectFile>

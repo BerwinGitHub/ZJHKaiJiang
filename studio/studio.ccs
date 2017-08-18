@@ -103,6 +103,7 @@
               <Project Name="dialog_menu.csd" Type="Node" />
               <Project Name="seat_left.csd" Type="Node" />
               <Project Name="seat_right.csd" Type="Node" />
+              <Project Name="add_bets.csd" Type="Node" />
             </Folder>
             <Folder Name="fonts">
               <Fnt Name="game_num_money.fnt" />
@@ -182,6 +183,29 @@
               <PlistInfo Name="card.csi" Type="Plist" />
               <PlistInfo Name="table.csi" Type="Plist" />
               <PlistInfo Name="ui.csi" Type="Plist" />
+              <Folder Name="chips">
+                <Image Name="chip10_10.png" />
+                <Image Name="chip10_100.png" />
+                <Image Name="chip10_30.png" />
+                <Image Name="chip10_50.png" />
+                <Image Name="chip10_80.png" />
+                <Image Name="chip100_100.png" />
+                <Image Name="chip100_1000.png" />
+                <Image Name="chip100_300.png" />
+                <Image Name="chip100_500.png" />
+                <Image Name="chip100_800.png" />
+                <Image Name="chip1000_1000.png" />
+                <Image Name="chip1000_10000.png" />
+                <Image Name="chip1000_3000.png" />
+                <Image Name="chip1000_5000.png" />
+                <Image Name="chip1000_8000.png" />
+                <Image Name="chip10000_10000.png" />
+                <Image Name="chip10000_100000.png" />
+                <Image Name="chip10000_30000.png" />
+                <Image Name="chip10000_50000.png" />
+                <Image Name="chip10000_80000.png" />
+              </Folder>
+              <PlistInfo Name="chips.csi" Type="Plist" />
             </Folder>
             <Folder Name="layers">
               <Project Name="room.csd" Type="Node" />

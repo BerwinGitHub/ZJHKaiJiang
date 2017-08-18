@@ -17,6 +17,9 @@ var GameView = cc.View.extend({
     _dealCardsNode: null,//
     _startTimeNode: null,
     _node: null,
+    _checkboxAutoFollow: null,// 自动跟注
+    _coinArea: null,
+    _minBet: 10,// 底注
 
     ctor: function () {
         this._super(new GameController(this));
@@ -25,6 +28,8 @@ var GameView = cc.View.extend({
         this._node = data.node;
         this._dealCardsNode = ccui.helper.seekNodeByName(data.node, "dealCards");
         this._startTimeNode = ccui.helper.seekNodeByName(data.node, "lbl_start");
+        this._checkboxAutoFollow = ccui.helper.seekNodeByName(data.node, "cb_follow");
+        this._coinArea = ccui.helper.seekNodeByName(data.node, "coin_area");
         this._startTimeNode.visible = false;
         // 初始化按钮
         this._initButton(data.node);
@@ -52,7 +57,9 @@ var GameView = cc.View.extend({
         var functions = [this._gameFollow, this._gameGiveup, this._gameCompare, this._gameWatch, this._gameAdd, this._gameFollowAlways, this._gamePrepare];
         for (var i = 0; i < keyNames.length; i++) {
             var btn = ccui.helper.seekNodeByName(node, keyNames[i]);
-            btn.addClickEventListener(functions[i]);
+            (function (btn, i, self) {
+                btn.addClickEventListener(() => functions[i].apply(self));
+            })(btn, i, this);
         }
     },
 
@@ -110,8 +117,8 @@ var GameView = cc.View.extend({
      * 跟到底
      * @private
      */
-    _gameFollowAlways: function (btn) {
-
+    _gameFollowAlways: function () {
+        this._checkboxAutoFollow.setSelected(!this._checkboxAutoFollow.isSelected());
     },
 
     /**
@@ -128,6 +135,10 @@ var GameView = cc.View.extend({
      */
     _gameGiveup: function () {
 
+    },
+
+    isAutoFollow: function () {
+        return this._checkboxAutoFollow.isSelected();
     },
 
     // TODO 执行操作
@@ -164,22 +175,6 @@ var GameView = cc.View.extend({
     },
 
     /**
-     * 开始倒计时
-     * @param seatID
-     * @param dt
-     * @param finish
-     */
-    turnCountDown: function (seatID, dt, finish) {
-        var seatNode = this._getSeatNodeBySeatID(seatID);
-        var progress = ccui.helper.seekNodeByName(seatNode, "count_down").getChildren()[0];
-        progress.color = cc.color.GREEN;
-        var spawn = cc.spawn(cc.progressFromTo(dt, 0, 100), cc.tintTo(dt, 255, 0, 0));
-        progress.runAction(cc.sequence(spawn, cc.callFunc(() => {
-            finish && finish(seatNode);
-        })));
-    },
-
-    /**
      * n秒后开始游戏
      * @param interval
      */
@@ -196,6 +191,131 @@ var GameView = cc.View.extend({
         }), cc.hide()));
         this._startTimeNode.visible = true;
     },
+
+    /**
+     * 开始倒计时
+     * @param seatID
+     * @param dt
+     * @param finish
+     */
+    somebodyCountDown: function (seatID, dt, finish) {
+        var seatNode = this._getSeatNodeBySeatID(seatID);
+        var progress = ccui.helper.seekNodeByName(seatNode, "count_down").getChildren()[0];
+        progress.color = cc.color.GREEN;
+        var spawn = cc.spawn(cc.progressFromTo(dt, 0, 100), cc.tintTo(dt, 255, 0, 0));
+        progress.runAction(cc.sequence(spawn, cc.callFunc(() => {
+            finish && finish(seatNode);
+            progress.setPercentage(0);
+            progress.color = cc.color.GREEN;
+        })));
+    },
+
+    /**
+     * 某个用户放弃
+     * @param seatID
+     */
+    somebodyGiveup: function (seatID) {
+        // 设置成弃牌的状态
+        this._setCardCoverFrame(seatID, cc.spriteFrameCache.getSpriteFrameByName("studio/room/images/cards/game_poker2.png"));
+    },
+
+    /**
+     * 某人看牌了
+     * @param seatID
+     */
+    somebodyWatch: function (seatID) {
+        var seatNode = this._getSeatNodeBySeatID(seatID);
+        // 设置成弃牌的状态
+        for (var i = 0; i < 3; i++) {
+            var cardNode = ccui.helper.seekNodeByName(seatNode, "poker_" + i);
+            cardNode.setRotation(i * 5);
+        }
+    },
+
+    /**
+     * 某人加注
+     * @param seatData
+     */
+    somebodyAddBet: function (seatData, addBet) {
+        var seatNode = this._getSeatNodeBySeatID(seatData.seatID);
+        var lblCoin = ccui.helper.seekNodeByName(seatNode, "use_coin");
+        lblCoin.string = seatData.callCoin;
+        this._addChipToTable(seatData.seatID, addBet);
+    },
+
+    /**
+     * 某人跟注
+     * @param seatID
+     */
+    somebodyFollowBet: function (seatData, bet) {
+        var seatNode = this._getSeatNodeBySeatID(seatData.seatID);
+        var lblCoin = ccui.helper.seekNodeByName(seatNode, "use_coin");
+        lblCoin.string = seatData.callCoin;
+        this._addChipToTable(seatData.seatID, bet);
+    },
+
+    /**
+     * 比牌
+     * @param seatID
+     * @param otherSeatID
+     * @param winnerSeatID
+     */
+    somebodyCompare: function (seatID, otherSeatID, winnerSeatID) {
+        // 1.播放比较动画
+        var sn1 = this._getSeatNodeBySeatID(seatID);
+        var sn2 = this._getSeatNodeBySeatID(otherSeatID);
+        var needShowCard = (seatID == this._mySeatID || otherSeatID == this._mySeatID);
+        this._setCardCoverVisible(seatID, !needShowCard);
+        this._setCardCoverVisible(otherSeatID, !needShowCard);
+        // 2.比牌失败就换cover
+        this._setCardCoverFrame(seatID == winnerSeatID ? otherSeatID : seatID, cc.spriteFrameCache.getSpriteFrameByName("studio/room/images/cards/game_poker3.png"));
+    },
+
+    /**
+     * 设置牌的cover是否显示
+     * @param seatID
+     * @param visible
+     * @private
+     */
+    _setCardCoverVisible: function (seatID, visible) {
+        var seatNode = this._getSeatNodeBySeatID(seatID);
+        // 设置成弃牌的状态
+        for (var i = 0; i < 3; i++) {
+            var cardNode = ccui.helper.seekNodeByName(seatNode, "poker_" + i);
+            var cover = ccui.helper.seekNodeByName(cardNode, "cover");
+            cover.visible = visible;
+        }
+    },
+
+    /**
+     * 设置cover的状态(正常/看牌/比牌输)
+     * @param seatID
+     * @param frame
+     * @private
+     */
+    _setCardCoverFrame: function (seatID, frame) {
+        var seatNode = this._getSeatNodeBySeatID(seatID);
+        // 设置成弃牌的状态
+        for (var i = 0; i < 3; i++) {
+            var cardNode = ccui.helper.seekNodeByName(seatNode, "poker_" + i);
+            var cover = ccui.helper.seekNodeByName(cardNode, "cover");
+            cover.setSpriteFrame(frame);
+        }
+    },
+
+    _addChipToTable: function (seatID, coin) {
+        var seatNode = this._getSeatNodeBySeatID(seatID);
+        var worldPos = seatNode.getParent().convertToWorldSpace(seatNode.getPosition());
+        var parentPos = this._coinArea.convertToNodeSpace(worldPos);
+        var targetPos = cc.p(app.core.randomInt(0, this._coinArea.width), app.core.randomInt(0, this._coinArea.height));
+        var chip = new cc.Sprite("#studio/room/images/chips/chip" + this._minBet + "_" + coin + ".png");
+        if (!chip)
+            return;
+        chip.setPosition(parentPos);
+        this._coinArea.addChild(chip);
+        chip.runAction(cc.moveTo(0.35, targetPos));
+    },
+
 
     _updateTable: function () {
         var table = cc.app.player.data.table;
@@ -337,13 +457,37 @@ var GameController = cc.ViewController.extend({
             this._target.dealCard(go.seatID ? go.seatID : 0);
         } else if (go.action == $root.GameAction.TURN) { // 该自己操作
             var seatID = go.seatID ? go.seatID : 0;
-            if (seatID == this._target._mySeatID) {
-                this._target.unlockButtons();
-            } else {
+            if (seatID == this._target._mySeatID) { // 该我操作
+                if (this._target.isAutoFollow()) {
+                    // TODO 自动跟注，给服务器发送跟注消息
+                } else {
+                    this._target.unlockButtons();
+                }
+            } else { // 到其他人操作
                 this._target.lockButtons();
             }
-            this._target.turnCountDown(seatID, (go.millis.toNumber() - Date.now()) / 1000.0, () => {
+            this._target.somebodyCountDown(seatID, (go.millis.toNumber() - Date.now()) / 1000.0, () => {
             });
+        } else if (go.action == $root.GameAction.ADDBET) { // 加注
+            var seatID = go.seatID ? go.seatID : 0;
+            var seatData = this.getSeatEntity(seatID);
+            seatData.callCoin += go.coin;
+            this._target.somebodyAddBet(seatData, go.coin);
+        } else if (go.action == $root.GameAction.FOLLOW) { // 跟注
+            var seatID = go.seatID ? go.seatID : 0;
+            var seatData = this.getSeatEntity(seatID);
+            this._target.somebodyFollowBet(seatData, go.coin);
+        } else if (go.action == $root.GameAction.WATCH) { // 看牌
+            var seatID = go.seatID ? go.seatID : 0;
+            this._target.somebodyWatch(seatID)
+        } else if (go.action == $root.GameAction.GIVEUP) { // 弃牌
+            var seatID = go.seatID ? go.seatID : 0;
+            this._target.somebodyGiveup(seatID);
+        } else if (go.action == $root.GameAction.COMPARE) { // 比牌
+            var seatID = go.seatID ? go.seatID : 0;
+            var placementSeatID = go.placementSeatID ? go.placementSeatID : 0;
+            var winnerSeatID = go.winnerSeatID ? go.winnerSeatID : 0;
+            this._target.somebodyCompare(seatID, placementSeatID, winnerSeatID);
         } else if (go.action == $root.GameAction.END) { // 一轮结束
             this._preparedSeat = null;
             this._target.lockButtons();
@@ -372,6 +516,10 @@ var GameController = cc.ViewController.extend({
         // Seat添加到Entity中，便后面使用
         var seatID = seat.seatID ? seat.seatID : 0;
         this._seatEntities[seatID] = seat;
+    },
+
+    getSeatEntity: function (seatID) {
+        return this._seatEntities[seatID];
     },
 
     removeFromSeatEntity: function (seat) {

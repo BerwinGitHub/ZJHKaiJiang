@@ -53,6 +53,62 @@
             "Tag": 149,
             "Children": [
               {
+                "FontSize": 45,
+                "LabelText": "开江炸金花",
+                "HorizontalAlignmentType": "HT_Center",
+                "VerticalAlignmentType": "VT_Center",
+                "OutlineColor": {
+                  "G": 0,
+                  "B": 0
+                },
+                "ShadowColor": {
+                  "R": 0,
+                  "G": 139,
+                  "B": 101
+                },
+                "ShadowOffsetX": 2.0,
+                "ShadowOffsetY": -2.0,
+                "AnchorPoint": {
+                  "ScaleX": 0.5,
+                  "ScaleY": 0.5
+                },
+                "Position": {
+                  "X": 640.0,
+                  "Y": 460.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {
+                  "R": 2,
+                  "G": 125,
+                  "B": 78
+                },
+                "IconVisible": false,
+                "PrePosition": {
+                  "X": 0.5,
+                  "Y": 0.6389
+                },
+                "PreSize": {
+                  "X": 0.1758,
+                  "Y": 0.0722
+                },
+                "LeftMargin": 527.5,
+                "RightMargin": 527.5,
+                "TopMargin": 234.0,
+                "BottomMargin": 434.0,
+                "Tag": 1149,
+                "ActionTag": 1737139788,
+                "Size": {
+                  "X": 225.0,
+                  "Y": 52.0
+                },
+                "Alpha": 153,
+                "Name": "Text_10",
+                "ctype": "TextObjectData"
+              },
+              {
                 "ClipAble": false,
                 "BackColorAlpha": 102,
                 "SingleColor": {
@@ -1047,25 +1103,10 @@
                           "Path": "studio/com/images/ui/agree_kuang.png",
                           "Plist": "studio/com/images/ui.plist"
                         },
-                        "PressedBackFileData": {
+                        "NodeNormalFileData": {
                           "Type": "MarkedSubImage",
                           "Path": "studio/com/images/ui/agree.png",
                           "Plist": "studio/com/images/ui.plist"
-                        },
-                        "DisableBackFileData": {
-                          "Type": "Default",
-                          "Path": "Default/CheckBox_Disable.png",
-                          "Plist": ""
-                        },
-                        "NodeNormalFileData": {
-                          "Type": "Default",
-                          "Path": "Default/CheckBoxNode_Normal.png",
-                          "Plist": ""
-                        },
-                        "NodeDisableFileData": {
-                          "Type": "Default",
-                          "Path": "Default/CheckBoxNode_Disable.png",
-                          "Plist": ""
                         },
                         "AnchorPoint": {
                           "ScaleX": 0.5,
@@ -1236,62 +1277,6 @@
             },
             "Name": "table_bg",
             "ctype": "SpriteObjectData"
-          },
-          {
-            "FontSize": 45,
-            "LabelText": "开江炸金花",
-            "HorizontalAlignmentType": "HT_Center",
-            "VerticalAlignmentType": "VT_Center",
-            "OutlineColor": {
-              "G": 0,
-              "B": 0
-            },
-            "ShadowColor": {
-              "R": 0,
-              "G": 139,
-              "B": 101
-            },
-            "ShadowOffsetX": 2.0,
-            "ShadowOffsetY": -2.0,
-            "AnchorPoint": {
-              "ScaleX": 0.5,
-              "ScaleY": 0.5
-            },
-            "Position": {
-              "X": 0.0,
-              "Y": 100.0
-            },
-            "Scale": {
-              "ScaleX": 1.0,
-              "ScaleY": 1.0
-            },
-            "CColor": {
-              "R": 2,
-              "G": 125,
-              "B": 78
-            },
-            "IconVisible": false,
-            "PrePosition": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "PreSize": {
-              "X": 0.0,
-              "Y": 0.0
-            },
-            "LeftMargin": -112.5,
-            "RightMargin": -112.5,
-            "TopMargin": -126.0,
-            "BottomMargin": 74.0,
-            "Tag": 1149,
-            "ActionTag": 1737139788,
-            "Size": {
-              "X": 225.0,
-              "Y": 52.0
-            },
-            "Alpha": 76,
-            "Name": "Text_10",
-            "ctype": "TextObjectData"
           },
           {
             "AnchorPoint": {},
@@ -1749,6 +1734,48 @@
             },
             "Name": "lbl_start",
             "ctype": "TextObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "studio/room/components/add_bets.json",
+              "Plist": ""
+            },
+            "StretchWidthEnable": false,
+            "StretchHeightEnable": false,
+            "InnerActionSpeed": 1.0,
+            "AnchorPoint": {},
+            "Position": {
+              "X": -127.0629,
+              "Y": -177.9252
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": true,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -127.0629,
+            "RightMargin": 127.0629,
+            "TopMargin": 177.9252,
+            "BottomMargin": -177.9252,
+            "Tag": 505,
+            "ActionTag": 221278124,
+            "Size": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "VisibleForFrame": false,
+            "Name": "addBetPanel",
+            "ctype": "ProjectNodeObjectData"
           }
         ],
         "Size": {
@@ -1759,11 +1786,9 @@
         "ctype": "SingleNodeObjectData"
       },
       "UsedResources": [
-        "../../../Default/CheckBox_Disable.png",
-        "../../../Default/CheckBoxNode_Disable.png",
-        "../../../Default/CheckBoxNode_Normal.png",
         "../../com/images/ui.plist",
         "../../com/images/ui.png",
+        "../components/add_bets.json",
         "../components/seat_left.json",
         "../components/seat_right.json",
         "../fonts/game_num_money.fnt",

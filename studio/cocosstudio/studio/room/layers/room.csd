@@ -9,6 +9,17 @@
           <AbstractNodeData Name="table_bg" ActionTag="508554984" Tag="149" IconVisible="False" LeftMargin="-639.9999" RightMargin="-640.0001" TopMargin="-360.0000" BottomMargin="-360.0000" ctype="SpriteObjectData">
             <Size X="1280.0000" Y="720.0000" />
             <Children>
+              <AbstractNodeData Name="Text_10" ActionTag="1737139788" Alpha="153" Tag="1149" IconVisible="False" LeftMargin="527.5000" RightMargin="527.5000" TopMargin="234.0000" BottomMargin="434.0000" FontSize="45" LabelText="开江炸金花" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                <Size X="225.0000" Y="52.0000" />
+                <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+                <Position X="640.0000" Y="460.0000" />
+                <Scale ScaleX="1.0000" ScaleY="1.0000" />
+                <CColor A="255" R="2" G="125" B="78" />
+                <PrePosition X="0.5000" Y="0.6389" />
+                <PreSize X="0.1758" Y="0.0722" />
+                <OutlineColor A="255" R="255" G="0" B="0" />
+                <ShadowColor A="255" R="0" G="139" B="101" />
+              </AbstractNodeData>
               <AbstractNodeData Name="coin_area" ActionTag="1409954769" Tag="273" IconVisible="False" LeftMargin="289.9998" RightMargin="290.0002" TopMargin="229.3726" BottomMargin="290.6274" TouchEnable="True" ClipAble="False" BackColorAlpha="102" ColorAngle="90.0000" Scale9Width="1" Scale9Height="1" ctype="PanelObjectData">
                 <Size X="700.0000" Y="200.0000" />
                 <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -227,10 +238,7 @@
                         <PrePosition X="0.2016" Y="0.5319" />
                         <PreSize X="0.1520" Y="0.3922" />
                         <NormalBackFileData Type="MarkedSubImage" Path="studio/com/images/ui/agree_kuang.png" Plist="studio/com/images/ui.plist" />
-                        <PressedBackFileData Type="MarkedSubImage" Path="studio/com/images/ui/agree.png" Plist="studio/com/images/ui.plist" />
-                        <DisableBackFileData Type="Default" Path="Default/CheckBox_Disable.png" Plist="" />
-                        <NodeNormalFileData Type="Default" Path="Default/CheckBoxNode_Normal.png" Plist="" />
-                        <NodeDisableFileData Type="Default" Path="Default/CheckBoxNode_Disable.png" Plist="" />
+                        <NodeNormalFileData Type="MarkedSubImage" Path="studio/com/images/ui/agree.png" Plist="studio/com/images/ui.plist" />
                       </AbstractNodeData>
                     </Children>
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
@@ -287,17 +295,6 @@
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="MarkedSubImage" Path="studio/room/images/bg_normal.jpg" Plist="studio/room/images/table.plist" />
             <BlendFunc Src="770" Dst="771" />
-          </AbstractNodeData>
-          <AbstractNodeData Name="Text_10" ActionTag="1737139788" Alpha="76" Tag="1149" IconVisible="False" LeftMargin="-112.5000" RightMargin="-112.5000" TopMargin="-126.0000" BottomMargin="74.0000" FontSize="45" LabelText="开江炸金花" HorizontalAlignmentType="HT_Center" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
-            <Size X="225.0000" Y="52.0000" />
-            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
-            <Position Y="100.0000" />
-            <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <CColor A="255" R="2" G="125" B="78" />
-            <PrePosition />
-            <PreSize X="0.0000" Y="0.0000" />
-            <OutlineColor A="255" R="255" G="0" B="0" />
-            <ShadowColor A="255" R="0" G="139" B="101" />
           </AbstractNodeData>
           <AbstractNodeData Name="ui_nodes" ActionTag="-912854751" Tag="512" IconVisible="True" LeftMargin="90.9994" RightMargin="-90.9994" TopMargin="-21.9245" BottomMargin="21.9245" ctype="SingleNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
@@ -395,6 +392,16 @@
             <PreSize X="0.0000" Y="0.0000" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="0" G="139" B="101" />
+          </AbstractNodeData>
+          <AbstractNodeData Name="addBetPanel" ActionTag="221278124" VisibleForFrame="False" Tag="505" IconVisible="True" LeftMargin="-127.0629" RightMargin="127.0629" TopMargin="177.9252" BottomMargin="-177.9252" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+            <Size X="0.0000" Y="0.0000" />
+            <AnchorPoint />
+            <Position X="-127.0629" Y="-177.9252" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <PrePosition />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FileData Type="Normal" Path="studio/room/components/add_bets.csd" Plist="" />
           </AbstractNodeData>
         </Children>
       </ObjectData>

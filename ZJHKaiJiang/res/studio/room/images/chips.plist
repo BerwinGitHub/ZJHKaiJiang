@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>studio/room/images/chips/chip10_10.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,2},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip10_100.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{86,2},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip10_30.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{170,2},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip10_50.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{254,2},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip10_80.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{338,2},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip100_100.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{422,2},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip100_1000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,84},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip100_300.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{86,84},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip100_500.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{170,84},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip100_800.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{254,84},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip1000_1000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{338,84},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip1000_10000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{422,84},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip1000_3000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,166},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip1000_5000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{86,166},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip1000_8000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{170,166},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip10000_10000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{254,166},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip10000_100000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{338,166},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip10000_30000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{422,166},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip10000_50000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{2,248},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+			<key>studio/room/images/chips/chip10000_80000.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{86,248},{78,80}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<true />
+				<key>sourceSize</key>
+				<string>{78,80}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>chips.png</string>
+			<key>realTextureFileName</key>
+			<string>chips.png</string>
+			<key>size</key>
+			<string>{504,328}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>504</integer>
+			<key>height</key>
+			<integer>328</integer>
+		</dict>
+	</dict>
+</plist>
