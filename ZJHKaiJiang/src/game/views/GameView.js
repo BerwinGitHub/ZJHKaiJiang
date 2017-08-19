@@ -7,6 +7,7 @@
  * @type {number}
  */
 var TABLE_MAX_PLAYER = 7;
+var BET_ITEMS = [1, 3, 5, 8, 10];
 
 var GameView = cc.View.extend({
 
@@ -19,7 +20,7 @@ var GameView = cc.View.extend({
     _node: null,
     _checkboxAutoFollow: null,// 自动跟注
     _coinArea: null,
-    _minBet: 10,// 底注
+    _addBetPanel: null,
 
     ctor: function () {
         this._super(new GameController(this));
@@ -30,6 +31,7 @@ var GameView = cc.View.extend({
         this._startTimeNode = ccui.helper.seekNodeByName(data.node, "lbl_start");
         this._checkboxAutoFollow = ccui.helper.seekNodeByName(data.node, "cb_follow");
         this._coinArea = ccui.helper.seekNodeByName(data.node, "coin_area");
+        this._addBetPanel = ccui.helper.seekNodeByName(data.node, "addBetPanel");
         this._startTimeNode.visible = false;
         // 初始化按钮
         this._initButton(data.node);
@@ -45,6 +47,7 @@ var GameView = cc.View.extend({
             cc.app.viewmgr.replaceView(new HallView());
         });
         cc.test = this;
+
     },
 
     /**
@@ -58,8 +61,20 @@ var GameView = cc.View.extend({
         for (var i = 0; i < keyNames.length; i++) {
             var btn = ccui.helper.seekNodeByName(node, keyNames[i]);
             (function (btn, i, self) {
-                btn.addClickEventListener(() => functions[i].apply(self));
+                btn.addClickEventListener((data) => functions[i].apply(self, [data]));
             })(btn, i, this);
+        }
+        this.lockButtons(true);
+        // 点击加注背景隐藏
+        var addBetMask = ccui.helper.seekNodeByName(node, "add_bet_mask");
+        addBetMask.addClickEventListener(() => {
+            this._addBetPanel.setVisible(false);
+        });
+        for (var i = 0; i < 5; i++) {
+            var chip = ccui.helper.seekNodeByName(node, "chip_" + i);
+            (function (chip, i, self) {
+                chip.addClickEventListener((data) => self._gameAddItem.apply(self, [data]));
+            })(chip, i, this);
         }
     },
 
@@ -83,9 +98,7 @@ var GameView = cc.View.extend({
      * @private
      */
     _gamePrepare: function (btn) {
-        var opt = {action: $root.GameAction.PREPARE};
-        var buffer = app.proto.bytesify($root.GameOperate, opt);
-        cc.app.socketmgr.emit(CSMapping.C2S.GAMEING, JSON.stringify(buffer));
+        this._viewController.toServerPrepare();
         btn.visible = false;
     },
 
@@ -94,7 +107,10 @@ var GameView = cc.View.extend({
      * @private
      */
     _gameCompare: function (btn) {
-
+        this.lockButtons(false); // 锁住按钮
+        // 选择比较的用户
+        var comparedSeatID = 1;
+        this._viewController.toServerCompare(comparedSeatID);
     },
 
     /**
@@ -102,7 +118,8 @@ var GameView = cc.View.extend({
      * @private
      */
     _gameWatch: function (btn) {
-
+        this.lockButtons(false); // 锁住按钮
+        this._viewController.toServerWatch();
     },
 
     /**
@@ -110,7 +127,23 @@ var GameView = cc.View.extend({
      * @private
      */
     _gameAdd: function (btn) {
+        // TODO 设置隐藏和显示
+        var betLevelValue = this._viewController._currentBet / this._viewController._minBet;
+        for (var i = 0; i < BET_ITEMS.length; i++) {
+            var chipBtn = ccui.helper.seekNodeByName(this._node, "chip_" + i);
+            chipBtn && chipBtn.setTouchEnabled(BET_ITEMS[i] > betLevelValue);
+            chipBtn && chipBtn.setBright(BET_ITEMS[i] > betLevelValue);
+        }
+        this._addBetPanel.setVisible(true);
+    },
 
+    _gameAddItem: function (btn) {
+        var data = cc.app.helper.ui.getWidgetUserData(btn);
+        var idx = parseInt(data);
+        var coin = this._viewController._minBet * BET_ITEMS[idx];
+        this._addBetPanel.setVisible(false);
+        this._viewController.toServerAddBet(coin);
+        this.lockButtons(false); // 锁住按钮
     },
 
     /**
@@ -126,7 +159,8 @@ var GameView = cc.View.extend({
      * @private
      */
     _gameFollow: function () {
-
+        this.lockButtons(false); // 锁住按钮
+        this._viewController.toServerFollow();
     },
 
     /**
@@ -134,9 +168,14 @@ var GameView = cc.View.extend({
      * @private
      */
     _gameGiveup: function () {
-
+        this.lockButtons(false); // 锁住按钮
+        this._viewController.toServerGiveup();
     },
 
+    /**
+     * 是否是自动加注
+     * @returns {*|boolean|bool|Boolean}
+     */
     isAutoFollow: function () {
         return this._checkboxAutoFollow.isSelected();
     },
@@ -210,13 +249,21 @@ var GameView = cc.View.extend({
         })));
     },
 
+    resetCountDown: function (seatID) {
+        var seatNode = this._getSeatNodeBySeatID(seatID);
+        var progress = ccui.helper.seekNodeByName(seatNode, "count_down").getChildren()[0];
+        progress.stopAllActions();
+        progress.setPercentage(0);
+        progress.color = cc.color.GREEN;
+    },
+
     /**
      * 某个用户放弃
      * @param seatID
      */
     somebodyGiveup: function (seatID) {
         // 设置成弃牌的状态
-        this._setCardCoverFrame(seatID, cc.spriteFrameCache.getSpriteFrameByName("studio/room/images/cards/game_poker2.png"));
+        this._setCardCoverFrame(seatID, "studio/room/images/cards/game_poker2.png");
     },
 
     /**
@@ -268,7 +315,7 @@ var GameView = cc.View.extend({
         this._setCardCoverVisible(seatID, !needShowCard);
         this._setCardCoverVisible(otherSeatID, !needShowCard);
         // 2.比牌失败就换cover
-        this._setCardCoverFrame(seatID == winnerSeatID ? otherSeatID : seatID, cc.spriteFrameCache.getSpriteFrameByName("studio/room/images/cards/game_poker3.png"));
+        this._setCardCoverFrame(seatID == winnerSeatID ? otherSeatID : seatID, "studio/room/images/cards/game_poker3.png");
     },
 
     /**
@@ -293,13 +340,13 @@ var GameView = cc.View.extend({
      * @param frame
      * @private
      */
-    _setCardCoverFrame: function (seatID, frame) {
+    _setCardCoverFrame: function (seatID, frameUrl) {
         var seatNode = this._getSeatNodeBySeatID(seatID);
         // 设置成弃牌的状态
         for (var i = 0; i < 3; i++) {
             var cardNode = ccui.helper.seekNodeByName(seatNode, "poker_" + i);
             var cover = ccui.helper.seekNodeByName(cardNode, "cover");
-            cover.setSpriteFrame(frame);
+            cover.setSpriteFrame(frameUrl);
         }
     },
 
@@ -308,7 +355,7 @@ var GameView = cc.View.extend({
         var worldPos = seatNode.getParent().convertToWorldSpace(seatNode.getPosition());
         var parentPos = this._coinArea.convertToNodeSpace(worldPos);
         var targetPos = cc.p(app.core.randomInt(0, this._coinArea.width), app.core.randomInt(0, this._coinArea.height));
-        var chip = new cc.Sprite("#studio/room/images/chips/chip" + this._minBet + "_" + coin + ".png");
+        var chip = new cc.Sprite("#studio/room/images/chips/chip" + this._viewController._minBet + "_" + coin + ".png");
         if (!chip)
             return;
         chip.setPosition(parentPos);
@@ -322,6 +369,11 @@ var GameView = cc.View.extend({
         if (!table)
             return;
         var tableID = table.tableID ? table.tableID : 0;
+        this._viewController._minBet = table.minBet;
+        this._viewController._currentBet = table.currentBet;
+        // 设置房间信息
+        var lblInfo = ccui.helper.seekNodeByName(this._node, "rule_txt");
+        lblInfo.string = "普通房--第" + tableID + "桌     单注:" + this._viewController._minBet + "     封顶:" + this._viewController._minBet * 10;
         // 先找到我是几号
         var seats = table.seats;
         this._handleSeat(seats);
@@ -395,21 +447,23 @@ var GameView = cc.View.extend({
         seatNode.visible = false;
     },
 
-    lockButtons: function () {
-        var keyNames = ["btn_follow", "btn_compare", "btn_add"];
+    lockButtons: function (isAllButtons = false) {
+        var keyNames = isAllButtons ? ["btn_follow", "btn_giveup", "btn_compare", "btn_watch", "btn_add", "btn_follow_always"] : ["btn_follow", "btn_compare", "btn_add"];
         for (var i = 0; i < keyNames.length; i++) {
             var btn = ccui.helper.seekNodeByName(this._node, keyNames[i]);
             btn && btn.setTouchEnabled(false);
             btn && btn.setBright(false);
+            btn && (btn.titleColor = cc.hexToColor("#4D4D4D"));
         }
     },
 
-    unlockButtons: function () {
-        var keyNames = ["btn_follow", "btn_compare", "btn_add"];
+    unlockButtons: function (isAllButtons = true) {
+        var keyNames = isAllButtons ? ["btn_follow", "btn_giveup", "btn_compare", "btn_watch", "btn_add", "btn_follow_always"] : ["btn_follow", "btn_compare", "btn_add"];
         for (var i = 0; i < keyNames.length; i++) {
             var btn = ccui.helper.seekNodeByName(this._node, keyNames[i]);
             btn && btn.setTouchEnabled(true);
             btn && btn.setBright(true);
+            btn && (btn.titleColor = cc.hexToColor("#005400"));
         }
     },
 
@@ -426,9 +480,10 @@ var GameView = cc.View.extend({
 
 var GameController = cc.ViewController.extend({
 
-    _seatEntities: null,
-
-    _preparedSeat: null,
+    _seatEntities: null, // 作为的实体(数据)
+    _preparedSeat: null, // 准备的座位
+    _currentBet: 0, // 当前倍率
+    _minBet: 0,// 最小倍率
 
     onLogic: function () {
         this._super();
@@ -437,7 +492,6 @@ var GameController = cc.ViewController.extend({
         cc.app.events.onNode(this._target, CSMapping.S2C.USER_ENTER_TABLE, (d) => this.somebodyEnetered(d));
         cc.app.events.onNode(this._target, CSMapping.S2C.USER_EXIT_TABLE, (d) => this.somebodyExited(d));
         cc.app.events.onNode(this._target, CSMapping.S2C.GAMEING, (d) => this.pollingExecute(d));
-
     },
 
     /**
@@ -445,57 +499,124 @@ var GameController = cc.ViewController.extend({
      */
     pollingExecute: function (data) {
         var go = cc.app.proto.parseFromArrayString($root.GameOperate, data);
-        if (go.action == $root.GameAction.PREPARE) { // 用户准备
-            this._target.lockButtons();
-            var seat = this._seatEntities[go.seatID];
-            seat.isPrepared = true;
-            this._preparedSeat[seat.seatID] = seat;
-            this._prepare(seat);
-        } else if (go.action == $root.GameAction.COUNTDOWN_START) { // 倒计时开始
-            this._target.startCountDown(go.millis.toNumber());
-        } else if (go.action == $root.GameAction.SEND_CARD) { // 发牌
-            this._target.dealCard(go.seatID ? go.seatID : 0);
-        } else if (go.action == $root.GameAction.TURN) { // 该自己操作
-            var seatID = go.seatID ? go.seatID : 0;
-            if (seatID == this._target._mySeatID) { // 该我操作
-                if (this._target.isAutoFollow()) {
-                    // TODO 自动跟注，给服务器发送跟注消息
-                } else {
-                    this._target.unlockButtons();
+        this._currentBet = go.currentBet; // 当前的倍率
+        var seatID = go.seatID ? go.seatID : 0;
+        switch (go.action) {
+            case $root.GameAction.PREPARE: // 用户准备
+                this._target.lockButtons(true);
+                var seat = this._seatEntities[seatID];
+                seat.isPrepared = true;
+                this._preparedSeat[seat.seatID] = seat;
+                this._target.updateSeat(seat); // 更新位置
+                break;
+            case $root.GameAction.COUNTDOWN_START: // 倒计时开始
+                this._target.startCountDown(go.millis.toNumber());
+                break;
+            case $root.GameAction.SEND_CARD: // 发牌
+                this._target.dealCard(seatID);
+                this._target.lockButtons(false);
+                break;
+            case $root.GameAction.TURN: // 该自己操作
+                if (seatID == this._target._mySeatID) { // 该我操作
+                    if (this._target.isAutoFollow()) {
+                        this.toServerFollow();
+                    } else {
+                        this._target.unlockButtons();
+                    }
+                } else { // 到其他人操作
+                    this._target.lockButtons();
                 }
-            } else { // 到其他人操作
-                this._target.lockButtons();
-            }
-            this._target.somebodyCountDown(seatID, (go.millis.toNumber() - Date.now()) / 1000.0, () => {
-            });
-        } else if (go.action == $root.GameAction.ADDBET) { // 加注
-            var seatID = go.seatID ? go.seatID : 0;
-            var seatData = this.getSeatEntity(seatID);
-            seatData.callCoin += go.coin;
-            this._target.somebodyAddBet(seatData, go.coin);
-        } else if (go.action == $root.GameAction.FOLLOW) { // 跟注
-            var seatID = go.seatID ? go.seatID : 0;
-            var seatData = this.getSeatEntity(seatID);
-            this._target.somebodyFollowBet(seatData, go.coin);
-        } else if (go.action == $root.GameAction.WATCH) { // 看牌
-            var seatID = go.seatID ? go.seatID : 0;
-            this._target.somebodyWatch(seatID)
-        } else if (go.action == $root.GameAction.GIVEUP) { // 弃牌
-            var seatID = go.seatID ? go.seatID : 0;
-            this._target.somebodyGiveup(seatID);
-        } else if (go.action == $root.GameAction.COMPARE) { // 比牌
-            var seatID = go.seatID ? go.seatID : 0;
-            var placementSeatID = go.placementSeatID ? go.placementSeatID : 0;
-            var winnerSeatID = go.winnerSeatID ? go.winnerSeatID : 0;
-            this._target.somebodyCompare(seatID, placementSeatID, winnerSeatID);
-        } else if (go.action == $root.GameAction.END) { // 一轮结束
-            this._preparedSeat = null;
-            this._target.lockButtons();
+                this._target.somebodyCountDown(seatID, (go.millis.toNumber() - Date.now()) / 1000.0, null);
+                break;
+            case $root.GameAction.ADDBET: // 加注
+                var seatData = this.getSeatEntity(seatID);
+                seatData.callCoin += go.coin;
+                this._target.somebodyAddBet(seatData, go.coin);
+                this._target.resetCountDown(seatID); // 清空倒计时
+                break;
+            case $root.GameAction.FOLLOW: // 跟注
+                var seatData = this.getSeatEntity(seatID);
+                seatData.callCoin += go.coin;
+                this._target.somebodyFollowBet(seatData, go.coin);
+                this._target.resetCountDown(seatID); // 清空倒计时
+                break;
+            case $root.GameAction.WATCH: // 看牌
+                this._target.somebodyWatch(seatID);
+                this._target.resetCountDown(seatID); // 清空倒计时
+                break;
+            case $root.GameAction.GIVEUP: // 弃牌
+                this._target.somebodyGiveup(seatID);
+                this._target.resetCountDown(seatID); // 清空倒计时
+                break;
+            case $root.GameAction.COMPARE: // 比牌
+                var placementSeatID = go.placementSeatID ? go.placementSeatID : 0;
+                var winnerSeatID = go.winnerSeatID ? go.winnerSeatID : 0;
+                this._target.somebodyCompare(seatID, placementSeatID, winnerSeatID);
+                this._target.resetCountDown(seatID); // 清空倒计时
+                break;
+            case $root.GameAction.END: // 结束
+                this._preparedSeat = null;
+                this._target.lockButtons(true);
+                break;
+            default:
+                break;
         }
     },
 
-    _prepare: function (seat) {
-        this._target.updateSeat(seat);
+    /**
+     * 告诉服务器准备了
+     */
+    toServerPrepare: function () {
+        var data = {action: $root.GameAction.PREPARE, seatID: this._target._mySeatID};
+        cc.app.socketmgr.emit(CSMapping.C2S.GAMEING, this._buildGameOperateProto(data));
+    },
+
+    /**
+     * 告诉服务器跟注
+     * @param coin
+     */
+    toServerFollow: function () {
+        var data = {action: $root.GameAction.FOLLOW, coin: this._currentBet, seatID: this._target._mySeatID};
+        cc.app.socketmgr.emit(CSMapping.C2S.GAMEING, this._buildGameOperateProto(data));
+    },
+
+    /**
+     * 告诉服务器加注
+     * @param coin
+     */
+    toServerAddBet: function (coin) {
+        var data = {action: $root.GameAction.ADDBET, coin: coin, seatID: this._target._mySeatID};
+        cc.app.socketmgr.emit(CSMapping.C2S.GAMEING, this._buildGameOperateProto(data));
+    },
+
+    /**
+     * 告诉服务器看牌
+     */
+    toServerWatch: function () {
+        var data = {action: $root.GameAction.WATCH, seatID: this._target._mySeatID};
+        cc.app.socketmgr.emit(CSMapping.C2S.GAMEING, this._buildGameOperateProto(data));
+    },
+
+    /**
+     * 告诉服务器比牌
+     * @param otherSeatID
+     */
+    toServerCompare: function (otherSeatID) {
+        var data = {action: $root.GameAction.COMPARE, seatID: this._target._mySeatID, placementSeatID: otherSeatID};
+        cc.app.socketmgr.emit(CSMapping.C2S.GAMEING, this._buildGameOperateProto(data));
+    },
+
+    /**
+     * 告诉服务器弃牌
+     */
+    toServerGiveup: function () {
+        var data = {action: $root.GameAction.GIVEUP, seatID: this._target._mySeatID};
+        cc.app.socketmgr.emit(CSMapping.C2S.GAMEING, this._buildGameOperateProto(data));
+    },
+
+    _buildGameOperateProto: function (data) {
+        var buffer = app.proto.bytesify($root.GameOperate, data);
+        return JSON.stringify(buffer);
     },
 
     somebodyEnetered: function (data) {

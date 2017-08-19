@@ -354,7 +354,7 @@
               <AbstractNodeData Name="rule" ActionTag="1443871650" Tag="563" IconVisible="False" LeftMargin="-624.5263" RightMargin="124.5263" TopMargin="-314.2735" BottomMargin="269.2735" Scale9Enable="True" LeftEage="31" RightEage="31" TopEage="8" BottomEage="8" Scale9OriginX="31" Scale9OriginY="8" Scale9Width="34" Scale9Height="9" ctype="ImageViewObjectData">
                 <Size X="500.0000" Y="45.0000" />
                 <Children>
-                  <AbstractNodeData Name="rule_txt" ActionTag="202434952" Tag="564" RotationSkewY="-0.0004" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentHeightEnable="True" PercentHeightEnabled="True" LeftMargin="25.0000" RightMargin="25.0000" IsCustomSize="True" FontSize="20" LabelText="普通房--第27桌     单注:100     封顶:2000" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
+                  <AbstractNodeData Name="rule_txt" ActionTag="202434952" Tag="564" RotationSkewY="-0.0004" IconVisible="False" PositionPercentXEnabled="True" PositionPercentYEnabled="True" PercentHeightEnable="True" PercentHeightEnabled="True" LeftMargin="25.0000" RightMargin="25.0000" IsCustomSize="True" FontSize="20" LabelText="普通房--第27桌     单注:10     封顶:100" VerticalAlignmentType="VT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ctype="TextObjectData">
                     <Size X="450.0000" Y="45.0000" />
                     <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
                     <Position X="250.0000" Y="22.5000" />
@@ -393,10 +393,10 @@
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="0" G="139" B="101" />
           </AbstractNodeData>
-          <AbstractNodeData Name="addBetPanel" ActionTag="221278124" VisibleForFrame="False" Tag="505" IconVisible="True" LeftMargin="-127.0629" RightMargin="127.0629" TopMargin="177.9252" BottomMargin="-177.9252" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
+          <AbstractNodeData Name="addBetPanel" ActionTag="221278124" VisibleForFrame="False" Tag="505" IconVisible="True" StretchWidthEnable="False" StretchHeightEnable="False" InnerActionSpeed="1.0000" CustomSizeEnabled="False" ctype="ProjectNodeObjectData">
             <Size X="0.0000" Y="0.0000" />
             <AnchorPoint />
-            <Position X="-127.0629" Y="-177.9252" />
+            <Position />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition />

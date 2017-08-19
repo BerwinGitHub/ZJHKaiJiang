@@ -45,7 +45,8 @@ message Table {
 	repeated Seat seats				=	2;
 	int32 minBet					=	3;
 	int32 maxBet					=	4;
-	int32 round						=	5;
+	int32 currentBet				=	5;
+	int32 round						=	6;
 }
 
 enum GameAction {
@@ -69,4 +70,5 @@ message GameOperate {
 	int32 coin						=	5;
 	repeated bytes cards			=	6; // 牌
 	uint64 millis					=	7; // 时间
+	uint32 currentBet				=	8; // 当前倍率
 }

@@ -822,6 +822,7 @@ $root.Table = (function() {
      * @property {Array.<ISeat>} [seats] Table seats
      * @property {number} [minBet] Table minBet
      * @property {number} [maxBet] Table maxBet
+     * @property {number} [currentBet] Table currentBet
      * @property {number} [round] Table round
      */
 
@@ -873,6 +874,14 @@ $root.Table = (function() {
     Table.prototype.maxBet = 0;
 
     /**
+     * Table currentBet.
+     * @member {number}currentBet
+     * @memberof Table
+     * @instance
+     */
+    Table.prototype.currentBet = 0;
+
+    /**
      * Table round.
      * @member {number}round
      * @memberof Table
@@ -913,8 +922,10 @@ $root.Table = (function() {
             writer.uint32(/* id 3, wireType 0 =*/24).int32(message.minBet);
         if (message.maxBet != null && message.hasOwnProperty("maxBet"))
             writer.uint32(/* id 4, wireType 0 =*/32).int32(message.maxBet);
+        if (message.currentBet != null && message.hasOwnProperty("currentBet"))
+            writer.uint32(/* id 5, wireType 0 =*/40).int32(message.currentBet);
         if (message.round != null && message.hasOwnProperty("round"))
-            writer.uint32(/* id 5, wireType 0 =*/40).int32(message.round);
+            writer.uint32(/* id 6, wireType 0 =*/48).int32(message.round);
         return writer;
     };
 
@@ -964,6 +975,9 @@ $root.Table = (function() {
                 message.maxBet = reader.int32();
                 break;
             case 5:
+                message.currentBet = reader.int32();
+                break;
+            case 6:
                 message.round = reader.int32();
                 break;
             default:
@@ -1019,6 +1033,9 @@ $root.Table = (function() {
         if (message.maxBet != null && message.hasOwnProperty("maxBet"))
             if (!$util.isInteger(message.maxBet))
                 return "maxBet: integer expected";
+        if (message.currentBet != null && message.hasOwnProperty("currentBet"))
+            if (!$util.isInteger(message.currentBet))
+                return "currentBet: integer expected";
         if (message.round != null && message.hasOwnProperty("round"))
             if (!$util.isInteger(message.round))
                 return "round: integer expected";
@@ -1053,6 +1070,8 @@ $root.Table = (function() {
             message.minBet = object.minBet | 0;
         if (object.maxBet != null)
             message.maxBet = object.maxBet | 0;
+        if (object.currentBet != null)
+            message.currentBet = object.currentBet | 0;
         if (object.round != null)
             message.round = object.round | 0;
         return message;
@@ -1077,6 +1096,7 @@ $root.Table = (function() {
             object.tableID = 0;
             object.minBet = 0;
             object.maxBet = 0;
+            object.currentBet = 0;
             object.round = 0;
         }
         if (message.tableID != null && message.hasOwnProperty("tableID"))
@@ -1090,6 +1110,8 @@ $root.Table = (function() {
             object.minBet = message.minBet;
         if (message.maxBet != null && message.hasOwnProperty("maxBet"))
             object.maxBet = message.maxBet;
+        if (message.currentBet != null && message.hasOwnProperty("currentBet"))
+            object.currentBet = message.currentBet;
         if (message.round != null && message.hasOwnProperty("round"))
             object.round = message.round;
         return object;
@@ -1152,6 +1174,7 @@ $root.GameOperate = (function() {
      * @property {number} [coin] GameOperate coin
      * @property {Array.<Uint8Array>} [cards] GameOperate cards
      * @property {number|Long} [millis] GameOperate millis
+     * @property {number} [currentBet] GameOperate currentBet
      */
 
     /**
@@ -1226,6 +1249,14 @@ $root.GameOperate = (function() {
     GameOperate.prototype.millis = $util.Long ? $util.Long.fromBits(0,0,true) : 0;
 
     /**
+     * GameOperate currentBet.
+     * @member {number}currentBet
+     * @memberof GameOperate
+     * @instance
+     */
+    GameOperate.prototype.currentBet = 0;
+
+    /**
      * Creates a new GameOperate instance using the specified properties.
      * @function create
      * @memberof GameOperate
@@ -1264,6 +1295,8 @@ $root.GameOperate = (function() {
                 writer.uint32(/* id 6, wireType 2 =*/50).bytes(message.cards[i]);
         if (message.millis != null && message.hasOwnProperty("millis"))
             writer.uint32(/* id 7, wireType 0 =*/56).uint64(message.millis);
+        if (message.currentBet != null && message.hasOwnProperty("currentBet"))
+            writer.uint32(/* id 8, wireType 0 =*/64).uint32(message.currentBet);
         return writer;
     };
 
@@ -1320,6 +1353,9 @@ $root.GameOperate = (function() {
                 break;
             case 7:
                 message.millis = reader.uint64();
+                break;
+            case 8:
+                message.currentBet = reader.uint32();
                 break;
             default:
                 reader.skipType(tag & 7);
@@ -1394,6 +1430,9 @@ $root.GameOperate = (function() {
         if (message.millis != null && message.hasOwnProperty("millis"))
             if (!$util.isInteger(message.millis) && !(message.millis && $util.isInteger(message.millis.low) && $util.isInteger(message.millis.high)))
                 return "millis: integer|Long expected";
+        if (message.currentBet != null && message.hasOwnProperty("currentBet"))
+            if (!$util.isInteger(message.currentBet))
+                return "currentBet: integer expected";
         return null;
     };
 
@@ -1478,6 +1517,8 @@ $root.GameOperate = (function() {
                 message.millis = object.millis;
             else if (typeof object.millis === "object")
                 message.millis = new $util.LongBits(object.millis.low >>> 0, object.millis.high >>> 0).toNumber(true);
+        if (object.currentBet != null)
+            message.currentBet = object.currentBet >>> 0;
         return message;
     };
 
@@ -1507,6 +1548,7 @@ $root.GameOperate = (function() {
                 object.millis = options.longs === String ? long.toString() : options.longs === Number ? long.toNumber() : long;
             } else
                 object.millis = options.longs === String ? "0" : 0;
+            object.currentBet = 0;
         }
         if (message.action != null && message.hasOwnProperty("action"))
             object.action = options.enums === String ? $root.GameAction[message.action] : message.action;
@@ -1528,6 +1570,8 @@ $root.GameOperate = (function() {
                 object.millis = options.longs === String ? String(message.millis) : message.millis;
             else
                 object.millis = options.longs === String ? $util.Long.prototype.toString.call(message.millis) : options.longs === Number ? new $util.LongBits(message.millis.low >>> 0, message.millis.high >>> 0).toNumber(true) : message.millis;
+        if (message.currentBet != null && message.hasOwnProperty("currentBet"))
+            object.currentBet = message.currentBet;
         return object;
     };
 
@@ -1544,5 +1588,3 @@ $root.GameOperate = (function() {
 
     return GameOperate;
 })();
-
-// module.exports = $root;

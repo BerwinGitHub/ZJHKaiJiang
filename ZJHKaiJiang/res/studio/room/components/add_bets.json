@@ -29,16 +29,23 @@
         "Tag": 114,
         "Children": [
           {
-            "FileData": {
-              "Type": "MarkedSubImage",
-              "Path": "studio/room/images/ui/dialog_bg.png",
-              "Plist": "studio/room/images/ui.plist"
+            "ClipAble": false,
+            "BackColorAlpha": 76,
+            "ComboBoxIndex": 1,
+            "SingleColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0
             },
-            "Scale9Enable": true,
-            "Scale9OriginX": 45,
-            "Scale9OriginY": 55,
-            "Scale9Width": 38,
-            "Scale9Height": 13,
+            "FirstColor": {
+              "R": 150,
+              "G": 200
+            },
+            "EndColor": {},
+            "ColorVector": {
+              "ScaleY": 1.0
+            },
+            "TouchEnable": true,
             "AnchorPoint": {
               "ScaleX": 0.5,
               "ScaleY": 0.5
@@ -61,10 +68,57 @@
               "X": 0.0,
               "Y": 0.0
             },
-            "LeftMargin": -225.0,
-            "RightMargin": -225.0,
-            "TopMargin": -60.0,
-            "BottomMargin": -60.0,
+            "LeftMargin": -640.0,
+            "RightMargin": -640.0,
+            "TopMargin": -360.0,
+            "BottomMargin": -360.0,
+            "Tag": 310,
+            "ActionTag": -1100769130,
+            "Size": {
+              "X": 1280.0,
+              "Y": 720.0
+            },
+            "Name": "add_bet_mask",
+            "ctype": "PanelObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "MarkedSubImage",
+              "Path": "studio/room/images/ui/dialog_bg.png",
+              "Plist": "studio/room/images/ui.plist"
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 45,
+            "Scale9OriginY": 55,
+            "Scale9Width": 38,
+            "Scale9Height": 13,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": -130.0,
+              "Y": -178.6103
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": -355.0,
+            "RightMargin": -95.0,
+            "TopMargin": 118.6103,
+            "BottomMargin": -238.6103,
             "Tag": 348,
             "Children": [
               {
@@ -123,6 +177,7 @@
                 "RightMargin": 351.2444,
                 "TopMargin": 17.0,
                 "BottomMargin": 23.0,
+                "UserData": "0",
                 "Tag": 352,
                 "ActionTag": -1459827848,
                 "Size": {
@@ -188,6 +243,7 @@
                 "RightMargin": 269.9572,
                 "TopMargin": 17.0,
                 "BottomMargin": 23.0,
+                "UserData": "1",
                 "Tag": 353,
                 "ActionTag": 1544225910,
                 "Size": {
@@ -253,6 +309,7 @@
                 "RightMargin": 188.6699,
                 "TopMargin": 17.0,
                 "BottomMargin": 23.0,
+                "UserData": "2",
                 "Tag": 354,
                 "ActionTag": 656381742,
                 "Size": {
@@ -318,6 +375,7 @@
                 "RightMargin": 107.3826,
                 "TopMargin": 17.0,
                 "BottomMargin": 23.0,
+                "UserData": "3",
                 "Tag": 355,
                 "ActionTag": 891192297,
                 "Size": {
@@ -383,6 +441,7 @@
                 "RightMargin": 26.0955,
                 "TopMargin": 17.0,
                 "BottomMargin": 23.0,
+                "UserData": "4",
                 "Tag": 356,
                 "ActionTag": -19459684,
                 "Size": {
